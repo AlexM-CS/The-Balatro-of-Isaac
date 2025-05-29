@@ -1,0 +1,81 @@
+-- Shoot the Moon is bugged. Decription updates, but only 13 Mult is given,
+-- unlike with Baron, which applies its effect properly,
+-- despite having the same (or at least a similar) effect as Shoot the Moon
+
+-- Other bugged interactions:
+--
+
+if context.before then
+    for _, other_card in ipairs(G.jokers.cards) do
+        if other_card ~= card then
+            if type(other_card.ability.extra) ~= "table" then
+                if other_card.label == "Fibonacci" or 
+                    other_card.label == "Abstract Joker" or 
+                    other_card.label == "Supernova" or 
+                    other_card.label == "Blackboard" or 
+                    other_card.label == "Baron" or 
+                    other_card.label == "Photograph" or 
+                    other_card.label == "Baseball Card" or 
+                    other_card.label == "Ancient Joker" or 
+                    other_card.label == "Smiley Face" or 
+                    other_card.label == "Acrobat" or 
+                    other_card.label == "Onyx Agate" or 
+                    other_card.label == "Flower Pot" or 
+                    other_card.label == "The Idol" or 
+                    other_card.label == "Seeing Double" or 
+                    other_card.label == "Shoot the Moon" or 
+                    other_card.label == "Driver's License" or 
+                    other_card.label == "Canio" or 
+                    other_card.label == "Triboulet" then
+                        other_card.ability.extra = other_card.ability.extra * card.ability.extra.multiplier
+                end
+            else
+                if other_card.ability.extra ~= nil then
+                    if other_card.ability.extra.mult ~= nil then other_card.ability.extra.mult = other_card.ability.extra.mult * card.ability.extra.multiplier end
+                    if other_card.ability.extra.s_mult ~= nil then other_card.ability.extra.mult = other_card.ability.extra.mult * card.ability.extra.multiplier end
+                    if other_card.ability.extra.t_mult ~= nil then other_card.ability.extra.mult = other_card.ability.extra.mult * card.ability.extra.multiplier end
+                    if other_card.ability.extra.Xmult ~= nil then other_card.ability.extra.Xmult = other_card.ability.extra.Xmult * card.ability.extra.multiplier end
+                end
+            end
+            if other_card.ability.mult ~= nil then other_card.ability.mult = other_card.ability.mult * card.ability.extra.multiplier end
+            if other_card.ability.Xmult ~= nil then other_card.ability.Xmult = other_card.ability.Xmult * card.ability.extra.multiplier end
+        end
+    end
+end
+if context.after then
+    for _, other_card in ipairs(G.jokers.cards) do
+        if other_card ~= card then
+            if type(other_card.ability.extra) ~= "table" then
+                if other_card.label == "Fibonacci" or 
+                    other_card.label == "Abstract Joker" or 
+                    other_card.label == "Supernova" or 
+                    other_card.label == "Blackboard" or 
+                    other_card.label == "Baron" or 
+                    other_card.label == "Photograph" or 
+                    other_card.label == "Baseball Card" or 
+                    other_card.label == "Ancient Joker" or 
+                    other_card.label == "Smiley Face" or 
+                    other_card.label == "Acrobat" or 
+                    other_card.label == "Onyx Agate" or 
+                    other_card.label == "Flower Pot" or 
+                    other_card.label == "The Idol" or 
+                    other_card.label == "Seeing Double" or 
+                    other_card.label == "Shoot the Moon" or 
+                    other_card.label == "Driver's License" or 
+                    other_card.label == "Canio" or 
+                    other_card.label == "Triboulet" then
+                        other_card.ability.extra = other_card.ability.extra / card.ability.extra.multiplier
+                end
+            else
+                if other_card.ability.extra ~= nil then
+                    if other_card.ability.extra.mult ~= nil then other_card.ability.extra.mult = other_card.ability.extra.mult / card.ability.extra.multiplier end
+                    if other_card.ability.extra.s_mult ~= nil then other_card.ability.extra.mult = other_card.ability.extra.mult / card.ability.extra.multiplier end
+                    if other_card.ability.extra.t_mult ~= nil then other_card.ability.extra.mult = other_card.ability.extra.mult / card.ability.extra.multiplier end
+                    if other_card.ability.extra.Xmult ~= nil then other_card.ability.extra.Xmult = other_card.ability.extra.Xmult / card.ability.extra.multiplier end
+                end
+            end
+            if other_card.ability.mult ~= nil then other_card.ability.mult = other_card.ability.mult / card.ability.extra.multiplier end
+            if other_card.ability.Xmult ~= nil then other_card.ability.Xmult = other_card.ability.Xmult / card.ability.extra.multiplier end
+        end
+    end
+end

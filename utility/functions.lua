@@ -1,0 +1,21 @@
+-- Functions to be used by The Balatro of Isaac
+
+function BI.register(items, path)
+    for i = 1, #items do
+        SMODS.load_file(path.."/"..items[i]..".lua")()
+    end
+end
+
+function BI.calculate_familiar(self, card, context)
+    if context.before then
+        card.ability.extra.target = pseudorandom_element(context.scoring_hand, pseudoseed("familiar"))
+    end
+    if context.repetition and context.cardarea == G.play then
+        if context.other_card == card.ability.extra.target then
+            return {
+                repetitions = BI.FAMILIARS.repetitions
+            }
+        end
+    end
+    if context.after then card.ability.extra.target = nil end
+end

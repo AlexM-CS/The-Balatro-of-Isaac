@@ -1,0 +1,9 @@
+{
+	"id": "The_Balatro_of_Isaac",
+	"name": "The Balatro of Isaac",
+	"author": ["Jedi"],
+	"description": "Turns Balatro into the Binding of Isaac!",
+	"prefix": "tboi",
+	"main_file": "isaac.lua",
+	"version": "1.0.0"
+}
