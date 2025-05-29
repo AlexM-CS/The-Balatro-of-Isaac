@@ -37,20 +37,41 @@ SMODS.Joker {
         -- condition (like Steel Joker or Supernova) are not yet functional with this Joker.
         -- Some of this is due to restrictions on how Mult is applied by these Jokers, but some interactions
         -- that (I think) should work don't
-        
-        -- Interactions that I think are simply bugged are listed below.
-        -- Any Jokers not listed either work as intended or have a special effect that I haven't messed with
 
-        -- Bugged interactions:
+        -- Non-functional/Bugged interactions:
         -- Joker Stencil
         -- Misprint
         -- Raised Fist
+        -- Steel Joker
+        -- Even Steven
+        -- Supernova
+        -- Ride the Bus
+        -- Constellation
+        -- Green Joker
+        -- Madness
+        -- Hologram
+        -- Obelisk
+        -- Erosion
+        -- Fortune Teller
+        -- Lucky Cat
+        -- Spare Trousers
+        -- Ramen
+        -- Campfire
+        -- Throwback
+        -- Glass Joker
+        -- Hit the Road
+        -- The Duo
+        -- The Trio
+        -- The Family
+        -- The Order
+        -- The Tribe
         -- Shoot the Moon
         -- Canio
+        -- Yorick
         
         if context.before then
             for _, other_card in ipairs(G.jokers.cards) do
-                if other_card ~= card then
+                if other_card ~= card and BI.IGNORE.CRICKETS_HEAD[other_card.config.center_key] == nil then
                     if type(other_card.ability.extra) ~= "table" then
                         if other_card.label == "Fibonacci" or 
                         other_card.label == "Abstract Joker" or 
@@ -65,7 +86,6 @@ SMODS.Joker {
                         other_card.label == "Flower Pot" or 
                         other_card.label == "The Idol" or 
                         other_card.label == "Seeing Double" or 
-                        other_card.label == "Shoot the Moon" or 
                         other_card.label == "Driver's License" or 
                         other_card.label == "Triboulet" then
                             other_card.ability.extra = other_card.ability.extra * card.ability.extra.multiplier
@@ -101,7 +121,6 @@ SMODS.Joker {
                         other_card.label == "Flower Pot" or 
                         other_card.label == "The Idol" or 
                         other_card.label == "Seeing Double" or 
-                        other_card.label == "Shoot the Moon" or 
                         other_card.label == "Driver's License" or 
                         other_card.label == "Canio" or 
                         other_card.label == "Triboulet" then

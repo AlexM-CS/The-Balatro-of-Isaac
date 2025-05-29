@@ -19,3 +19,11 @@ function BI.calculate_familiar(self, card, context)
     end
     if context.after then card.ability.extra.target = nil end
 end
+
+function BI.calculate_flies(self, card, context)
+    if context.joker_main then
+        return {
+            chips = card.ability.extra.flies * BI.FLIES.fly * BI.FLIES.multiplier
+        }
+    end
+end
