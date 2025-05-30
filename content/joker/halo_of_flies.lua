@@ -3,8 +3,8 @@ SMODS.Joker {
     loc_txt = {
         name = "Halo of Flies",
         text = {
-            "+#1# {C:attention}Flies",
-            "{C:green}#2# in #3#{} chance to",
+            "+#1# #2# {C:attention}Flies",
+            "{C:green}#3# in #4#{} chance to",
             "disable the {C:attention}Boss Blind",
             "{s:0.8}{C:inactive}\"Projectile Protection\""
         }
@@ -12,6 +12,7 @@ SMODS.Joker {
     config = {
         extra = {
             flies = 2,
+            type = "Basic",
             odds = 8
         }
     },
@@ -28,6 +29,7 @@ SMODS.Joker {
         return {
             vars = {
                 card.ability.extra.flies,
+                card.ability.extra.type,
                 G.GAME.probabilities.normal,
                 card.ability.extra.odds
             }

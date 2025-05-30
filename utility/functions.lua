@@ -23,7 +23,8 @@ end
 function BI.calculate_flies(self, card, context)
     if context.joker_main then
         return {
-            chips = card.ability.extra.flies * BI.FLIES.fly * BI.FLIES.multiplier
+            chips = card.ability.extra.flies * BI.FLIES.fly_chips,
+            mult = card.ability.extra.flies * BI.FLIES.fly_mult
         }
     end
 end

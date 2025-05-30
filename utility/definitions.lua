@@ -20,13 +20,60 @@ BI.ENABLED_JOKERS = {
     -- Page 2
 }
 
+BI.POISONOUS = {
+    j_tboi_the_virus = true,
+    j_tboi_bobs_rotten_head = true,
+    j_tboi_the_common_cold = true,
+    j_tboi_bobs_curse = true,
+    j_tboi_bobs_brain = true,
+    j_tboi_mysterious_liquid = true,
+    j_tboi_toxic_shock = true,
+    j_tboi_serpents_kiss = true,
+    j_tboi_sinus_infection = true,
+    j_tboi_contagion = true,
+    j_tboi_mucormycosis = true,
+    j_tboi_jupiter = true
+}
+
 BI.FAMILIARS = {
     repetitions = 1
 }
 
 BI.FLIES = {
-    fly = 25,
-    multiplier = 1
+    special = {
+        Fire = {},
+        Fire_explosive = {},
+        Poison = {},
+        Poison_explosive = {},
+        Bleed = {},
+        Fear = {},
+        Petrify = {},
+        Charm = {},
+        Slow = {},
+        Slow_explosive = {},
+        Confusion = {},
+        Knockback = {},
+        Knockback_confusion_poison = {},
+        Magnetic = {},
+        Bone = {},
+        Godhead = {},
+        Holy = {},
+        Homing = {},
+        Electric = {},
+        Shield = {},
+        Explosive = {},
+        Random = {}
+    },
+    size = {
+        one = 1,
+        two = 1.5,
+        three = 2,
+        four = 2.5,
+        half = 0.5,
+        tiny = 0.1
+    },
+    fly_chips = 25,
+    fly_mult = 0
 }
 
 BI.IGNORE = {

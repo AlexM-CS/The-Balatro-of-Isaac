@@ -24,3 +24,8 @@ SMODS.load_file("content/atlas.lua")()
 if BI.config.enable_jokers then
     BI.register(BI.ENABLED_JOKERS, "content/joker")
 end
+
+-- Opt-in to SMODS features
+SMODS.current_mod.optional_features = {
+    retrigger_joker = true
+}
