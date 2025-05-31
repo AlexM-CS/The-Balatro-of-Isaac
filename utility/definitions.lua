@@ -2,22 +2,96 @@
 
 BI.ENABLED_JOKERS = {
     -- Page 1
-    "sad_onion",
-    "inner_eye",
-    "spoon_bender",
-    "crickets_head",
-    "my_reflection",
-    "number_one",
-    "blood_of_the_martyr",
-    "brother_bobby",
-    "skatole",
-    "halo_of_flies",
-    "1up",
-    "magic_mushroom",
-    "the_virus",
-    "roid_rage",
-    "less_than_3"
+    "page1/sad_onion",
+    "page1/inner_eye",
+    "page1/spoon_bender",
+    "page1/crickets_head",
+    "page1/my_reflection",
+    "page1/number_one",
+    "page1/blood_of_the_martyr",
+    "page1/brother_bobby",
+    "page1/skatole",
+    "page1/halo_of_flies",
+    "page1/1up",
+    "page1/magic_mushroom",
+    "page1/the_virus",
+    "page1/roid_rage",
+    "page1/less_than_3",
+
     -- Page 2
+    "page2/raw_liver",
+    "page2/skeleton_key",
+    "page2/a_dollar",
+    "page2/boom",
+    "page2/transcendence",
+    "page2/the_compass",
+    "page2/lunch",
+    "page2/dinner",
+    "page2/dessert",
+    "page2/breakfast",
+    "page2/rotten_meat",
+    "page2/wooden_spoon",
+    "page2/the_belt",
+    "page2/moms_underwear",
+    "page2/moms_heels",
+
+    -- Page 3
+    --"page3/moms_lipstick",
+    --"page3/wire_coat_hangar",
+    --"page3/the_bible",
+    --"page3/the_book_of_belial",
+    --"page3/the_necronomicon",
+    --"page3/the_poop",
+    --"page3/mr_boom",
+    --"page3/tammys_head",
+    --"page3/moms_bra",
+    --"page3/kamikaze",
+    --"page3/moms_pad",
+    --"page3/bobs_rotten_head",
+    --"page3/teleport",
+    --"page3/yum_heart",
+    --"page3/lucky_foot",
+
+    -- Page 4
+
+    -- Page 5
+
+    -- Page 6
+
+    -- Page 7
+
+    -- Page 8
+
+    -- Page 9
+
+    -- Page 10
+}
+
+BI.ENABLED_CONSUMABLES = {
+    ENABLED_REVERSED_TAROTS = {
+        "r_fool",
+        "r_magician",
+        "r_high_priestess",
+        "r_empress",
+        "r_emperor",
+        "r_hierophant",
+        "r_lovers",
+        "r_chariot",
+        "r_justice",
+        "r_hermit",
+        "r_wheel_of_fortune",
+        "r_strength",
+        "r_hanged_man",
+        "r_death",
+        "r_temperance",
+        "r_devil",
+        "r_tower",
+        "r_star",
+        "r_moon",
+        "r_sun",
+        "r_judgement",
+        "r_world"
+    }
 }
 
 BI.POISONOUS = {

@@ -10,7 +10,8 @@
 BI = {}
 
 BI.config = {
-    enable_jokers = true
+    enable_jokers = true,
+    enable_reversed_tarots = true
 }
 
 -- Load util
@@ -23,6 +24,11 @@ SMODS.load_file("content/atlas.lua")()
 -- Load jokers
 if BI.config.enable_jokers then
     BI.register(BI.ENABLED_JOKERS, "content/joker")
+end
+
+-- Load Consumables
+if BI.config.enable_reversed_tarots then
+    BI.register(BI.ENABLED_CONSUMABLES.ENABLED_REVERSED_TAROTS, "content/consumables/reversed_tarots")
 end
 
 -- Opt-in to SMODS features

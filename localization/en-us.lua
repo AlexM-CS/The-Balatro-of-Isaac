@@ -177,6 +177,11 @@ return {
         dictionary = {
             k_buffed = "Buffed!",
             k_halved = "Halved!",
+            k_minus_3 = "-3",
+            k_minus_6 = "-6",
+            k_minus_9 = "-9",
+            k_minus_12 = "-12",
+            k_minus_15 = "-15",
             k_swapped = "Swapped!",
             ph_1up = "Saved by 1 Up"
         }

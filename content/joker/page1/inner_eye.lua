@@ -22,7 +22,7 @@ SMODS.Joker {
     pos = { x = 1, y = 2 },
     atlas = "tboi_jokers",
     cost = 8,
-    blueprint_compat = false,
+    blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
 

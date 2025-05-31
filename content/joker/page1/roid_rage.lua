@@ -12,8 +12,7 @@ SMODS.Joker {
     config = {
         extra = {
             chips = 300,
-            subtract = 3,
-            cards_played = 0
+            subtract = 3
         }
     },
     rarity = 2,
@@ -35,7 +34,6 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
         if G.GAME.blind and G.GAME.blind.boss and context.end_of_round and not context.game_over and context.cardarea == G.jokers then
-            card.ability.extra.cards_played = 0
             card.ability.extra.chips = 300
             return {
                 message = localize("k_reset"),
@@ -43,13 +41,18 @@ SMODS.Joker {
             }
         end
         if context.joker_main then
-            if not context.blueprint then
-                card.ability.extra.cards_played = card.ability.extra.cards_played + #context.scoring_hand
-                card.ability.extra.chips = card.ability.extra.chips - card.ability.extra.cards_played * card.ability.extra.subtract
-            end
             return {
                 chips = card.ability.extra.chips
             }
+        end
+        if context.after then
+            if not context.blueprint then
+                card.ability.extra.chips = card.ability.extra.chips - #context.scoring_hand * card.ability.extra.subtract
+                return {
+                    message = localize("k_minus_"..(#context.scoring_hand * card.ability.extra.subtract)),
+                    colour = G.C.BLUE
+                }
+            end
         end
     end
 }
