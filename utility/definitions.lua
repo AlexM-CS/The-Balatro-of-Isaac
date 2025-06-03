@@ -94,6 +94,38 @@ BI.ENABLED_CONSUMABLES = {
         "r_sun",
         "r_judgement",
         "r_world"
+    },
+    ENABLED_RUNES = {
+        "hagalaz",
+        "jera",
+        "ehwaz",
+        "dagaz",
+        "ansuz",
+        "perthro",
+        "berkano",
+        "algiz",
+        "blank_rune",
+        "black_rune",
+        "rune_shard"
+    },
+    ENABLED_SOUL_STONES = {
+        "soul_of_isaac",
+        "soul_of_magdalene",
+        "soul_of_cain",
+        "soul_of_judas",
+        "soul_of_blue_baby",
+        "soul_of_eve",
+        "soul_of_samson",
+        "soul_of_azazel",
+        "soul_of_lazarus",
+        "soul_of_eden",
+        "soul_of_lost",
+        "soul_of_lilith",
+        "soul_of_keeper",
+        "soul_of_apollyon",
+        "soul_of_forgor",
+        "soul_of_bethany",
+        "soul_of_jacob_and_esau"
     }
 }
 

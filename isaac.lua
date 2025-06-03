@@ -11,7 +11,7 @@ BI = {}
 
 BI.config = {
     enable_jokers = true,
-    enable_reversed_tarots = true
+    enable_consumables = true
 }
 
 -- Load util
@@ -27,9 +27,11 @@ if BI.config.enable_jokers then
 end
 
 -- Load Consumables
-if BI.config.enable_reversed_tarots then
+if BI.config.enable_consumables then
     BI.register(BI.ENABLED_CONSUMABLES.TYPES, "content/consumables")
     BI.register(BI.ENABLED_CONSUMABLES.ENABLED_REVERSED_TAROTS, "content/consumables/reversed_tarots")
+    BI.register(BI.ENABLED_CONSUMABLES.ENABLED_RUNES, "content/consumables/runes")
+    BI.register(BI.ENABLED_CONSUMABLES.ENABLED_SOUL_STONES, "content/consumables/soul_stones")
 end
 
 -- Opt-in to SMODS features

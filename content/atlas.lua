@@ -15,3 +15,17 @@ SMODS.Atlas {
     py = 95,
     path = "Reversed_Tarots.png"
 }
+
+SMODS.Atlas {
+    key = "tboi_runes",
+    px = 65,
+    py = 95,
+    path = "Reversed_Tarots.png"
+}
+
+SMODS.Atlas {
+    key = "tboi_soul_stones",
+    px = 65,
+    py = 95,
+    path = "Reversed_Tarots.png"
+}
