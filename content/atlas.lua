@@ -11,7 +11,7 @@ SMODS.Atlas {
 -- Consumables
 SMODS.Atlas {
     key = "tboi_reversed_tarots",
-    px = 71,
+    px = 65,
     py = 95,
-    path = "Jokers.png"
+    path = "Reversed_Tarots.png"
 }

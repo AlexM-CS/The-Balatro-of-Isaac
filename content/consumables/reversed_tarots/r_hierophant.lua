@@ -15,7 +15,7 @@ SMODS.Consumable {
             max = 2
         }
     },
-    pos = { x = 0, y = 0 },
+    pos = { x = 0, y = 1 },
     atlas = "tboi_reversed_tarots",
 
     loc_vars = function(self, info_queue, card)

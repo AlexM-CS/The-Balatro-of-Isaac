@@ -68,6 +68,9 @@ BI.ENABLED_JOKERS = {
 }
 
 BI.ENABLED_CONSUMABLES = {
+    TYPES = {
+        "consumable_type"
+    },
     ENABLED_REVERSED_TAROTS = {
         "r_fool",
         "r_magician",

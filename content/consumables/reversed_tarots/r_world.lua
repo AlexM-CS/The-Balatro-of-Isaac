@@ -4,26 +4,39 @@ SMODS.Consumable {
     loc_txt = {
         name = "The World?",
         text = {
-            "Destroy all {C:Spades}Spades",
+            "Destroy all {V:1}Spades",
             "cards in your hand",
             "{s:0.8}{C:inactive}\"Step into the abyss\""
         }
     },
-    pos = { x = 0, y = 0 },
+    pos = { x = 1, y = 4 },
     atlas = "tboi_reversed_tarots",
 
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
+                colours = {
+                    G.C.SUITS["Spades"]
+                }
             }
         }
     end,
 
     use = function(self, card, area, copier)
-
+        for _, playing_card in ipairs(G.hand.cards) do
+            if playing_card.base.suit == "Spades" then
+                G.E_MANAGER:add_event(Event({
+                    trigger = "after",
+                    func = function()
+                        playing_card:start_dissolve()
+                        return true
+                    end
+                }))
+            end
+        end        
     end,
 
     can_use = function(self, card)
-
+        return G.hand
     end
 }

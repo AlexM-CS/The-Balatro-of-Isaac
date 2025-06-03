@@ -28,6 +28,7 @@ end
 
 -- Load Consumables
 if BI.config.enable_reversed_tarots then
+    BI.register(BI.ENABLED_CONSUMABLES.TYPES, "content/consumables")
     BI.register(BI.ENABLED_CONSUMABLES.ENABLED_REVERSED_TAROTS, "content/consumables/reversed_tarots")
 end
 
