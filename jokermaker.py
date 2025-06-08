@@ -7,7 +7,7 @@
 import os
 
 # We'll be reading this file and looking for every Joker in it
-file = open("definitions.lua")
+file = open(f"utility\\definitions.lua")
 
 # Read until the end
 while True:
@@ -27,7 +27,7 @@ while True:
         
         # As a safeguard, we'll check to make sure that the directory doesn't exist
         try:
-            os.mkdir(directory)
+            os.mkdir(f"{directory}")
             print(f"Directory '{directory}' created successfully.")
         except FileExistsError:
             print(f"Directory '{directory}' already exists.")
