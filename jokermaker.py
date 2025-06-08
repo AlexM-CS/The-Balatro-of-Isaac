@@ -7,7 +7,9 @@
 import os
 
 # We'll be reading this file and looking for every Joker in it
-file = open(f"utility\\definitions.lua")
+os.chdir("The-Balatro-of-Isaac\\utility")
+file = open(f"definitions.lua")
+os.chdir("..")
 
 # Read until the end
 while True:
@@ -27,7 +29,8 @@ while True:
         
         # As a safeguard, we'll check to make sure that the directory doesn't exist
         try:
-            os.mkdir(f"{directory}")
+            parent_directory = f"content\\joker\\{directory}"
+            os.mkdir(parent_directory)
             print(f"Directory '{directory}' created successfully.")
         except FileExistsError:
             print(f"Directory '{directory}' already exists.")
@@ -43,7 +46,7 @@ while True:
 }}"""
 
         try:
-            path = os.path.join(directory, f"{item}.lua")
+            path = os.path.join(parent_directory, f"{item}.lua")
             write_file = open(path, f"w")
             print(f"File '{item} created successfully in directory '{directory}'.")
             write_file.write(file_content)
