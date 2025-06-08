@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = libra,
     loc_txt = {

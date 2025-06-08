@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = hallowed_ground,
     loc_txt = {

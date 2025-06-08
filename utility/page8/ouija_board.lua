@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = ouija_board,
     loc_txt = {

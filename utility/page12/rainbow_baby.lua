@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = rainbow_baby,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = rock_bottom,
     loc_txt = {

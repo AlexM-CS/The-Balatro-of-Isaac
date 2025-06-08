@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = cube_baby,
     loc_txt = {

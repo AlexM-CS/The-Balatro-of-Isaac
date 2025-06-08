@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = spider_mod,
     loc_txt = {

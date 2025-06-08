@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = lost_fly,
     loc_txt = {

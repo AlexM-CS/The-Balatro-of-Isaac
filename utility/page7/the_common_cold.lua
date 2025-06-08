@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = the_common_cold,
     loc_txt = {

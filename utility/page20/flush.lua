@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = flush,
     loc_txt = {

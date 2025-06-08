@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = cupids_arrow,
     loc_txt = {

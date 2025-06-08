@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = bird_cage,
     loc_txt = {

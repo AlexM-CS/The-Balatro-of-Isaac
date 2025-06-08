@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = teleport,
     loc_txt = {

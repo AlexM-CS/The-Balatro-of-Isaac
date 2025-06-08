@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = circle_of_protection,
     loc_txt = {

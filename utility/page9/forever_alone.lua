@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = forever_alone,
     loc_txt = {

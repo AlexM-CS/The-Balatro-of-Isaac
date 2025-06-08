@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = deep_pockets,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = metal_plate,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = polydactyly,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = mr_boom,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = spelunker_hat,
     loc_txt = {

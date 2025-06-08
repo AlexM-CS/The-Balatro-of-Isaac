@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = purgatory,
     loc_txt = {

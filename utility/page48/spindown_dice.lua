@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = spindown_dice,
     loc_txt = {

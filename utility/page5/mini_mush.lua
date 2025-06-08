@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = mini_mush,
     loc_txt = {

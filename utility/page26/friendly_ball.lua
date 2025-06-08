@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = friendly_ball,
     loc_txt = {

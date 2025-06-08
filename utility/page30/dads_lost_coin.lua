@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = dads_lost_coin,
     loc_txt = {

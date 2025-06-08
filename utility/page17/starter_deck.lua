@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = starter_deck,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = larynx,
     loc_txt = {

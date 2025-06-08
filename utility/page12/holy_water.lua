@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = holy_water,
     loc_txt = {

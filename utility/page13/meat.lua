@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = meat,
     loc_txt = {

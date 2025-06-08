@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = yum_heart,
     loc_txt = {

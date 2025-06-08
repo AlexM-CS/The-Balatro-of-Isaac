@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = binky,
     loc_txt = {

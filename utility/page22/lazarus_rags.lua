@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = lazarus_rags,
     loc_txt = {

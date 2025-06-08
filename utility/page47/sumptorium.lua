@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = sumptorium,
     loc_txt = {

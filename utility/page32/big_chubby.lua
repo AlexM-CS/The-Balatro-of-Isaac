@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = big_chubby,
     loc_txt = {

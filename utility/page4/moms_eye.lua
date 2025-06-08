@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = moms_eye,
     loc_txt = {

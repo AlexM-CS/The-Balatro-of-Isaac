@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = satanic_bible,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = godhead,
     loc_txt = {

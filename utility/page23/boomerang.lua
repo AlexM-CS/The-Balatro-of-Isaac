@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = boomerang,
     loc_txt = {

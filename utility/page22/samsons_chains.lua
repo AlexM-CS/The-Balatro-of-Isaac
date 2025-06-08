@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = samsons_chains,
     loc_txt = {

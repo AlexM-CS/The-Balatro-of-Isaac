@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = scapular,
     loc_txt = {

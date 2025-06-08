@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = tm_trainer,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = tiny_planet,
     loc_txt = {

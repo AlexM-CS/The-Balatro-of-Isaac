@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = dark_arts,
     loc_txt = {

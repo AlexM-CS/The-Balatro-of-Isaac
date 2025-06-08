@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = latch_key,
     loc_txt = {

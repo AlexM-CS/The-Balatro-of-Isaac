@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = dead_cat,
     loc_txt = {

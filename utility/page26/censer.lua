@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = censer,
     loc_txt = {

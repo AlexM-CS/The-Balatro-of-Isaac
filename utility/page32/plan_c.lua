@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = plan_c,
     loc_txt = {

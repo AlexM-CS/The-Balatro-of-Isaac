@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = old_bandage,
     loc_txt = {

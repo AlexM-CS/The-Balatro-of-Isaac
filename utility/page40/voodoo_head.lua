@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = voodoo_head,
     loc_txt = {

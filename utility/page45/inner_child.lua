@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = inner_child,
     loc_txt = {

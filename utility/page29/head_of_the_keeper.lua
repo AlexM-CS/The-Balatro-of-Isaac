@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = head_of_the_keeper,
     loc_txt = {

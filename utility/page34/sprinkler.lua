@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = sprinkler,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = bloodshot_eye,
     loc_txt = {

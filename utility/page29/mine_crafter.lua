@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = mine_crafter,
     loc_txt = {

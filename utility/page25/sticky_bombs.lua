@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = sticky_bombs,
     loc_txt = {

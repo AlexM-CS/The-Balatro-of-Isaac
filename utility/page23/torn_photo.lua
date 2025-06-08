@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = torn_photo,
     loc_txt = {

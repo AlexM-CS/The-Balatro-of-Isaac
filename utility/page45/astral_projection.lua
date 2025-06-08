@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = astral_projection,
     loc_txt = {

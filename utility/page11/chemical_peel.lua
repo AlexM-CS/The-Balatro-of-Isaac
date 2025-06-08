@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = chemical_peel,
     loc_txt = {

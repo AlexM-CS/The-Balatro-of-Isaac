@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = the_halo,
     loc_txt = {

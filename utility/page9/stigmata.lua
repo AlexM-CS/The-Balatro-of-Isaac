@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = stigmata,
     loc_txt = {

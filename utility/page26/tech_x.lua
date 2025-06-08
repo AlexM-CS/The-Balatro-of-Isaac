@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = tech_x,
     loc_txt = {

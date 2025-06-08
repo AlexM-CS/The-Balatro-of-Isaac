@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = shard_of_glass,
     loc_txt = {

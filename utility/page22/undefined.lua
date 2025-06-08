@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = undefined,
     loc_txt = {

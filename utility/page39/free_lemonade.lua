@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = free_lemonade,
     loc_txt = {

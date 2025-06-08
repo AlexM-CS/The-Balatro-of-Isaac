@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = my_shadow,
     loc_txt = {

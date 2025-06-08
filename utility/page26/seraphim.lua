@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = seraphim,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = abaddon,
     loc_txt = {

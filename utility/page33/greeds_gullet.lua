@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = greeds_gullet,
     loc_txt = {

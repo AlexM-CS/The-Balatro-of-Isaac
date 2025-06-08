@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = spider_bite,
     loc_txt = {

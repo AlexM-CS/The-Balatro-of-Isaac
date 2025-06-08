@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = multidimensional_baby,
     loc_txt = {

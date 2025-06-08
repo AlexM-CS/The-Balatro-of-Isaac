@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = unicorn_stump,
     loc_txt = {

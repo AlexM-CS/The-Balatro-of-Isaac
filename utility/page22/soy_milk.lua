@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = soy_milk,
     loc_txt = {

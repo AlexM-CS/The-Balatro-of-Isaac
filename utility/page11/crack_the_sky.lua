@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = crack_the_sky,
     loc_txt = {

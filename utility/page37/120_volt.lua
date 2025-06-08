@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = 120_volt,
     loc_txt = {

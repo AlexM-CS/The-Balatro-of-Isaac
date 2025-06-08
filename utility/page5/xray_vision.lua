@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = xray_vision,
     loc_txt = {

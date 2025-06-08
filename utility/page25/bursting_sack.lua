@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = bursting_sack,
     loc_txt = {

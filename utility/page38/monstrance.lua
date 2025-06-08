@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = monstrance,
     loc_txt = {

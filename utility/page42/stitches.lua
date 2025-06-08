@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = stitches,
     loc_txt = {

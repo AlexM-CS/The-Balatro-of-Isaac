@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = glyph_of_balance,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = champion_belt,
     loc_txt = {

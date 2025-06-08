@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = buddy_in_a_box,
     loc_txt = {

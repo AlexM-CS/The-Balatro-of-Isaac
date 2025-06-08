@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = dull_razor,
     loc_txt = {

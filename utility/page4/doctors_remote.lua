@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = doctors_remote,
     loc_txt = {

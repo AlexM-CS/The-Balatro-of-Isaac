@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = friend_zone,
     loc_txt = {

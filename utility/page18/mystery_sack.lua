@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = mystery_sack,
     loc_txt = {

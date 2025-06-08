@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = act_of_contrition,
     loc_txt = {

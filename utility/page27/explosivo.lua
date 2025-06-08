@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = explosivo,
     loc_txt = {

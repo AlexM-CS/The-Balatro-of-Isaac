@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = large_zit,
     loc_txt = {

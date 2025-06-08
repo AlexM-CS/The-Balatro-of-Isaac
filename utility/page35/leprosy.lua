@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = leprosy,
     loc_txt = {

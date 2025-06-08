@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = crack_jacks,
     loc_txt = {

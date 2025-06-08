@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = guppys_hairball,
     loc_txt = {

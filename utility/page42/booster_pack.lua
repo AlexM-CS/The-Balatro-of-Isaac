@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = booster_pack,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = friend_finder,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = purity,
     loc_txt = {

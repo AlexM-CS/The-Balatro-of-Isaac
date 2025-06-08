@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = toothpicks,
     loc_txt = {

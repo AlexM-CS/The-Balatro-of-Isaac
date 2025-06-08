@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = candy_heart,
     loc_txt = {

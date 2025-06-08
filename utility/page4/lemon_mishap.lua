@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = lemon_mishap,
     loc_txt = {

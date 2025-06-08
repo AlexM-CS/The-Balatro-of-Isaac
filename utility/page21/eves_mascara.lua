@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = eves_mascara,
     loc_txt = {

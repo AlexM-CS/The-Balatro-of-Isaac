@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = ball_of_tar,
     loc_txt = {

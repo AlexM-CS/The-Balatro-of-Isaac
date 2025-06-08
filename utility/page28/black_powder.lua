@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = black_powder,
     loc_txt = {

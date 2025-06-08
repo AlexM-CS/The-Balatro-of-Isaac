@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = esau_jr,
     loc_txt = {

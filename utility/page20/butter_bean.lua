@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = butter_bean,
     loc_txt = {

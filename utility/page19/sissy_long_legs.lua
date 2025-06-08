@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = sissy_long_legs,
     loc_txt = {

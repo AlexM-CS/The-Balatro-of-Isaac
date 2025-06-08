@@ -32,8 +32,7 @@ while True:
         except FileExistsError:
             print(f"Directory '{directory}' already exists.")
 
-        file_content = f"""
-SMODS.Joker {{
+        file_content = f"""SMODS.Joker {{
     key = {item},
     loc_txt = {{
         name = {item},

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = serpents_kiss,
     loc_txt = {

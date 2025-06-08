@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = sharp_straw,
     loc_txt = {

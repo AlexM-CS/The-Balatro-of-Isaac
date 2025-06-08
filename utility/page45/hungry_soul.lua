@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = hungry_soul,
     loc_txt = {

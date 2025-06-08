@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = divine_intervention,
     loc_txt = {

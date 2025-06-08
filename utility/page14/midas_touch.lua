@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = midas_touch,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = lucky_foot,
     loc_txt = {

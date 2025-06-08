@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = juicy_sack,
     loc_txt = {

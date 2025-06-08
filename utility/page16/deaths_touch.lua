@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = deaths_touch,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = contract_from_below,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = sworn_protector,
     loc_txt = {

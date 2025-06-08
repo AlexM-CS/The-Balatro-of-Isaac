@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = caffeine_pill,
     loc_txt = {

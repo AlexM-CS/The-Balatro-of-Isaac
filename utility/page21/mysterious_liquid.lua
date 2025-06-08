@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = mysterious_liquid,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = car_battery,
     loc_txt = {

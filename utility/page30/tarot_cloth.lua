@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = tarot_cloth,
     loc_txt = {

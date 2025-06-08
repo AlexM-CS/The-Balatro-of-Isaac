@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = wait_what,
     loc_txt = {

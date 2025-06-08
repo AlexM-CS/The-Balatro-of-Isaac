@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = rosary,
     loc_txt = {

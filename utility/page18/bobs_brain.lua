@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = bobs_brain,
     loc_txt = {

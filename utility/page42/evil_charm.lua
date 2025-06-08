@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = evil_charm,
     loc_txt = {

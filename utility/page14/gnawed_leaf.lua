@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = gnawed_leaf,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = acid_baby,
     loc_txt = {

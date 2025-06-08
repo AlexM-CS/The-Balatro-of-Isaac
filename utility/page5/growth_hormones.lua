@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = growth_hormones,
     loc_txt = {

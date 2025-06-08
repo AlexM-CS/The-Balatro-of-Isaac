@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = stapler,
     loc_txt = {

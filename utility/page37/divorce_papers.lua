@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = divorce_papers,
     loc_txt = {

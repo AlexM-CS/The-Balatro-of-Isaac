@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = magic_8_ball,
     loc_txt = {

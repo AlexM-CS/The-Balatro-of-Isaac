@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = dead_eye,
     loc_txt = {

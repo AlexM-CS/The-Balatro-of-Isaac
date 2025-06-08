@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = meat_cleaver,
     loc_txt = {

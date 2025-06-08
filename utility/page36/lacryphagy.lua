@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = lacryphagy,
     loc_txt = {

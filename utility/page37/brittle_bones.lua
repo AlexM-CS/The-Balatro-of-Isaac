@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = brittle_bones,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = glitter_bombs,
     loc_txt = {

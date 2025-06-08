@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = delirious,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = eye_drops,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = best_friend,
     loc_txt = {

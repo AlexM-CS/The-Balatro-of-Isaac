@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = worm_friend,
     loc_txt = {

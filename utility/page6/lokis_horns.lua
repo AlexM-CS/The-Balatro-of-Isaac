@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = lokis_horns,
     loc_txt = {

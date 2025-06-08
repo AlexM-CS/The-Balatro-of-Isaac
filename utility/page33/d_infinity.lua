@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = d_infinity,
     loc_txt = {

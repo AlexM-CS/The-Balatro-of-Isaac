@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = angelic_prism,
     loc_txt = {

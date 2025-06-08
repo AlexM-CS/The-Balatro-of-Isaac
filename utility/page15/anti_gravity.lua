@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = anti_gravity,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = freezer_baby,
     loc_txt = {

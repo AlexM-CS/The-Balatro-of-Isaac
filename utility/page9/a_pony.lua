@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = a_pony,
     loc_txt = {

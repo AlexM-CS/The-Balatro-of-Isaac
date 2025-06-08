@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = consolation_prize,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = birds_eye,
     loc_txt = {

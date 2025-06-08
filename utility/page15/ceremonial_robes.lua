@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = ceremonial_robes,
     loc_txt = {

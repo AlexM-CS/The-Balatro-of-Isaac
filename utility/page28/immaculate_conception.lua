@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = immaculate_conception,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = the_book_of_belial,
     loc_txt = {

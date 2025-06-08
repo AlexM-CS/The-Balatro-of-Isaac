@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = ventricle_razor,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = genesis,
     loc_txt = {

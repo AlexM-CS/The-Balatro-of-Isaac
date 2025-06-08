@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = anima_sola,
     loc_txt = {

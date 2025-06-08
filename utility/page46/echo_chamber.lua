@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = echo_chamber,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = rocket_in_a_jar,
     loc_txt = {

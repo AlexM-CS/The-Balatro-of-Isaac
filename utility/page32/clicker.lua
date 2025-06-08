@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = clicker,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = jesus_juice,
     loc_txt = {

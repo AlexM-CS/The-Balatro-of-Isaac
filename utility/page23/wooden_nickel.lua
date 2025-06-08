@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = wooden_nickel,
     loc_txt = {

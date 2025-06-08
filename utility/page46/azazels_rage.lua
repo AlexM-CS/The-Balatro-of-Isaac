@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = azazels_rage,
     loc_txt = {

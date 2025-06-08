@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = ocular_rift,
     loc_txt = {

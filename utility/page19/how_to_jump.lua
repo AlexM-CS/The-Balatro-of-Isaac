@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = how_to_jump,
     loc_txt = {

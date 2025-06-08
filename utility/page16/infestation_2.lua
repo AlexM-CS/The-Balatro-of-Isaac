@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = infestation_2,
     loc_txt = {

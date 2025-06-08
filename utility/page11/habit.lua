@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = habit,
     loc_txt = {

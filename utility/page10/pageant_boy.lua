@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = pageant_boy,
     loc_txt = {

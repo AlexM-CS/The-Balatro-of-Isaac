@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = telepathy_for_dummies,
     loc_txt = {

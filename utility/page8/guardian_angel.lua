@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = guardian_angel,
     loc_txt = {

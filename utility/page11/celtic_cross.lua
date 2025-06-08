@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = celtic_cross,
     loc_txt = {

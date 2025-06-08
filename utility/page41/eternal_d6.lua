@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = eternal_d6,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = poke_go,
     loc_txt = {

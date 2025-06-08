@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = bobs_rotten_head,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = money_equals_power,
     loc_txt = {

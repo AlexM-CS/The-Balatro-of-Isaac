@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = fortune_cookie,
     loc_txt = {

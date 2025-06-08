@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = book_of_shadows,
     loc_txt = {

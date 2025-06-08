@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = strawman,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = jaw_bone,
     loc_txt = {

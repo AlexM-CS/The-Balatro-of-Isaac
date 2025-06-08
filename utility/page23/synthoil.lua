@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = synthoil,
     loc_txt = {

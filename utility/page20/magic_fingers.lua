@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = magic_fingers,
     loc_txt = {

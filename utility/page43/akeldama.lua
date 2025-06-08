@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = akeldama,
     loc_txt = {

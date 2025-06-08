@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = star_of_bethlehem,
     loc_txt = {

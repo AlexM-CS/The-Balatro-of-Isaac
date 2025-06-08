@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = camo_undies,
     loc_txt = {

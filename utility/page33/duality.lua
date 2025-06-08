@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = duality,
     loc_txt = {

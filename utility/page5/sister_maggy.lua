@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = sister_maggy,
     loc_txt = {

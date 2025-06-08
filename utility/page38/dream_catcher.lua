@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = dream_catcher,
     loc_txt = {

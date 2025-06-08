@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = iron_bar,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = humbleing_bundle,
     loc_txt = {

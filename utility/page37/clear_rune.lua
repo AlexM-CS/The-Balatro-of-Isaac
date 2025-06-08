@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = clear_rune,
     loc_txt = {

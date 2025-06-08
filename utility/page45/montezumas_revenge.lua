@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = montezumas_revenge,
     loc_txt = {

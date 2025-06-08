@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = prayer_card,
     loc_txt = {

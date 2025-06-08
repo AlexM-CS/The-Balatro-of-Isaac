@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = kamikaze,
     loc_txt = {

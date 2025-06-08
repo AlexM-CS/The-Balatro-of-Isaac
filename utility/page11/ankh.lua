@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = ankh,
     loc_txt = {

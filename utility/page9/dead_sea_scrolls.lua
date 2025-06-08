@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = dead_sea_scrolls,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = a_quarter,
     loc_txt = {

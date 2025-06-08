@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = squeezy,
     loc_txt = {

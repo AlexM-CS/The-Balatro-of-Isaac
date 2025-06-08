@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = mr_dolly,
     loc_txt = {

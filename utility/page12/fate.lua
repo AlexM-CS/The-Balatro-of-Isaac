@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = fate,
     loc_txt = {

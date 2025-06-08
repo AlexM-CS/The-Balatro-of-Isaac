@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = lil_portal,
     loc_txt = {

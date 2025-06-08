@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = placenta,
     loc_txt = {

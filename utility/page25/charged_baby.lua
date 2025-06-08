@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = charged_baby,
     loc_txt = {

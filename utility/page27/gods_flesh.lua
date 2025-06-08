@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = gods_flesh,
     loc_txt = {

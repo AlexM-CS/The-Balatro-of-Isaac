@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = speed_ball,
     loc_txt = {

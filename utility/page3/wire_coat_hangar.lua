@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = wire_coat_hangar,
     loc_txt = {

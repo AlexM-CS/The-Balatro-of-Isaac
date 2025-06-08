@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = polyphemus,
     loc_txt = {

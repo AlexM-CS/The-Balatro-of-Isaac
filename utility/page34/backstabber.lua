@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = backstabber,
     loc_txt = {

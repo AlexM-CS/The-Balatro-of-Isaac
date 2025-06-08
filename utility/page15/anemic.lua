@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = anemic,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = fates_reward,
     loc_txt = {

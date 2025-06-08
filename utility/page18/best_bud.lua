@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = best_bud,
     loc_txt = {

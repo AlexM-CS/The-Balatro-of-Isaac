@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = coupon,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = pointy_rib,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = the_d6,
     loc_txt = {

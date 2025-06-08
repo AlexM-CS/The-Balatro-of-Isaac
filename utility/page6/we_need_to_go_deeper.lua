@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = we_need_to_go_deeper,
     loc_txt = {

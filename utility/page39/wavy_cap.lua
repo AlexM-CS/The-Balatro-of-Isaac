@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = wavy_cap,
     loc_txt = {

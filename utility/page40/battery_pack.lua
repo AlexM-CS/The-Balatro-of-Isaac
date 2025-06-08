@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = battery_pack,
     loc_txt = {

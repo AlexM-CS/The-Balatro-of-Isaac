@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = crystal_ball,
     loc_txt = {

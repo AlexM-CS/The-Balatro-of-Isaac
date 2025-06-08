@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = vasculitis,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = heartbreak,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = vericose_veins,
     loc_txt = {

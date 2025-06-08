@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = e_coli,
     loc_txt = {

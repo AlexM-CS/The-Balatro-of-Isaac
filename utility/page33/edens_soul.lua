@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = edens_soul,
     loc_txt = {

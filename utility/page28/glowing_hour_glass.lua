@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = glowing_hour_glass,
     loc_txt = {

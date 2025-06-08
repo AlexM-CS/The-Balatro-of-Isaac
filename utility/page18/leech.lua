@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = leech,
     loc_txt = {

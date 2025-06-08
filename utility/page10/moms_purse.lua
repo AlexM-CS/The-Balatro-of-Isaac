@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = moms_purse,
     loc_txt = {

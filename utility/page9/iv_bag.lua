@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = iv_bag,
     loc_txt = {

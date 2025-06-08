@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = the_stairway,
     loc_txt = {

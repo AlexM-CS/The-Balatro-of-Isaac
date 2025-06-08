@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = dead_onion,
     loc_txt = {

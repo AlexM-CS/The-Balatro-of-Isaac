@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = monster_manual,
     loc_txt = {

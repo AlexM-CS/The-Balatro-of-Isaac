@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = succubus,
     loc_txt = {

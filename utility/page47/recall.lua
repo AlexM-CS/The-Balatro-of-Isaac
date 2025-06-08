@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = recall,
     loc_txt = {

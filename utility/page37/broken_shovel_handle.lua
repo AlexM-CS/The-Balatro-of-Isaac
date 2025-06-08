@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = broken_shovel_handle,
     loc_txt = {

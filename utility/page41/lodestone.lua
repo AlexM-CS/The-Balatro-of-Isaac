@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = lodestone,
     loc_txt = {

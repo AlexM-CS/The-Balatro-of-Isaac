@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = brimstone,
     loc_txt = {

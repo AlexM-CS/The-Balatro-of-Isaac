@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = terra,
     loc_txt = {

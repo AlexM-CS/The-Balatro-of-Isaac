@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = spin_to_win,
     loc_txt = {

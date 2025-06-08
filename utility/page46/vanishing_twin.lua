@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = vanishing_twin,
     loc_txt = {

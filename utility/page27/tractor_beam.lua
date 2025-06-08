@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = tractor_beam,
     loc_txt = {

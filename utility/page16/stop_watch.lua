@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = stop_watch,
     loc_txt = {

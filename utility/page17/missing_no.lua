@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = missing_no,
     loc_txt = {

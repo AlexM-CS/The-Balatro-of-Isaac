@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = pyro,
     loc_txt = {

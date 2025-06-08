@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = death_certificate,
     loc_txt = {

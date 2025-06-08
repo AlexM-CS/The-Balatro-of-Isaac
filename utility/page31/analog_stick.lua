@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = analog_stick,
     loc_txt = {

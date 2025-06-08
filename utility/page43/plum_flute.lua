@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = plum_flute,
     loc_txt = {

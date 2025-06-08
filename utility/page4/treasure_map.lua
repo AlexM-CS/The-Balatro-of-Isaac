@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = treasure_map,
     loc_txt = {

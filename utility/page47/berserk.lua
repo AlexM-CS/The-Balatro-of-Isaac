@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = berserk,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = distant_admiration,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = jar_of_flies,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = eye_of_greed,
     loc_txt = {

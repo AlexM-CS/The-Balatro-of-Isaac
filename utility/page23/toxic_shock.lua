@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = toxic_shock,
     loc_txt = {

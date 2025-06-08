@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = everything_jar,
     loc_txt = {

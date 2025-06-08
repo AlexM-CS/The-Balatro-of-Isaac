@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = anarchist_cookbook,
     loc_txt = {

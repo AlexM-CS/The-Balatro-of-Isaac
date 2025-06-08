@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = butt_bombs,
     loc_txt = {

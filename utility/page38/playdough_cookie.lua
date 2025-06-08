@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = playdough_cookie,
     loc_txt = {

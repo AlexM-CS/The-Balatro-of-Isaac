@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = cracked_orb,
     loc_txt = {

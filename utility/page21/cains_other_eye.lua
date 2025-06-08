@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = cains_other_eye,
     loc_txt = {

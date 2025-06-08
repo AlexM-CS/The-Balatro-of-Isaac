@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = whore_of_babylon,
     loc_txt = {

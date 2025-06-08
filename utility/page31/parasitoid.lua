@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = parasitoid,
     loc_txt = {

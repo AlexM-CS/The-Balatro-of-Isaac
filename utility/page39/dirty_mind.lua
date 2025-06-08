@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = dirty_mind,
     loc_txt = {

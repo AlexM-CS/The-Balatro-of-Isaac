@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = a_lump_of_coal,
     loc_txt = {

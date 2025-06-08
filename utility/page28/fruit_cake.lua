@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = fruit_cake,
     loc_txt = {

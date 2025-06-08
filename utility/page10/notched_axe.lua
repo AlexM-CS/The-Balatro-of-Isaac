@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = notched_axe,
     loc_txt = {

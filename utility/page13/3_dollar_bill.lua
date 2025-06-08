@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = 3_dollar_bill,
     loc_txt = {

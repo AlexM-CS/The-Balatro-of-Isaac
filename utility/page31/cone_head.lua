@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = cone_head,
     loc_txt = {

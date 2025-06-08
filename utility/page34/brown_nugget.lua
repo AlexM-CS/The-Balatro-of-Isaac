@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = brown_nugget,
     loc_txt = {

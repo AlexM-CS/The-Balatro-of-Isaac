@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = sacred_orb,
     loc_txt = {

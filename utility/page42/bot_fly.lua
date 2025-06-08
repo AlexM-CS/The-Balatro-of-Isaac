@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = bot_fly,
     loc_txt = {

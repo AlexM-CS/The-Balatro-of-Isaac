@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = more_options,
     loc_txt = {

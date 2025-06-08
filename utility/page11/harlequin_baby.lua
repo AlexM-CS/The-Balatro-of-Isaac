@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = harlequin_baby,
     loc_txt = {

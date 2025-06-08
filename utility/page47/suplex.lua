@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = suplex,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = alabaster_box,
     loc_txt = {

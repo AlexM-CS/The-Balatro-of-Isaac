@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = lost_soul,
     loc_txt = {

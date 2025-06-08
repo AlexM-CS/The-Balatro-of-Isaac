@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = tough_love,
     loc_txt = {

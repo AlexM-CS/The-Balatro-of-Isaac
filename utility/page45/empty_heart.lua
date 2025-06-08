@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = empty_heart,
     loc_txt = {

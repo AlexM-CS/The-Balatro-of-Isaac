@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = 7_seals,
     loc_txt = {

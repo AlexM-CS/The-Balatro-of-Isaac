@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = crickets_body,
     loc_txt = {

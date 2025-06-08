@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = euthanasia,
     loc_txt = {

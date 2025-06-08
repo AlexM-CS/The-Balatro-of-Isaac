@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = forget_me_now,
     loc_txt = {

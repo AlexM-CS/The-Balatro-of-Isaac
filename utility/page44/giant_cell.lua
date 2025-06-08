@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = giant_cell,
     loc_txt = {

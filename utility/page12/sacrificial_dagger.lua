@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = sacrificial_dagger,
     loc_txt = {

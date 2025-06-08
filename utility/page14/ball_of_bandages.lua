@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = ball_of_bandages,
     loc_txt = {

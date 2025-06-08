@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = glitched_crown,
     loc_txt = {

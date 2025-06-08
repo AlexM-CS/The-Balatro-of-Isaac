@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = lead_pencil,
     loc_txt = {

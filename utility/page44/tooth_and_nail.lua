@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = tooth_and_nail,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = belly_jelly,
     loc_txt = {

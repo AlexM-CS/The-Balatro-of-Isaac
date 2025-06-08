@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = flat_stone,
     loc_txt = {

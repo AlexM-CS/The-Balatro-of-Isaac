@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = bloody_lust,
     loc_txt = {

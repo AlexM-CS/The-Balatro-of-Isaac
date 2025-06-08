@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = night_light,
     loc_txt = {

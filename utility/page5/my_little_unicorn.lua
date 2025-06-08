@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = my_little_unicorn,
     loc_txt = {

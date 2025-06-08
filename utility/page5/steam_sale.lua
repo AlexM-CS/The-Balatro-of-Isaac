@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = steam_sale,
     loc_txt = {

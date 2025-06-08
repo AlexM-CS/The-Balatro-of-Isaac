@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = rune_bag,
     loc_txt = {

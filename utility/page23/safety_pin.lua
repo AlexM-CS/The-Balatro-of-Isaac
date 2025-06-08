@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = safety_pin,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = diplopia,
     loc_txt = {

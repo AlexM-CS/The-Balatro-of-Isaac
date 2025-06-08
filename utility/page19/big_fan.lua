@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = big_fan,
     loc_txt = {

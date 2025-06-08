@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = thunder_thighs,
     loc_txt = {

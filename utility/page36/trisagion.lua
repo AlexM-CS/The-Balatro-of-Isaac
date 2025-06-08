@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = trisagion,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = pupula_duplex,
     loc_txt = {

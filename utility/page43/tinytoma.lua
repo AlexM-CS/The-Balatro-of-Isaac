@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = tinytoma,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = piggy_bank,
     loc_txt = {

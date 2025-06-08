@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = remote_detonator,
     loc_txt = {

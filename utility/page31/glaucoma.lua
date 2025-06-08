@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = glaucoma,
     loc_txt = {

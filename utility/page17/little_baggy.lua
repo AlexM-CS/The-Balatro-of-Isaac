@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = little_baggy,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = knife_piece_2,
     loc_txt = {

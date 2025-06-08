@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = yo_listen,
     loc_txt = {

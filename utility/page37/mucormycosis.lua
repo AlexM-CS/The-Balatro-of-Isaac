@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = mucormycosis,
     loc_txt = {

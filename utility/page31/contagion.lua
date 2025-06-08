@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = contagion,
     loc_txt = {

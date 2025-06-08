@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = little_chad,
     loc_txt = {

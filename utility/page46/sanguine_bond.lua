@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = sanguine_bond,
     loc_txt = {

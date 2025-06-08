@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = marbles,
     loc_txt = {

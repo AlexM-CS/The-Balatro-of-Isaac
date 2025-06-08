@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = luna,
     loc_txt = {

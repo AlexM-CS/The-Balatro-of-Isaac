@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = binge_eater,
     loc_txt = {

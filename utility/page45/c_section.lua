@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = c_section,
     loc_txt = {

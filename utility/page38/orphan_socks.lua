@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = orphan_socks,
     loc_txt = {

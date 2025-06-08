@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = hive_mind,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = isaacs_tomb,
     loc_txt = {

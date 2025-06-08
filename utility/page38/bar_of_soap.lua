@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = bar_of_soap,
     loc_txt = {

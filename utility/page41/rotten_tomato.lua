@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = rotten_tomato,
     loc_txt = {

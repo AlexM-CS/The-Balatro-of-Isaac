@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = birthright,
     loc_txt = {

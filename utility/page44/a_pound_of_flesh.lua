@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = a_pound_of_flesh,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = pinking_shears,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = dark_princes_crown,
     loc_txt = {

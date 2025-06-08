@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = lemegeton,
     loc_txt = {

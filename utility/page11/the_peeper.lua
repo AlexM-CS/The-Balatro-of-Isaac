@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = the_peeper,
     loc_txt = {

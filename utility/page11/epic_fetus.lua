@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = epic_fetus,
     loc_txt = {

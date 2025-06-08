@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = schoolbag,
     loc_txt = {

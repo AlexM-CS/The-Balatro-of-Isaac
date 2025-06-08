@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = false_phd,
     loc_txt = {

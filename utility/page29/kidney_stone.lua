@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = kidney_stone,
     loc_txt = {

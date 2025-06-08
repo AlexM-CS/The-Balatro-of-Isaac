@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = trinity_shield,
     loc_txt = {

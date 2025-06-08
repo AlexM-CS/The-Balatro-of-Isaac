@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = placebo,
     loc_txt = {

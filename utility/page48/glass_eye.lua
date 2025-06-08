@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = glass_eye,
     loc_txt = {

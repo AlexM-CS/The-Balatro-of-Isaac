@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = skinny_odd_mushroom,
     loc_txt = {

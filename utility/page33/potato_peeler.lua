@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = potato_peeler,
     loc_txt = {

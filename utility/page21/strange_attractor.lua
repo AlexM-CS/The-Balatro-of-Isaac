@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = strange_attractor,
     loc_txt = {

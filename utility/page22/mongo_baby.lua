@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = mongo_baby,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = jacobs_ladder,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = mama_mega,
     loc_txt = {

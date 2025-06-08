@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = sinus_infection,
     loc_txt = {

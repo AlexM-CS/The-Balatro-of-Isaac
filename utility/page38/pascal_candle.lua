@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = pascal_candle,
     loc_txt = {

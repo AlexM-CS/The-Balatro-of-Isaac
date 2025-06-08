@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = moms_knife,
     loc_txt = {

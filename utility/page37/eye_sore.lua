@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = eye_sore,
     loc_txt = {

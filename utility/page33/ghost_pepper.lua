@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = ghost_pepper,
     loc_txt = {

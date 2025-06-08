@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = midnight_snack,
     loc_txt = {

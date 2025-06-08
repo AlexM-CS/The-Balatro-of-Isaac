@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = sulfuric_acid,
     loc_txt = {

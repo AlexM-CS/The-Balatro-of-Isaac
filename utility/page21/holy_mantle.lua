@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = holy_mantle,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = decap_attack,
     loc_txt = {

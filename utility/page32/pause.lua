@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = pause,
     loc_txt = {

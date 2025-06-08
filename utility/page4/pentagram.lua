@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = pentagram,
     loc_txt = {

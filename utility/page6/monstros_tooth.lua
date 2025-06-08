@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = monstros_tooth,
     loc_txt = {

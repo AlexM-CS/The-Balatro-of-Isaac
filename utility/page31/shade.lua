@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = shade,
     loc_txt = {

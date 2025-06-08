@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = card_reading,
     loc_txt = {

@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = jumper_cables,
     loc_txt = {

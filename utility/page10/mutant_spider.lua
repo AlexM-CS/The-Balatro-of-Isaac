@@ -1,4 +1,3 @@
-
 SMODS.Joker {
     key = mutant_spider,
     loc_txt = {
