@@ -10,7 +10,7 @@ SMODS.Joker {
         }
     },
     config = {
-        extra = {
+        special = {
             multiplier = 1.5
         }
     },
@@ -25,7 +25,7 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
-                card.ability.extra.multiplier
+                card.ability.special.multiplier
             }
         }
     end,
@@ -88,18 +88,18 @@ SMODS.Joker {
                         other_card.label == "Seeing Double" or 
                         other_card.label == "Driver's License" or 
                         other_card.label == "Triboulet" then
-                            other_card.ability.extra = other_card.ability.extra * card.ability.extra.multiplier
+                            other_card.ability.extra = other_card.ability.extra * card.ability.special.multiplier
                         end
                     else
                         if other_card.ability.extra ~= nil then
-                            if other_card.ability.extra.mult ~= nil then other_card.ability.extra.mult = other_card.ability.extra.mult * card.ability.extra.multiplier end
-                            if other_card.ability.extra.s_mult ~= nil then other_card.ability.extra.s_mult = other_card.ability.extra.s_mult * card.ability.extra.multiplier end
-                            if other_card.ability.extra.Xmult ~= nil then other_card.ability.extra.Xmult = other_card.ability.extra.Xmult * card.ability.extra.multiplier end
+                            if other_card.ability.extra.mult ~= nil then other_card.ability.extra.mult = other_card.ability.extra.mult * card.ability.special.multiplier end
+                            if other_card.ability.extra.s_mult ~= nil then other_card.ability.extra.s_mult = other_card.ability.extra.s_mult * card.ability.special.multiplier end
+                            if other_card.ability.extra.Xmult ~= nil then other_card.ability.extra.Xmult = other_card.ability.extra.Xmult * card.ability.special.multiplier end
                         end
                     end
-                    if other_card.ability.mult ~= nil then other_card.ability.mult = other_card.ability.mult * card.ability.extra.multiplier end
-                    if other_card.ability.t_mult ~= nil then other_card.ability.t_mult = other_card.ability.t_mult * card.ability.extra.multiplier end
-                    if other_card.ability.Xmult ~= nil then other_card.ability.Xmult = other_card.ability.Xmult * card.ability.extra.multiplier end
+                    if other_card.ability.mult ~= nil then other_card.ability.mult = other_card.ability.mult * card.ability.special.multiplier end
+                    if other_card.ability.t_mult ~= nil then other_card.ability.t_mult = other_card.ability.t_mult * card.ability.special.multiplier end
+                    if other_card.ability.Xmult ~= nil then other_card.ability.Xmult = other_card.ability.Xmult * card.ability.special.multiplier end
                 end
             end
         end
@@ -124,18 +124,18 @@ SMODS.Joker {
                         other_card.label == "Driver's License" or 
                         other_card.label == "Canio" or 
                         other_card.label == "Triboulet" then
-                            other_card.ability.extra = other_card.ability.extra / card.ability.extra.multiplier
+                            other_card.ability.extra = other_card.ability.extra / card.ability.special.multiplier
                         end
                     else
                         if other_card.ability.extra ~= nil then
-                            if other_card.ability.extra.mult ~= nil then other_card.ability.extra.mult = other_card.ability.extra.mult / card.ability.extra.multiplier end
-                            if other_card.ability.extra.s_mult ~= nil then other_card.ability.extra.s_mult = other_card.ability.extra.s_mult / card.ability.extra.multiplier end
-                            if other_card.ability.extra.Xmult ~= nil then other_card.ability.extra.Xmult = other_card.ability.extra.Xmult / card.ability.extra.multiplier end
+                            if other_card.ability.extra.mult ~= nil then other_card.ability.extra.mult = other_card.ability.extra.mult / card.ability.special.multiplier end
+                            if other_card.ability.extra.s_mult ~= nil then other_card.ability.extra.s_mult = other_card.ability.extra.s_mult / card.ability.special.multiplier end
+                            if other_card.ability.extra.Xmult ~= nil then other_card.ability.extra.Xmult = other_card.ability.extra.Xmult / card.ability.special.multiplier end
                         end
                     end
-                    if other_card.ability.mult ~= nil then other_card.ability.mult = other_card.ability.mult / card.ability.extra.multiplier end
-                    if other_card.ability.t_mult ~= nil then other_card.ability.t_mult = other_card.ability.t_mult / card.ability.extra.multiplier end
-                    if other_card.ability.Xmult ~= nil then other_card.ability.Xmult = other_card.ability.Xmult / card.ability.extra.multiplier end
+                    if other_card.ability.mult ~= nil then other_card.ability.mult = other_card.ability.mult / card.ability.special.multiplier end
+                    if other_card.ability.t_mult ~= nil then other_card.ability.t_mult = other_card.ability.t_mult / card.ability.special.multiplier end
+                    if other_card.ability.Xmult ~= nil then other_card.ability.Xmult = other_card.ability.Xmult / card.ability.special.multiplier end
                 end
             end
         end

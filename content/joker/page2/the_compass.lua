@@ -11,8 +11,10 @@ SMODS.Joker {
     },
     config = {
         extra = {
-            add = 12,
             mult = 0
+        },
+        special = {
+            add = 12
         }
     },
     rarity = 2,
@@ -26,7 +28,7 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
-                card.ability.extra.add,
+                card.ability.special.add,
                 card.ability.extra.mult
             }
         }
@@ -34,7 +36,7 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
         if G.GAME.blind and G.GAME.blind.boss and context.end_of_round and not context.game_over and context.cardarea == G.jokers then
-            card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.add
+            card.ability.extra.mult = card.ability.extra.mult + card.ability.special.add
             return {
                 message = localize("k_upgrade_ex"),
                 colour = G.C.RED

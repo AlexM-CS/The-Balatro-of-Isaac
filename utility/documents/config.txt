@@ -1,0 +1,51 @@
+This document specifies how card configs are written in this mod.
+If a keyword exists inside an item's config, such as chips or mult,
+it will always be in the specified location. I'll try to keep the order
+in mind as well.
+
+Any special behavior is controlled using the "special" table IFF
+it must be separate for some reason.
+
+config = {
+    extra_value (might change when I do Vanilla reworks)
+    
+    extra = {
+        h_size
+        d_size
+        chips
+        mult
+        Xmult
+        odds
+        repetitions
+        money
+    }
+
+    special = {
+        target
+        targets = {
+            first
+            second
+            third
+            ...
+        }
+
+        flies
+        spiders
+        type
+
+        temp
+
+        amount_chips
+        amount_mult
+        stored
+
+        add
+        subtract
+
+        disable
+
+        levels
+
+        duplicate
+    }
+}

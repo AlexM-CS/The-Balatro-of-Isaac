@@ -8,7 +8,7 @@ SMODS.Joker {
         }
     },
     config = {
-        extra = {
+        special = {
             temp = nil
         }
     },
@@ -29,9 +29,9 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
         if context.joker_main then
-            card.ability.extra.temp = hand_chips
+            card.ability.special.temp = hand_chips
             hand_chips = mult
-            mult = card.ability.extra.temp
+            mult = card.ability.special.temp
             update_hand_text({}, {mult = mult, chips = hand_chips})
             G.E_MANAGER:add_event(Event({
                 func = (function()

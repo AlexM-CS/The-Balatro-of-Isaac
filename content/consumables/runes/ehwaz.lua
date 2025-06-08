@@ -4,15 +4,17 @@ SMODS.Consumable {
     loc_txt = {
         name = "Ehwaz",
         text = {
-            "Use inside the {C:attention}shop",
-            "to go to {C:attention}Ante 8",
-            "and gain {C:money}$#1#{}",
+            "{C:attention}-#1#{} Ante",
+            "Gain {C:money}$#1#{}",
             "{s:0.8}{C:inactive}\"Passage\""
         }
     },
     config = {
         extra = {
-            money = 75
+            money = 25
+        },
+        special = {
+            add = 1
         }
     },
     pos = { x = 0, y = 0 },
@@ -21,6 +23,7 @@ SMODS.Consumable {
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
+                card.ability.special.add
                 card.ability.extra.money
             }
         }

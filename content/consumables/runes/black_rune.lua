@@ -10,7 +10,7 @@ SMODS.Consumable {
         }
     },
     config = {
-        extra = {
+        special = {
             levels = 2
         }
     },
@@ -20,7 +20,7 @@ SMODS.Consumable {
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
-                card.ability.extra.levels,
+                card.ability.special.levels,
                 colours = {
                     G.C.SUITS["Spades"],
                     G.C.SUITS["Clubs"]

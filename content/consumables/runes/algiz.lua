@@ -10,7 +10,7 @@ SMODS.Consumable {
         }
     },
     config = {
-        extra = {
+        special = {
             disable = 2
         }
     },
@@ -20,7 +20,7 @@ SMODS.Consumable {
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
-                card.ability.extra.disable
+                card.ability.special.disable
             }
         }
     end,

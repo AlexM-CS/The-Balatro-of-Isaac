@@ -10,7 +10,7 @@ SMODS.Joker {
     },
     config = {
         repetitions = 1,
-        extra = {
+        special = {
             targets = {
                 first = nil,
                 second = nil,
@@ -35,19 +35,19 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
         if context.before then
-            card.ability.extra.targets.first = pseudorandom_element(context.scoring_hand, pseudoseed("inner_eye"))
-            card.ability.extra.targets.second = pseudorandom_element(context.scoring_hand, pseudoseed("inner_eye"))
-            card.ability.extra.targets.third = pseudorandom_element(context.scoring_hand, pseudoseed("inner_eye"))
+            card.ability.special.targets.first = pseudorandom_element(context.scoring_hand, pseudoseed("inner_eye"))
+            card.ability.special.targets.second = pseudorandom_element(context.scoring_hand, pseudoseed("inner_eye"))
+            card.ability.special.targets.third = pseudorandom_element(context.scoring_hand, pseudoseed("inner_eye"))
         end
         if context.repetition and context.cardarea == G.play then
             local _count = 0
-            if context.other_card == card.ability.extra.targets.first then
+            if context.other_card == card.ability.special.targets.first then
                 _count = _count + card.ability.repetitions
             end
-            if context.other_card == card.ability.extra.targets.second then
+            if context.other_card == card.ability.special.targets.second then
                 _count = _count + card.ability.repetitions
             end
-            if context.other_card == card.ability.extra.targets.third then
+            if context.other_card == card.ability.special.targets.third then
                 _count = _count + card.ability.repetitions
             end
             if _count > 0 then
@@ -56,8 +56,8 @@ SMODS.Joker {
                 }
             end
         end
-        if context.after then card.ability.extra.targets.first = nil end
-        if context.after then card.ability.extra.targets.second = nil end
-        if context.after then card.ability.extra.targets.third = nil end
+        if context.after then card.ability.special.targets.first = nil end
+        if context.after then card.ability.special.targets.second = nil end
+        if context.after then card.ability.special.targets.third = nil end
     end
 }

@@ -11,9 +11,11 @@ SMODS.Joker {
     },
     config = {
         extra = {
-            flies = 2,
-            type = "Basic",
             odds = 8
+        },
+        special = {
+            flies = 2,
+            type = "Basic"
         }
     },
     rarity = 2,
@@ -28,8 +30,8 @@ SMODS.Joker {
         info_queue[#info_queue + 1] = { key = "flies", set = "Other" }
         return {
             vars = {
-                card.ability.extra.flies,
-                card.ability.extra.type,
+                card.ability.special.flies,
+                card.ability.special.type,
                 G.GAME.probabilities.normal,
                 card.ability.extra.odds
             }

@@ -9,7 +9,7 @@ SMODS.Joker {
         }
     },
     config = {
-        extra = {
+        special = {
             target = nil
         }
     },

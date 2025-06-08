@@ -9,5 +9,24 @@ SMODS.Consumable {
             "of the same rarity",
             "{s:0.8}{C:inactive}\"Change\""
         }
-    }
+    },
+    config = {
+    },
+    pos = { x = 0, y = 0 },
+    atlas = "tboi_runes",
+
+    loc_vars = function(self, info_queue, card)
+        return {
+            vars = {
+            }
+        }
+    end,
+
+    use = function(self, card, area, copier)
+
+    end,
+
+    can_use = function(self, card)
+
+    end
 }

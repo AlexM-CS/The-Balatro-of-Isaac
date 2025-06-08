@@ -10,7 +10,7 @@ SMODS.Consumable {
         }
     },
     config = {
-        extra = {
+        special = {
             duplicate = 1
         }
     },

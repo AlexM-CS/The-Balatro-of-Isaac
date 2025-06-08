@@ -10,9 +10,9 @@ SMODS.Joker {
         }
     },
     config = {
-        extra = {
-            amount_mult = 1,
-            amount_chips = 10,
+        special = {
+            amount_chips = 25,
+            amount_mult = 2,
             stored = nil
         }
     },
@@ -27,15 +27,15 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
-                card.ability.extra.amount_mult,
-                card.ability.extra.amount_chips
+                card.ability.special.amount_mult,
+                card.ability.special.amount_chips
             }
         }
     end,
 
     calculate = function(self, card, context)
         if context.before then
-            card.ability.extra.stored = math.floor((mult - mult / 2) / card.ability.extra.amount_mult)
+            card.ability.special.stored = math.floor((mult - mult / 2) / card.ability.spcial.amount_mult)
             mult = mult / 2
             return {
                 mult = 0,
@@ -45,7 +45,7 @@ SMODS.Joker {
         end
         if context.joker_main then
             return {
-                chips = card.ability.extra.stored * card.ability.extra.amount_chips
+                chips = card.ability.special.stored * card.ability.extra.amount_chips
             }
         end
     end

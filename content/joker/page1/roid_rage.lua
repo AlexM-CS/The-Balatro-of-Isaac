@@ -12,6 +12,8 @@ SMODS.Joker {
     config = {
         extra = {
             chips = 300,
+        },
+        special = {
             subtract = 3
         }
     },
@@ -27,7 +29,7 @@ SMODS.Joker {
         return {
             vars = {
                 math.max(card.ability.extra.chips, 0),
-                card.ability.extra.subtract
+                card.ability.special.subtract
             }
         }
     end,
@@ -42,14 +44,14 @@ SMODS.Joker {
         end
         if context.joker_main then
             return {
-                chips = card.ability.extra.chips
+                chips = math.max(card.ability.extra.chips, 0)
             }
         end
         if context.after then
             if not context.blueprint then
-                card.ability.extra.chips = card.ability.extra.chips - #context.scoring_hand * card.ability.extra.subtract
+                card.ability.extra.chips = card.ability.extra.chips - #context.scoring_hand * card.ability.special.subtract
                 return {
-                    message = localize("k_minus_"..(#context.scoring_hand * card.ability.extra.subtract)),
+                    message = localize("k_minus_"..(#context.scoring_hand * card.ability.special.subtract)),
                     colour = G.C.BLUE
                 }
             end

@@ -11,7 +11,7 @@ SMODS.Consumable {
         }
     },
     config = {
-        extra = {
+        special = {
             flies = 3,
             spiders = 3
         }
