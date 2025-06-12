@@ -1,5 +1,26 @@
 --- Tables to be used in The Balatro of Isaac
 
+BI.VANILLA_JOKERS = {
+    "joker",
+    "greedy_joker",
+    "lusty_joker",
+    "wrathful_joker",
+    "gluttenous_joker",
+    "jolly",
+    "zany",
+    "mad",
+    "crazy",
+    "droll",
+
+    "half",
+    "stencil",
+    "ceremonial",
+    "mystic_summit",
+    "loyalty_card",
+    "misprint",
+    "raised_fist",
+}
+
 BI.ENABLED_JOKERS = {
     -- Page 1
     "page1/sad_onion",

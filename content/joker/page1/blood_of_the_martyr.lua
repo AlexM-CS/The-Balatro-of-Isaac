@@ -1,14 +1,5 @@
 SMODS.Joker {
     key = "blood_of_the_martyr",
-    loc_txt = {
-        name = "Blood of the Martyr",
-        text = {
-            "{C:red}+#1#{} Mult",
-            "{X:red,C:white}X#2#{} Mult if you also have",
-            "{C:attention}Book of Belial",
-            "{s:0.8}{C:inactive}\"DMG up\""
-        }
-    },
     config = {
         extra = {
             mult = 12,

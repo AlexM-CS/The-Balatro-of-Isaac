@@ -10,17 +10,25 @@ config = {
     extra_value (might change when I do Vanilla reworks)
     
     extra = {
-        h_size
-        d_size
-        chips
-        mult
-        Xmult
-        odds
-        repetitions
-        money
+        h_size          (hands)
+        d_size          (discards)
+        size            (hand size)
+        chips           (chips)
+        mult            (mult)
+        s_mult          (suit-dependent mult)
+        suit            (suit)
+        t_mult          (hand type-dependent mult)
+        type            (hand type)
+        Xmult           (times mult)
+        crickets_head   (multiplier from Cricket's Head)
+        odds            (probability)
+        repetitions     (retriggers)
+        money           (money)
     }
 
     special = {
+        multiplier
+
         target
         targets = {
             first

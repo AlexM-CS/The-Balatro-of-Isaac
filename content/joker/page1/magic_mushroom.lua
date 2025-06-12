@@ -1,14 +1,5 @@
 SMODS.Joker {
     key = "magic_mushroom",
-    loc_txt = {
-        name = "Magic Mushroom",
-        text = {
-            "{C:attention}+#1#{} Hand, {C:red}+#2#{} discard",
-            "{C:blue}+#3#{} Chips, {C:red}+#4#{} Mult",
-            "{X:red,C:white}X#5#{} Mult",
-            "{s:0.8}{C:inactive}\"All stats up!\""
-        }
-    },
     config = {
         extra = {
             h_size = 1,

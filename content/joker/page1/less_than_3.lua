@@ -1,13 +1,5 @@
 SMODS.Joker {
     key = "less_than_3",
-    loc_txt = {
-        name = "<3",
-        text = {
-            "{C:attention}+#1#{} Hand, refills",
-            "Hands if found mid-blind",
-            "{s:0.8}\"HP up\""
-        }
-    },
     config = {
         extra = {
             h_size = 1

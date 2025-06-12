@@ -1,5 +1,6 @@
 -- Functions to be used by The Balatro of Isaac
 
+-- Registers things in the mod to be shown in-game
 function BI.register(items, path)
     for i = 1, #items do
         SMODS.load_file(path.."/"..items[i]..".lua")()

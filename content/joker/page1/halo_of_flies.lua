@@ -1,14 +1,5 @@
 SMODS.Joker {
     key = "halo_of_flies",
-    loc_txt = {
-        name = "Halo of Flies",
-        text = {
-            "+#1# #2# {C:attention}Flies",
-            "{C:green}#3# in #4#{} chance to",
-            "disable the {C:attention}Boss Blind",
-            "{s:0.8}{C:inactive}\"Projectile Protection\""
-        }
-    },
     config = {
         extra = {
             odds = 8

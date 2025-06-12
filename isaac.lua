@@ -10,6 +10,7 @@
 BI = {}
 
 BI.config = {
+    vanilla_reworks = true,
     enable_jokers = true,
     enable_consumables = true
 }
@@ -20,6 +21,11 @@ SMODS.load_file("utility/functions.lua")()
 
 -- Load atlases
 SMODS.load_file("content/atlas.lua")()
+
+-- Load vanilla joker reworks
+if BI.config.vanilla_reworks then
+    BI.register(BI.VANILLA_JOKERS, "content/joker/vanilla")
+end
 
 -- Load jokers
 if BI.config.enable_jokers then

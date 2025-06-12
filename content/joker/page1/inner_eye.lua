@@ -1,13 +1,5 @@
 SMODS.Joker {
     key = "inner_eye",
-    loc_txt = {
-        name = "The Inner Eye",
-        text = {
-            "Makes 3 random retriggers",
-            "on scored cards",
-            "{s:0.8}{C:inactive}\"Triple shot\""
-        }
-    },
     config = {
         repetitions = 1,
         special = {

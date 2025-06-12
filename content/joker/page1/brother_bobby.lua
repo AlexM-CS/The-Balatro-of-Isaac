@@ -1,13 +1,5 @@
 SMODS.Joker {
     key = "brother_bobby",
-    loc_txt = {
-        name = "Brother Bobby",
-        text = {
-            "{C:attention}Familiar",
-            "No extra effect",
-            "{s:0.8}{C:inactive}\"Friends 'till the end\""
-        }
-    },
     config = {
         special = {
             target = nil

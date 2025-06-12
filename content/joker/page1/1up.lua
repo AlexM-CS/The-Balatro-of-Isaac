@@ -1,13 +1,5 @@
 SMODS.Joker {
     key = "1up",
-    loc_txt = {
-        name = "1 Up",
-        text = {
-            "Prevents death once",
-            "{C:red}self destructs",
-            "{s:0.8,C:inactive}\"Extra life\""
-        }
-    },
     config = {
     },
     rarity = 3,
