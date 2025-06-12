@@ -28,10 +28,27 @@ SMODS.Consumable {
     end,
 
     use = function(self, card, area, copier)
-
+        for _, playing_card in ipairs(G.hand.highlighted) do
+            G.E_MANAGER:add_event(Event({
+                trigger = "after",
+                delay = 0.1,
+                func = function()
+                    playing_card.ability.perma_bonus = playing_card.ability.perma_bonus + card.ability.extra.upgrade
+                    return true
+                end
+            }))
+            G.E_MANAGER:add_event(Event({
+                trigger = "after",
+                delay = 0.1,
+                func = function()
+                    playing_card:juice_up()
+                    return true
+                end
+            }))
+        end
     end,
 
     can_use = function(self, card)
-
+        return G.hand and #G.hand.highlighted > 0 and #G.hand.highlighted <= card.ability.extra.max
     end
 }
