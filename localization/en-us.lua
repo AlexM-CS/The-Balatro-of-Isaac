@@ -149,6 +149,26 @@ return {
         },
 
         Other = {
+            -- Bombs --
+            bomb = {
+                name = "Bomb",
+                text = {
+                    "Use during a {C:attention}Blind{}",
+                    "to add 150 chips",
+                    "to your score"
+                }
+            },
+
+            -- Keys --
+            key = {
+                name = "Key",
+                text = {
+                    "Use to open special",
+                    "{C:attention}Booster Packs",
+                    "in the shop"
+                }
+            },
+
             -- Familiars --
             familiar = {
                 name = "Familiar",
@@ -164,6 +184,13 @@ return {
                 text = {
                     "Synergy with:",
                     "{C:attention}The Virus"
+                }
+            },
+            food = {
+                name = "Food Item",
+                text = {
+                    "Synergy with:",
+                    "{C:attention}Binge Eater"
                 }
             },
 

@@ -25,6 +25,10 @@ config = {
         odds            (probability)
         repetitions     (retriggers)
         dollars         (money)
+        hands_left      (hands until this is destroyed)
+
+        bombs
+        keys
     }
 
     special = {

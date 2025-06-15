@@ -1,0 +1,18 @@
+This is the changelog for The Balatro of Isaac. I can't promise it will get
+updated every time I push, but I'll try to remember to do this each time.
+
+============================================================
+
+6/14/2025
+Update 1.0.2.1
+
+Created changelog.txt
+Added tooltips for Bombs, Keys, and Food Items
+Implemented Breakfast, apart from the Binge Eater synergy
+Implemented Lunch, apart from the Binge Eater synergy
+Implemented Dinner, apart from the Binge Eater synergy
+Implemented Dessert, apart from the Binge Eater synergy
+Added description and tooltip for Boom!
+Added 'Food Item' tooltip to Gros Michel
+
+============================================================

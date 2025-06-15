@@ -7,7 +7,14 @@ SMODS.Joker:take_ownership("gros_michel",
             }
         },
         loc_vars = function(self, info_queue, card)
-            return { vars = { card.ability.extra.mult, (G.GAME and G.GAME.probabilities.normal or 1), card.ability.extra.odds } }
+            info_queue[#info_queue + 1] = { key = "food", set = "Other" }
+            return {
+                vars = {
+                    card.ability.extra.mult,
+                    (G.GAME and G.GAME.probabilities.normal or 1),
+                    card.ability.extra.odds
+                }
+            }
         end,
         calculate = function(self, card, context)
             if context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint then

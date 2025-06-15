@@ -3,10 +3,15 @@ SMODS.Joker {
     loc_txt = {
         name = "Boom!",
         text = {
-            "Placeholder"
+            "Gives #1# {C:attention}Bombs",
+            "on pickup",
+            "{s:0.8}{C:inactive}\"10 Bombs\""
         }
     },
     config = {
+        extra = {
+            bombs = 10
+        }
     },
     rarity = 1,
     pos = { x = 18, y = 2 },
@@ -17,8 +22,10 @@ SMODS.Joker {
     perishable_compat = true,
 
     loc_vars = function(self, info_queue, card)
+        info_queue[#info_queue + 1] = { key = "bomb", set = "Other" }
         return {
             vars = {
+                card.ability.extra.bombs
             }
         }
     end
