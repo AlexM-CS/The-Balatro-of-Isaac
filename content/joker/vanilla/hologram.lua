@@ -31,6 +31,6 @@ SMODS.Joker:take_ownership("hologram",
                 }
             end
         end,
-    }
-    --true
+    },
+    true
 )

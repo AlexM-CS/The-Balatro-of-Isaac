@@ -28,6 +28,6 @@ SMODS.Joker:take_ownership("photograph",
                 end
             end
         end
-    }
-    --true
+    },
+    true
 )

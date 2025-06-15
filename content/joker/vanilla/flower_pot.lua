@@ -56,6 +56,6 @@ SMODS.Joker:take_ownership("flower_pot",
                 end
             end
         end,
-    }
-    --true
+    },
+    true
 )

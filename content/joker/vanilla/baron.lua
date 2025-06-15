@@ -26,6 +26,6 @@ SMODS.Joker:take_ownership("baron",
                 end
             end
         end
-    }
-    --true
+    },
+    true
 )

@@ -19,6 +19,6 @@ SMODS.Joker:take_ownership("onyx_agate",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

@@ -37,6 +37,6 @@ SMODS.Joker:take_ownership("loyalty_card",
                 end
             end
         end
-    }
-    --true
+    },
+    true
 )

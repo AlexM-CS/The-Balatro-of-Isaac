@@ -30,6 +30,6 @@ SMODS.Joker:take_ownership("lucky_cat",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

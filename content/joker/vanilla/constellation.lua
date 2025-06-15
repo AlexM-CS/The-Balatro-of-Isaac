@@ -28,6 +28,6 @@ SMODS.Joker:take_ownership("constellation",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

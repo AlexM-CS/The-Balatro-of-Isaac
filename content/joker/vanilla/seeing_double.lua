@@ -19,5 +19,6 @@ SMODS.Joker:take_ownership("seeing_double",
                 }
             end
         end,
-    }
+    },
+    true
 )

@@ -21,6 +21,6 @@ SMODS.Joker:take_ownership("duo",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

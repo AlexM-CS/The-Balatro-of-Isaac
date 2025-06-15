@@ -21,6 +21,6 @@ SMODS.Joker:take_ownership("order",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

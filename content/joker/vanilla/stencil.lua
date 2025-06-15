@@ -24,6 +24,6 @@ SMODS.Joker:take_ownership("stencil",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

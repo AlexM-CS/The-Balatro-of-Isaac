@@ -23,6 +23,6 @@ SMODS.Joker:take_ownership("abstract",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

@@ -51,9 +51,7 @@ SMODS.Joker:take_ownership("cavendish",
                     xmult = card.ability.extra.Xmult
                 }
             end
-        end,
-        in_pool = function(self, args) -- equivalent to `yes_pool_flag = 'vremade_gros_michel_extinct'`
-            return G.GAME.pool_flags.vremade_gros_michel_extinct
         end
-    }
+    },
+    true
 )

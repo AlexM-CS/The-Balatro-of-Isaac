@@ -29,6 +29,6 @@ SMODS.Joker:take_ownership("fortune_teller",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

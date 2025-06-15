@@ -88,6 +88,6 @@ SMODS.Joker:take_ownership("glass",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

@@ -36,6 +36,6 @@ SMODS.Joker:take_ownership("campfire",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

@@ -50,6 +50,6 @@ SMODS.Joker:take_ownership("madness",
                 }
             end
         end,
-    }
-    --true
+    },
+    true
 )

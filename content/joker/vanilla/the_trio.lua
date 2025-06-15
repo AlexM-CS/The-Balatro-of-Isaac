@@ -21,6 +21,6 @@ SMODS.Joker:take_ownership("trio",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

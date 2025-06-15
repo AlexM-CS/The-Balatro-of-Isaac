@@ -32,5 +32,6 @@ SMODS.Joker:take_ownership("drivers_license",
                 end
             end
         end
-    }
+    },
+    true
 )

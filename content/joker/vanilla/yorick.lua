@@ -45,5 +45,6 @@ SMODS.Joker:take_ownership("yorick",
                 }
             end
         end
-    }
+    },
+    true
 )

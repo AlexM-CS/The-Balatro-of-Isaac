@@ -37,6 +37,6 @@ SMODS.Joker:take_ownership("raised_fist",
                 end
             end
         end
-    }
-    --true
+    },
+    true
 )

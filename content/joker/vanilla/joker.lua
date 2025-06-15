@@ -19,6 +19,6 @@ SMODS.Joker:take_ownership("joker",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

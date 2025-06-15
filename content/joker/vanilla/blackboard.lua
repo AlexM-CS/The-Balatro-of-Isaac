@@ -30,6 +30,6 @@ SMODS.Joker:take_ownership("blackboard",
                 end
             end
         end
-    }
-    --true
+    },
+    true
 )

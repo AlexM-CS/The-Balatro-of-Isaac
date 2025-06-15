@@ -22,6 +22,6 @@ SMODS.Joker:take_ownership("erosion",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

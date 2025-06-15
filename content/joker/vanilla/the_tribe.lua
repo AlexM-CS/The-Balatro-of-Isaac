@@ -21,6 +21,6 @@ SMODS.Joker:take_ownership("tribe",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

@@ -25,6 +25,6 @@ SMODS.Joker:take_ownership("fibonacci",
                 end
             end
         end
-    }
-    --true
+    },
+    true
 )

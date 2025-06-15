@@ -20,6 +20,6 @@ SMODS.Joker:take_ownership("zany",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

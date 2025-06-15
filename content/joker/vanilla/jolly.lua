@@ -20,6 +20,6 @@ SMODS.Joker:take_ownership("jolly",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

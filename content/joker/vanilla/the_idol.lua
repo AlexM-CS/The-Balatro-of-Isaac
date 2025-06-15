@@ -25,6 +25,6 @@ SMODS.Joker:take_ownership("idol",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

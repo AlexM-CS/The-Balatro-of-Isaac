@@ -49,6 +49,6 @@ SMODS.Joker:take_ownership("vampire",
                 }
             end
         end,
-    }
-    --true
+    },
+    true
 )

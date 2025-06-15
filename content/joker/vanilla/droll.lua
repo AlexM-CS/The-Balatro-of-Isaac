@@ -20,6 +20,6 @@ SMODS.Joker:take_ownership("droll",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

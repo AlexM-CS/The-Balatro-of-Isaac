@@ -22,6 +22,6 @@ SMODS.Joker:take_ownership("greedy_joker",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

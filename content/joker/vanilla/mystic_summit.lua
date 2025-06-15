@@ -21,6 +21,6 @@ SMODS.Joker:take_ownership("mystic_summit",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

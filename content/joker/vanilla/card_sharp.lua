@@ -20,6 +20,6 @@ SMODS.Joker:take_ownership("card_sharp",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

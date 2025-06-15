@@ -29,6 +29,6 @@ SMODS.Joker:take_ownership("trousers",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

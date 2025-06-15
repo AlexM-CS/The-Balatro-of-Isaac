@@ -31,6 +31,6 @@ SMODS.Joker:take_ownership("flash",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

@@ -45,6 +45,7 @@ SMODS.Joker:take_ownership("obelisk",
                     xmult = card.ability.extra.Xmult
                 }
             end
-        end,
-    }
+        end
+    },
+    true
 )

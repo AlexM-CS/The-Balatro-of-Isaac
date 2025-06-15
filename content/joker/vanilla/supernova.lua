@@ -31,6 +31,6 @@ SMODS.Joker:take_ownership("supernova",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

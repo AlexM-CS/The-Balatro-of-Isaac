@@ -31,5 +31,6 @@ SMODS.Joker:take_ownership("swashbuckler",
                 }
             end
         end
-    }
+    },
+    true
 )

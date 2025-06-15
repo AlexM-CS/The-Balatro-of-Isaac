@@ -61,6 +61,6 @@ SMODS.Joker:take_ownership("ceremonial",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

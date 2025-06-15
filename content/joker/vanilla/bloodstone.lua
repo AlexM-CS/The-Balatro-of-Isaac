@@ -23,6 +23,6 @@ SMODS.Joker:take_ownership("bloodstone",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

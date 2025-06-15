@@ -22,6 +22,6 @@ SMODS.Joker:take_ownership("bootstraps",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

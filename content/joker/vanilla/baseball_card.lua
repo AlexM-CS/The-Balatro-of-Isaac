@@ -19,6 +19,6 @@ SMODS.Joker:take_ownership("baseball",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

@@ -22,6 +22,6 @@ SMODS.Joker:take_ownership("scholar",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

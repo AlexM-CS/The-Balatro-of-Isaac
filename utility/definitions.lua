@@ -1,6 +1,7 @@
 --- Tables to be used in The Balatro of Isaac
 
 BI.VANILLA_JOKERS = {
+    -- Vanilla Page 1
     "joker",
     "greedy_joker",
     "lusty_joker",
@@ -12,6 +13,7 @@ BI.VANILLA_JOKERS = {
     "crazy",
     "droll",
 
+    -- Vanilla Page 2
     "half",
     "stencil",
     "ceremonial",
@@ -19,6 +21,7 @@ BI.VANILLA_JOKERS = {
     "loyalty_card",
     "raised_fist",
 
+    -- Vanilla Page 3
     "fibonacci",
     "steel_joker",
     "abstract",
@@ -28,10 +31,12 @@ BI.VANILLA_JOKERS = {
     "supernova",
     "ride_the_bus",
 
+    -- Vanilla Page 4
     "blackboard",
     "constellation",
     "green_joker",
 
+    -- Vanilla Page 5
     "cavendish",
     "card_sharp",
     "red_card",
@@ -41,10 +46,12 @@ BI.VANILLA_JOKERS = {
     "baron",
     "obelisk",
 
+    -- Vanilla Page 6
     "photograph",
     "erosion",
     "fortune_teller",
 
+    -- Vanilla Page 7
     "lucky_cat",
     "baseball_card",
     "flash_card",
@@ -56,6 +63,7 @@ BI.VANILLA_JOKERS = {
     "smiley_face",
     "campfire",
 
+    -- Vanilla Page 8
     "acrobat",
     "swashbuckler",
     "throwback",
@@ -63,6 +71,7 @@ BI.VANILLA_JOKERS = {
     "onyx_agate",
     "glass_joker",
 
+    -- Vanilla Page 9
     "flower_pot",
     "the_idol",
     "seeing_double",
@@ -73,6 +82,7 @@ BI.VANILLA_JOKERS = {
     "the_order",
     "the_tribe",
 
+    -- Vanilla Page 10
     "shoot_the_moon",
     "drivers_license",
     "bootstraps",

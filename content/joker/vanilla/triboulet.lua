@@ -20,6 +20,6 @@ SMODS.Joker:take_ownership("triboulet",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

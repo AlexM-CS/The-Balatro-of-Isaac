@@ -23,6 +23,6 @@ SMODS.Joker:take_ownership("even_steven",
                 end
             end
         end
-    }
-    --true
+    },
+    true
 )

@@ -58,6 +58,6 @@ SMODS.Joker:take_ownership("ramen",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

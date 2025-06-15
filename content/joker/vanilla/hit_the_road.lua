@@ -45,6 +45,6 @@ SMODS.Joker:take_ownership("hit_the_road",
                 }
             end
         end,
-    }
-    --true
+    },
+    true
 )

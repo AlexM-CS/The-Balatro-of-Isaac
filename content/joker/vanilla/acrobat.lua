@@ -19,5 +19,6 @@ SMODS.Joker:take_ownership("acrobat",
                 }
             end
         end
-    }
+    },
+    true
 )

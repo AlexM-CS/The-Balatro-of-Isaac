@@ -36,6 +36,7 @@ SMODS.Joker:take_ownership("caino",
                     xmult = card.ability.extra.Xmult
                 }
             end
-        end,
-    }
+        end
+    },
+    true
 )

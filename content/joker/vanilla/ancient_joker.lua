@@ -22,6 +22,6 @@ SMODS.Joker:take_ownership("ancient",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )

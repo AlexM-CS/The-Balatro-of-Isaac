@@ -30,5 +30,6 @@ SMODS.Joker:take_ownership("throwback",
                 }
             end
         end
-    }
+    },
+    true
 )

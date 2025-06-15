@@ -21,6 +21,6 @@ SMODS.Joker:take_ownership("family",
                 }
             end
         end
-    }
-    --true
+    },
+    true
 )
