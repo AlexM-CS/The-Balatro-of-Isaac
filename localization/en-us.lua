@@ -10,15 +10,51 @@ return {
                     "empty {C:attention}Joker{} slot",
                     "{s:0.8}Joker Stencil included",
                     "{C:inactive}(Currently {X:red,C:white} X#2# {C:inactive})",
-                },
-                unlock = {
-                    "Placeholder"
                 }
+            },
+            j_ceremonial={
+                name="Ceremonial Dagger",
+                text={
+                    "When {C:attention}Blind{} is selected,",
+                    "destroy Joker to the right",
+                    "and permanently add {X:red,C:white}#1#X",
+                    "its sell value to this {C:red}Mult",
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)",
+                }
+            },
+            j_raised_fist = {
+                name = "Raised Fist",
+                text = {
+                    "Adds {X:red,C:white}#1#X{} the rank",
+                    "of {C:attention}lowest{} ranked card",
+                    "held in hand to Mult"
+                }
+            },
+            j_supernova={
+                name= "Supernova",
+                text = {
+                    "Adds {X:red,C:white}#1#{}the number of times",
+                    "{C:attention}poker hand{} has been",
+                    "played this run to Mult",
+                }
+            },
+            j_drivers_license={
+                name="Driver's License",
+                text={
+                    "{X:mult,C:white} X#1# {} Mult if you have",
+                    "at least {C:attention}#2#{} Enhanced",
+                    "cards in your full deck",
+                    "{C:inactive}(Currently {C:attention}#3#{C:inactive})",
+                },
+                unlock={
+                    "Enhance {E:1,C:attention}#1#{} cards",
+                    "in your deck",
+                },
             },
 
             -- TBOI Jokers
 
-            tboi_j_1up = {
+            j_tboi_1up = {
                 name = "1 Up",
                 text = {
                     "Prevents death once",
@@ -29,7 +65,7 @@ return {
                     "Placeholder"
                 }
             },
-            tboi_j_blood_of_the_martyr = {
+            j_tboi_blood_of_the_martyr = {
                 name = "Blood of the Martyr",
                 text = {
                     "{C:red}+#1#{} Mult",
@@ -41,7 +77,7 @@ return {
                     "Placeholder"
                 }
             },
-            tboi_j_brother_bobby = {
+            j_tboi_brother_bobby = {
                 name = "Brother Bobby",
                 text = {
                     "{C:attention}Familiar",
@@ -52,19 +88,19 @@ return {
                     "Placeholder"
                 }
             },
-            tboi_j_crickets_head = {
+            j_tboi_crickets_head = {
                 name = "Cricket's Head",
                 text = {
                     "Applies a {X:red,C:white}X#1#{} Mult",
-                    "multiplier to most other {C:attention}Jokers",
-                    "that give {C:red}Mult",
+                    "multiplier to other {C:attention}Jokers'",
+                    "{C:red}Mult{} effects",
                     "{s:0.8}{C:inactive}\"DMG up\""
                 },
                 unlock = {
                     "Placeholder"
                 }
             },
-            tboi_j_halo_of_flies = {
+            j_tboi_halo_of_flies = {
                 name = "Halo of Flies",
                 text = {
                     "+#1# #2# {C:attention}Flies",
@@ -76,7 +112,7 @@ return {
                     "Placeholder"
                 }
             },
-            tboi_j_inner_eye = {
+            j_tboi_inner_eye = {
                 name = "The Inner Eye",
                 text = {
                     "Makes 3 random retriggers",
@@ -87,7 +123,7 @@ return {
                     "Placeholder"
                 }
             },
-            tboi_j_less_than_3 = {
+            j_tboi_less_than_3 = {
                 name = "<3",
                 text = {
                     "{C:attention}+#1#{} Hand, refills",
@@ -98,7 +134,7 @@ return {
                     "Placeholder"
                 }
             },
-            tboi_j_magic_mushroom = {
+            j_tboi_magic_mushroom = {
                 name = "Magic Mushroom",
                 text = {
                     "{C:attention}+#1#{} Hand, {C:red}+#2#{} discard",

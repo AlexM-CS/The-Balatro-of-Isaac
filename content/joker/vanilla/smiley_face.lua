@@ -1,21 +1,19 @@
-SMODS.Joker:take_ownership("mystic_summit",
+SMODS.Joker:take_ownership("smiley",
     {
         config = {
             extra = {
-                mult = 15,
-                d_remaining = 0
+                mult = 5
             }
         },
         loc_vars = function(self, info_queue, card)
             return {
                 vars = {
-                    card.ability.extra.mult,
-                    card.ability.extra.d_remaining
+                    card.ability.extra.mult
                 }
             }
         end,
         calculate = function(self, card, context)
-            if context.joker_main and G.GAME.current_round.discards_left == card.ability.extra.d_remaining then
+            if context.individual and context.cardarea == G.play and context.other_card:is_face() then
                 return {
                     mult = card.ability.extra.mult
                 }

@@ -1,23 +1,21 @@
-SMODS.Joker:take_ownership("half",
+SMODS.Joker:take_ownership("baseball",
     {
         config = {
             extra = {
-                mult = 20,
-                size = 3
+                Xmult = 1.5
             }
         },
         loc_vars = function(self, info_queue, card)
             return {
                 vars = {
-                    card.ability.extra.mult,
-                    card.ability.extra.size
+                    card.ability.extra.Xmult
                 }
             }
         end,
         calculate = function(self, card, context)
-            if context.joker_main and #context.full_hand <= card.ability.extra.size then
+            if context.other_joker and (context.other_joker.config.center.rarity == 2 or context.other_joker.config.center.rarity == "Uncommon") then
                 return {
-                    mult = card.ability.extra.mult
+                    xmult = card.ability.extra.Xmult
                 }
             end
         end

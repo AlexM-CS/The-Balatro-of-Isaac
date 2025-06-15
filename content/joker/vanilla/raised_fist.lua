@@ -1,10 +1,17 @@
 SMODS.Joker:take_ownership("raised_fist",
     {
         config = {
-            extra = {
+            special = {
                 raised_fist_Xmult = 2
             }
         },
+        loc_vars = function(self, info_queue, card)
+            return {
+                vars = {
+                    card.ability.special.raised_fist_Xmult
+                }
+            }
+        end,
         calculate = function(self, card, context)
             if context.individual and context.cardarea == G.hand and not context.end_of_round then
                 local temp_Mult, temp_ID = 15, 15
@@ -24,7 +31,7 @@ SMODS.Joker:take_ownership("raised_fist",
                         }
                     else
                         return {
-                            mult = card.ability.extra.raised_fist_Xmult * temp_Mult
+                            mult = card.ability.special.raised_fist_Xmult * temp_Mult
                         }
                     end
                 end

@@ -4,7 +4,9 @@ it will always be in the specified location. I'll try to keep the order
 in mind as well.
 
 Any special behavior is controlled using the "special" table IFF
-it must be separate for some reason.
+it must be separate for some reason. The special table is only used for
+Vanilla Jokers if they need it to function with one of the modded cards,
+but otherwise no Vanilla Jokers will have a special table.
 
 config = {
     extra_value (might change when I do Vanilla reworks)
@@ -20,10 +22,9 @@ config = {
         t_mult          (hand type-dependent mult)
         type            (hand type)
         Xmult           (times mult)
-        crickets_head   (multiplier from Cricket's Head)
         odds            (probability)
         repetitions     (retriggers)
-        money           (money)
+        dollars         (money)
     }
 
     special = {

@@ -1,24 +1,25 @@
-SMODS.Joker:take_ownership("wrathful_joker",
+SMODS.Joker:take_ownership("walkie_talkie",
     {
         config = {
             extra = {
-                s_mult = 3, 
-                suit = "Spades"
+                chips = 10,
+                mult = 4
             }
         },
         loc_vars = function(self, info_queue, card)
             return {
                 vars = {
-                    card.ability.extra.s_mult,
-                    localize(card.ability.extra.suit, "suits_singular")
+                    card.ability.extra.chips,
+                    card.ability.extra.mult
                 }
             }
         end,
         calculate = function(self, card, context)
             if context.individual and context.cardarea == G.play and
-                context.other_card:is_suit(card.ability.extra.suit) then
+                (context.other_card:get_id() == 10 or context.other_card:get_id() == 4) then
                 return {
-                    mult = card.ability.extra.s_mult
+                    chips = card.ability.extra.chips,
+                    mult = card.ability.extra.mult
                 }
             end
         end
