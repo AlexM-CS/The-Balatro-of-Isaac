@@ -12,11 +12,15 @@ config = {
     extra_value (might change when I do Vanilla reworks)
     
     extra = {
-        h_size          (hands)
+        h_size          (hand size)
+        h_plays         (hands)
         d_size          (discards)
         size            (hand size)
         chips           (chips)
+        chip_mod        (chips gain)
+        Xchips          (times chips)
         mult            (mult)
+        mult_gain       (mult gain)
         s_mult          (suit-dependent mult)
         suit            (suit)
         t_mult          (hand type-dependent mult)

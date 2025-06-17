@@ -1,13 +1,5 @@
 SMODS.Joker {
     key = "the_virus",
-    loc_txt = {
-        name = "The Virus",
-        text = {
-            "{C:attention}Poisonous",
-            "Retrigger {C:attention}Poisonous{} Jokers",
-            "{s:0.8}{C:inactive}\"Poison Touch\""
-        }
-    },
     config = {
         extra = {
             repetitions = 1

@@ -1,14 +1,5 @@
 SMODS.Joker {
     key = "number_one",
-    loc_txt = {
-        name = "Number One",
-        text = {
-            "Halves base {C:red}Mult",
-            "For every {C:red}#1#{} Mult lost",
-            "this gives {C:blue}+#2#{} Chips",
-            "{s:0.8}{C:inactive}\"Tears up\""
-        }
-    },
     config = {
         special = {
             amount_chips = 25,

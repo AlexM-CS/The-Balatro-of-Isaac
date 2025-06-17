@@ -1,14 +1,5 @@
 SMODS.Joker {
     key = "sad_onion",
-    loc_txt = {
-        name = "The Sad Onion",
-        text = {
-            "{C:blue}+#1#{} Chips for",
-            "every {C:attention}Joker{} card",
-            "{C:inactive}(Currently {}{C:blue}+#2#{}{C:inactive} Chips)",
-            "{s:0.8}{C:inactive}\"Tears up\""
-        }
-    },
     config = {
         extra = {
             chips = 75

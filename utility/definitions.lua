@@ -111,9 +111,9 @@ BI.ENABLED_JOKERS = {
 
     -- Page 2
     "page2/raw_liver",
-    "page2/skeleton_key",
+    -- "page2/skeleton_key", -- Keys still unimplemented
     "page2/a_dollar",
-    "page2/boom",
+    -- "page2/boom", -- Bombs still unimplemented
     "page2/transcendence",
     "page2/the_compass",
     "page2/lunch",

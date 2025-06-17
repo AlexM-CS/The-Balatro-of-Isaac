@@ -1,12 +1,5 @@
 SMODS.Joker {
     key = "a_dollar",
-    loc_txt = {
-        name = "A Dollar",
-        text = {
-            "Sells for {C:money}$100{}",
-            "{s:0.8}{C:inactive}\"$$$\""
-        }
-    },
     config = {
         extra_value = 96
     },

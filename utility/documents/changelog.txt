@@ -1,13 +1,30 @@
 This is the changelog for The Balatro of Isaac. I can't promise it will get
 updated every time I push, but I'll try to remember to do this each time.
 
-============================================================
+===================================================================================================
+
+6/17/2025
+Update 1.0.2.2
+
+Moved descriptions for every page1 and page2 Joker into en-us.lua
+Rebalanced Roid Rage (now 200 chips, -2 per card instead of 300, -3)
+Redefined "h_size" to "h_plays" in cards that give hands
+Implemented Mom's Heels
+Implemented Mom's Underwear
+Implemented Rotten Meat, apart from the Binge Eater synergy
+Added description and tooltip for Skeleton Key
+Implemented Raw Liver. Currently bugged, until card removal context exists
+Implemented The Belt
+Implemented Wooden Spoon
+Lowered the rate at which Reversed Tarot cards appear in the shop
+
+===================================================================================================
 
 6/14/2025
 Update 1.0.2.1
 
 Created changelog.txt
-Added tooltips for Bombs, Keys, and Food Items
+Added tooltips for Bombs, Keys, and Food Items (no functionality yet)
 Implemented Breakfast, apart from the Binge Eater synergy
 Implemented Lunch, apart from the Binge Eater synergy
 Implemented Dinner, apart from the Binge Eater synergy
@@ -15,4 +32,4 @@ Implemented Dessert, apart from the Binge Eater synergy
 Added description and tooltip for Boom!
 Added 'Food Item' tooltip to Gros Michel
 
-============================================================
+===================================================================================================

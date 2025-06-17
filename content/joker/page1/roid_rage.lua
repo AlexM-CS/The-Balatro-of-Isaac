@@ -1,20 +1,11 @@
 SMODS.Joker {
     key = "roid_rage",
-    loc_txt = {
-        name = "Roid Rage",
-        text = {
-            "{C:blue}+#1#{} Chips",
-            "{C:attention}-#2#{} Chips for every",
-            "card played this {C:attention}Ante",
-            "{s:0.8}{C:inactive}\"Speed and range up\""
-        }
-    },
     config = {
         extra = {
-            chips = 300,
+            chips = 200,
         },
         special = {
-            subtract = 3
+            subtract = 2
         }
     },
     rarity = 2,

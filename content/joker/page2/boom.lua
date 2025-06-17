@@ -1,13 +1,5 @@
 SMODS.Joker {
     key = "boom",
-    loc_txt = {
-        name = "Boom!",
-        text = {
-            "Gives #1# {C:attention}Bombs",
-            "on pickup",
-            "{s:0.8}{C:inactive}\"10 Bombs\""
-        }
-    },
     config = {
         extra = {
             bombs = 10

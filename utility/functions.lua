@@ -7,6 +7,7 @@ function BI.register(items, path)
     end
 end
 
+-- Calculates the effects of familiars
 function BI.calculate_familiar(self, card, context)
     if context.before then
         card.ability.special.target = pseudorandom_element(context.scoring_hand, pseudoseed("familiar"))
@@ -21,6 +22,7 @@ function BI.calculate_familiar(self, card, context)
     if context.after then card.ability.special.target = nil end
 end
 
+-- Calculates the effects of flies
 function BI.calculate_flies(self, card, context)
     if context.joker_main then
         return {

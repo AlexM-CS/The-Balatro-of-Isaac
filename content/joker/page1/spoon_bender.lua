@@ -1,13 +1,5 @@
 SMODS.Joker {
     key = "spoon_bender",
-    loc_txt = {
-        name = "Spoon Bender",
-        text = {
-            "{C:attention}Debuffed{} cards",
-            "still score",
-            "{s:0.8}{C:inactive}\"Homing Shots\""
-        }
-    },
     config = {
     },
     rarity = 3,

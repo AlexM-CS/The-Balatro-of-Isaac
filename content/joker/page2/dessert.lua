@@ -1,16 +1,8 @@
 SMODS.Joker {
     key = "dessert",
-    loc_txt = {
-        name = "Dessert",
-        text = {
-            "{C:red}+#1#{} Hands",
-            "Eaten after {C:attention}#2#{} rounds",
-            "{s:0.8}{C:inactive}\"HP up\""
-        }
-    },
     config = {
         extra = {
-            h_size = 2,
+            h_plays = 2,
             hands_left = 4
         }
     },
@@ -26,20 +18,20 @@ SMODS.Joker {
         info_queue[#info_queue + 1] = { key = "food", set = "Other" }
         return {
             vars = {
-                card.ability.extra.h_size,
+                card.ability.extra.h_plays,
                 card.ability.extra.hands_left
             }
         }
     end,
 
-    add_to_deck = function(self, card)
-        G.GAME.round_resets.hands = G.GAME.round_resets.hands + card.ability.extra.h_size
-        ease_hands_played(card.ability.extra.h_size)
+    add_to_deck = function(self, card, from_debuff)
+        G.GAME.round_resets.hands = G.GAME.round_resets.hands + card.ability.extra.h_plays
+        ease_hands_played(card.ability.extra.h_plays)
     end,
 
-    remove_from_deck = function(self, card)
-        G.GAME.round_resets.hands = G.GAME.round_resets.hands - card.ability.extra.h_size
-        ease_hands_played(-card.ability.extra.h_size)
+    remove_from_deck = function(self, card, from_debuff)
+        G.GAME.round_resets.hands = G.GAME.round_resets.hands - card.ability.extra.h_plays
+        ease_hands_played(-card.ability.extra.h_plays)
     end,
 
     calculate = function(self, card, context)

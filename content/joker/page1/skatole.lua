@@ -1,13 +1,5 @@
 SMODS.Joker {
     key = "skatole",
-    loc_txt = {
-        name = "Skatole",
-        text = {
-            "All {C:attention}Flies{} give",
-            "{C:red}+#1#{} Mult",
-            "{s:0.8}{C:inactive}\"Fly love\""
-        }
-    },
     config = {
         extra = {
             mult = 1

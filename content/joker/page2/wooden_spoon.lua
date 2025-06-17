@@ -1,12 +1,9 @@
 SMODS.Joker {
     key = "wooden_spoon",
-    loc_txt = {
-        name = "Wooden Spoon",
-        text = {
-            "Placeholder"
-        }
-    },
     config = {
+        extra = {
+            Xchips = 1.25
+        }
     },
     rarity = 1,
     pos = { x = 5, y = 3 },
@@ -19,7 +16,16 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
+                card.ability.extra.Xchips
             }
         }
+    end,
+
+    calculate = function(self, card, context)
+        if context.joker_main then
+            return {
+                x_chips = card.ability.extra.Xchips
+            }
+        end
     end
 }

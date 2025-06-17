@@ -1,12 +1,5 @@
 SMODS.Joker {
     key = "my_reflection",
-    loc_txt = {
-        name = "My Reflection",
-        text = {
-            "Swaps {C:blue}Chips{} and {C:red}Mult{}",
-            "{s:0.8}{C:inactive}\"Boomerang tears\""
-        }
-    },
     config = {
         special = {
             temp = nil

@@ -1,12 +1,9 @@
 SMODS.Joker {
     key = "skeleton_key",
-    loc_txt = {
-        name = "Skeleton Key",
-        text = {
-            "Placeholder"
-        }
-    },
     config = {
+        extra = {
+            keys = 99
+        }
     },
     rarity = 3,
     pos = { x = 16, y = 2 },
@@ -17,8 +14,10 @@ SMODS.Joker {
     perishable_compat = true,
 
     loc_vars = function(self, info_queue, card)
+        info_queue[#info_queue + 1] = { key = "key", set = "Other" }
         return {
             vars = {
+                card.ability.extra.keys
             }
         }
     end
