@@ -7,6 +7,7 @@ SMODS.Joker:take_ownership("ice_cream",
             }
         },
         loc_vars = function(self, info_queue, card)
+            info_queue[#info_queue + 1] = { key = "food", set = "Other" }
             return {
                 vars = {
                     card.ability.extra.chips,
