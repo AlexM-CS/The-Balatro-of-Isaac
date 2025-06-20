@@ -1,23 +1,22 @@
-SMODS.Joker:take_ownership("cavendish",
+SMODS.Joker:take_ownership("turtle_bean",
     {
         config = {
             extra = {
-                Xmult = 3,
-                odds = 1000
+                h_size = 5,
+                h_mod = 1
             }
         },
         loc_vars = function(self, info_queue, card)
             return {
                 vars = {
-                    card.ability.extra.Xmult,
-                    G.GAME and G.GAME.probabilities.normal or 1,
-                    card.ability.extra.odds
+                    card.ability.extra.h_size,
+                    card.ability.extra.h_mod
                 }
             }
         end,
         calculate = function(self, card, context)
             if context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint then
-                if pseudorandom("cavendish") < G.GAME.probabilities.normal / card.ability.extra.odds then
+                if card.ability.extra.h_size - card.ability.extra.h_mod <= 0 then
                     G.E_MANAGER:add_event(Event({
                         func = function()
                             play_sound("tarot1")
@@ -40,28 +39,38 @@ SMODS.Joker:take_ownership("cavendish",
                     if SMODS.find_card("j_tboi_binge_eater") then
                         for i = 1, #G.jokers.cards do
                             if G.jokers.cards[i].config.center_key == "j_tboi_binge_eater" then
-                                if G.jokers.cards[i].ability.extra.Xmult == nil then
-                                    G.jokers.cards[i].ability.extra.Xmult = card.ability.extra.Xmult
+                                if G.jokers.cards[i].ability.extra.h_size == nil then
+                                    G.jokers.cards[i].ability.extra.h_size = 5
                                 else
-                                    G.jokers.cards[i].ability.extra.Xmult = G.jokers.cards[i].ability.extra.Xmult + card.ability.extra.Xmult
+                                    G.jokers.cards[i].ability.extra.h_size = G.jokers.cards[i].ability.extra.h_size + 5
                                 end
+                                G.hand:change_size(5)
                             end
                         end
                     end
                     return {
-                        message = localize("k_extinct_ex")
+                        message = localize("k_eaten_ex"),
+                        colour = G.C.FILTER
                     }
                 else
+                    card.ability.extra.h_size = card.ability.extra.h_size - card.ability.extra.h_mod
+                    G.hand:change_size(-card.ability.extra.h_mod)
                     return {
-                        message = localize("k_safe_ex")
+                        message = localize({
+                            type = "variable",
+                            key = "a_handsize_minus",
+                            vars = { card.ability.extra.h_mod }
+                        }),
+                        colour = G.C.FILTER
                     }
                 end
             end
-            if context.joker_main then
-                return {
-                    xmult = card.ability.extra.Xmult
-                }
-            end
+        end,
+        add_to_deck = function(self, card, from_debuff)
+            G.hand:change_size(card.ability.extra.h_size)
+        end,
+        remove_from_deck = function(self, card, from_debuff)
+            G.hand:change_size(-card.ability.extra.h_size)
         end
     },
     true

@@ -1,23 +1,22 @@
-SMODS.Joker:take_ownership("cavendish",
+SMODS.Joker:take_ownership("ice_cream",
     {
         config = {
             extra = {
-                Xmult = 3,
-                odds = 1000
+                chip_mod = 5,
+                chips = 100
             }
         },
         loc_vars = function(self, info_queue, card)
             return {
                 vars = {
-                    card.ability.extra.Xmult,
-                    G.GAME and G.GAME.probabilities.normal or 1,
-                    card.ability.extra.odds
+                    card.ability.extra.chips,
+                    card.ability.extra.chip_mod
                 }
             }
         end,
         calculate = function(self, card, context)
-            if context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint then
-                if pseudorandom("cavendish") < G.GAME.probabilities.normal / card.ability.extra.odds then
+            if context.after and context.main_eval and not context.blueprint then
+                if card.ability.extra.chips - card.ability.extra.chip_mod <= 0 then
                     G.E_MANAGER:add_event(Event({
                         func = function()
                             play_sound("tarot1")
@@ -40,26 +39,33 @@ SMODS.Joker:take_ownership("cavendish",
                     if SMODS.find_card("j_tboi_binge_eater") then
                         for i = 1, #G.jokers.cards do
                             if G.jokers.cards[i].config.center_key == "j_tboi_binge_eater" then
-                                if G.jokers.cards[i].ability.extra.Xmult == nil then
-                                    G.jokers.cards[i].ability.extra.Xmult = card.ability.extra.Xmult
+                                if G.jokers.cards[i].ability.extra.chips == nil then
+                                    G.jokers.cards[i].ability.extra.chips = 100
                                 else
-                                    G.jokers.cards[i].ability.extra.Xmult = G.jokers.cards[i].ability.extra.Xmult + card.ability.extra.Xmult
+                                    G.jokers.cards[i].ability.extra.chips = G.jokers.cards[i].ability.extra.chips + 100
                                 end
                             end
                         end
                     end
                     return {
-                        message = localize("k_extinct_ex")
+                        message = localize("k_melted_ex"),
+                        colour = G.C.CHIPS
                     }
                 else
+                    card.ability.extra.chips = card.ability.extra.chips - card.ability.extra.chip_mod
                     return {
-                        message = localize("k_safe_ex")
+                        message = localize({
+                            type = "variable",
+                            key = "a_chips_minus",
+                            vars = { card.ability.extra.chip_mod }
+                        }),
+                        colour = G.C.CHIPS
                     }
                 end
             end
             if context.joker_main then
                 return {
-                    xmult = card.ability.extra.Xmult
+                    chips = card.ability.extra.chips
                 }
             end
         end

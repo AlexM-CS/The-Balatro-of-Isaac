@@ -330,6 +330,23 @@ return {
                     "{s:0.8}{C:inactive}\"Range up\""
                 }
             },
+            j_tboi_midnight_snack = {
+                name = "Midnight Snack",
+                text = {
+                    "{C:blue}+#1#{} Hand, {C:attention}+#2#{} Retrigger",
+                    "on scored {C:attention}face cards",
+                    "Eaten after {C:attention}#3#{} rounds",
+                    "{s:0.8}{C:inactive}\"HP up\""
+                }
+            },
+            j_tboi_binge_eater = {
+                name = "Binge Eater",
+                text = {
+                    "Absorbs the effects of",
+                    "eaten {C:attention}Food Items",
+                    "{s:0.8}{C:inactive}\"All you can eat\""
+                }
+            },
         },
 
         Other = {

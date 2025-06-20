@@ -11,7 +11,7 @@ SMODS.Joker {
     pos = { x = 4, y = 3 },
     atlas = "tboi_jokers",
     cost = 2,
-    blueprint_compat = false,
+    blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
 
@@ -65,6 +65,23 @@ SMODS.Joker {
                         return true
                     end
                 }))
+                if SMODS.find_card("j_tboi_binge_eater") then
+                    for i = 1, #G.jokers.cards do
+                        if G.jokers.cards[i].config.center_key == "j_tboi_binge_eater" then
+                            if G.jokers.cards[i].ability.extra.h_plays == nil then                           
+                                G.jokers.cards[i].ability.extra.h_plays = card.ability.extra.h_plays
+                            else
+                                G.jokers.cards[i].ability.extra.h_plays = G.jokers.cards[i].ability.extra.h_plays + card.ability.extra.h_plays
+                            end
+                            G.GAME.round_resets.hands = G.GAME.round_resets.hands + card.ability.extra.h_plays
+                            if G.jokers.cards[i].ability.extra.number_repetitions == nil then
+                                G.jokers.cards[i].ability.extra.number_repetitions = card.ability.extra.repetitions
+                            else
+                                G.jokers.cards[i].ability.extra.number_repetitions = G.jokers.cards[i].ability.extra.number_repetitions + card.ability.extra.repetitions
+                            end
+                        end
+                    end
+                end
                 return {
                     message = localize("k_eaten_ex"),
                     colour = G.C.FILTER

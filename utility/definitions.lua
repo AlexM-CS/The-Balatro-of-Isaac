@@ -33,6 +33,7 @@ BI.VANILLA_JOKERS = {
 
     -- Vanilla Page 4
     "blackboard",
+    "ice_cream",
     "constellation",
     "green_joker",
 
@@ -48,6 +49,7 @@ BI.VANILLA_JOKERS = {
 
     -- Vanilla Page 6
     "photograph",
+    "turtle_bean",
     "erosion",
     "fortune_teller",
 
@@ -60,6 +62,7 @@ BI.VANILLA_JOKERS = {
     "ancient_joker",
     "ramen",
     "walkie_talkie",
+    "seltzer",
     "smiley_face",
     "campfire",
 
@@ -111,9 +114,9 @@ BI.ENABLED_JOKERS = {
 
     -- Page 2
     "page2/raw_liver",
-    -- "page2/skeleton_key", -- Keys still unimplemented
+    --"page2/skeleton_key", -- Keys still unimplemented
     "page2/a_dollar",
-    -- "page2/boom", -- Bombs still unimplemented
+    --"page2/boom", -- Bombs still unimplemented
     "page2/transcendence",
     "page2/the_compass",
     "page2/lunch",
@@ -128,7 +131,7 @@ BI.ENABLED_JOKERS = {
 
     -- Page 3
     -- "page3/moms_lipstick",
-    -- "page3/wire_coat_hangar",
+    -- "page3/wire_coat_hanger",
     -- "page3/the_bible",
     -- "page3/the_book_of_belial",
     -- "page3/the_necronomicon",
@@ -603,7 +606,7 @@ BI.ENABLED_JOKERS = {
     -- "page30/dads_lost_coin",
 
     -- Page 31
-    -- "page31/midnight_snack",
+    "page31/midnight_snack",
     -- "page31/cone_head",
     -- "page31/belly_button",
     -- "page31/sinus_infection",
@@ -830,7 +833,7 @@ BI.ENABLED_JOKERS = {
     -- "page44/card_reading",
     -- "page44/quints",
     -- "page44/tooth_and_nail",
-    -- "page44/binge_eater",
+    "page44/binge_eater",
     -- "page44/guppys_eye",
     -- "page44/strawman",
     -- "page44/dads_note",
@@ -982,6 +985,22 @@ BI.POISONOUS = {
     j_tboi_contagion = true,
     j_tboi_mucormycosis = true,
     j_tboi_jupiter = true
+}
+
+BI.FOOD_ITEMS = {
+    j_gros_michel = true,
+    j_ice_cream = true,
+    j_cavendish = true,
+    j_turtle_bean = true,
+    j_popcorn = true,
+    j_ramen = true,
+    j_seltzer = true,
+    j_tboi_lunch = true,
+    j_tboi_dinner = true,
+    j_tboi_dessert = true,
+    j_tboi_breakfast = true,
+    j_tboi_rotten_meat = true,
+    j_tboi_midnight_snack = true,
 }
 
 BI.FAMILIARS = {

@@ -38,6 +38,17 @@ SMODS.Joker:take_ownership("gros_michel",
                             return true
                         end
                     }))
+                    if SMODS.find_card("j_tboi_binge_eater") then
+                        for i = 1, #G.jokers.cards do
+                            if G.jokers.cards[i].config.center_key == "j_tboi_binge_eater" then
+                                if G.jokers.cards[i].ability.extra.mult == nil then
+                                    G.jokers.cards[i].ability.extra.mult = card.ability.extra.mult
+                                else
+                                    G.jokers.cards[i].ability.extra.mult = G.jokers.cards[i].ability.extra.mult + card.ability.extra.mult
+                                end
+                            end
+                        end
+                    end
                     G.GAME.pool_flags.vremade_gros_michel_extinct = true
                     return {
                         message = localize("k_extinct_ex")

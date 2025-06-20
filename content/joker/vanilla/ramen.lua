@@ -4,6 +4,9 @@ SMODS.Joker:take_ownership("ramen",
             extra = {
                 Xmult_loss = 0.01,
                 Xmult = 2
+            },
+            special = {
+                flag = true
             }
         },
         loc_vars = function(self, info_queue, card)
@@ -15,7 +18,7 @@ SMODS.Joker:take_ownership("ramen",
             }
         end,
         calculate = function(self, card, context)
-            if context.discard and not context.blueprint then
+            if context.discard and not context.blueprint and card.ability.special.flag then
                 if card.ability.extra.Xmult - card.ability.extra.Xmult_loss <= 1 then
                     G.E_MANAGER:add_event(Event({
                         func = function()
@@ -25,7 +28,7 @@ SMODS.Joker:take_ownership("ramen",
                             card.states.drag.is = true
                             card.children.center.pinch.x = true
                             G.E_MANAGER:add_event(Event({
-                                trigger = 'after',
+                                trigger = "after",
                                 delay = 0.3,
                                 blockable = false,
                                 func = function()
@@ -36,6 +39,18 @@ SMODS.Joker:take_ownership("ramen",
                             return true
                         end
                     }))
+                    if SMODS.find_card("j_tboi_binge_eater") then
+                        for i = 1, #G.jokers.cards do
+                            if G.jokers.cards[i].config.center_key == "j_tboi_binge_eater" then
+                                if G.jokers.cards[i].ability.extra.Xmult == nil then
+                                    G.jokers.cards[i].ability.extra.Xmult = 2
+                                else
+                                    G.jokers.cards[i].ability.extra.Xmult = G.jokers.cards[i].ability.extra.Xmult + 2
+                                end
+                            end
+                        end
+                    end
+                    card.ability.special.flag = false
                     return {
                         message = localize("k_eaten_ex"),
                         colour = G.C.FILTER
