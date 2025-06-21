@@ -207,7 +207,8 @@ return {
             j_tboi_raw_liver = {
                 name = "Raw Liver",
                 text = {
-                    "This Joker gives {C:blue}+#1#{} Hand",
+                    "At the start of each round,",
+                    "this Joker gives {C:blue}+#1#{} Hand",
                     "for each {C:green}Uncommon{} Joker",
                     "{s:0.8}{C:inactive}\"HP up\""
                 }
@@ -330,6 +331,25 @@ return {
                     "{s:0.8}{C:inactive}\"Range up\""
                 }
             },
+            j_tboi_midas_touch = {
+                name = "Midas Touch",
+                text = {
+                    "Scored cards have a",
+                    "{C:green}#1# in #2#{} chance to become",
+                    "{C:money}Gold Cards{} and a {C:green}#1# in #3#",
+                    "chance to gain a {C:money}Gold Seal",
+                    "{s:0.8}{C:inactive}\"Golden Touch\""
+                }
+            },
+            j_tboi_head_of_the_keeper = {
+                name = "Head of the Keeper",
+                text = {
+                    "Played cards have a",
+                    "{C:green}#1# in #2#{} chance to give {C:money}$#3#",
+                    "when scored",
+                    "{s:0.8}{C:inactive}\"Penny tears!\""
+                }
+            },
             j_tboi_midnight_snack = {
                 name = "Midnight Snack",
                 text = {
@@ -337,6 +357,16 @@ return {
                     "on scored {C:attention}face cards",
                     "Eaten after {C:attention}#3#{} rounds",
                     "{s:0.8}{C:inactive}\"HP up\""
+                }
+            },
+            j_tboi_greeds_gullet = {
+                name = "Greed's Gullet",
+                text = {
+                    "At the start of each round,",
+                    "gives {C:blue}+#1#{} Hand for every",
+                    "{C:money}$#2#{} you have",
+                    "{C:inactive}(Currently{} {C:blue}+#3#{} {C:inactive}Hands)",
+                    "{s:0.8}{C:inactive}\"Money = Health!\""
                 }
             },
             j_tboi_binge_eater = {
@@ -545,6 +575,194 @@ return {
                 name = "Random Flies",
                 text = {
                     
+                }
+            }
+        },
+
+        tboi_reversed = {
+            c_tboi_r_fool = {
+                name = "The Fool?",
+                text = {
+                    "Creates a {C:dark_edition}Negative{} copy",
+                    "of the last used {C:tarot}Tarot{} or",
+                    "{C:planet}Planet{} card used during this run",
+                    "{s:0.8}{C:inactive}\"Let go and move on\""
+                }
+            },
+            c_tboi_r_magician = {
+                name = "The Magician?",
+                text = {
+                    "Remove {C:attention}Enhancements",
+                    "from #1# selected cards",
+                    "gain {C:money}$#2#",
+                    "{s:0.8}{C:inactive}\"May no harm come to you\""
+                }
+            },
+            c_tboi_r_high_priestess = {
+                name = "The High Priestess?",
+                text = {
+                    "Create a random",
+                    "{C:dark_edition}Negative{} {C:planet}Planet{} Card",
+                    "{s:0.8}{C:inactive}\"Run\""
+                }
+            },
+            c_tboi_r_empress = {
+                name = "The Empress?",
+                text = {
+                    "Enhances #1# random cards",
+                    "to {C:red}Mult{} cards",
+                    "{s:0.8}{C:inactive}\"May your love bring protection\""
+                }
+            },
+            c_tboi_r_emperor = {
+                name = "The Emperor?",
+                text = {
+                    "Creates up to {C:attention}#1#",
+                    "{V:1}Reversed Tarot{} Cards",
+                    "{C:inactive}(Must have room)",
+                    "{s:0.8}{C:inactive}\"May you find a worthy opponent\""
+                }
+            },
+            c_tboi_r_hierophant = {
+                name = "The Hierophant?",
+                text = {
+                    "Permanently add {C:blue}+#1#{} Chips",
+                    "to up to #2# cards",
+                    "{s:0.8}{C:inactive}\"Two prayers for the forgotten\""
+                }
+            },
+            c_tboi_r_lovers = {
+                name = "The Lovers?",
+                text = {
+                    "Select up to #1# cards",
+                    "Change suits randomly",
+                    "{s:0.8}{C:inactive}\"May your heart shatter to pieces\""
+                }
+            },
+            c_tboi_r_chariot = {
+                name = "The Chariot?",
+                text = {
+                    "Add a random {C:attention}Steel Card",
+                    "to your hand",
+                    "{s:0.8}{C:inactive}\"May nothing walk past you\""
+                }
+            },
+            c_tboi_r_justice = {
+                name = "Justice?",
+                text = {
+                    "Adds a random {C:attention}Glass Card",
+                    "to your deck",
+                    "{s:0.8}{C:inactive}\"May your sins come back to torment you\""
+                }
+            },
+            c_tboi_r_hermit = {
+                name = "The Hermit?",
+                text = {
+                    "Gives {C:money}$#1#{}",
+                    "{s:0.8}{C:inactive}\"May you see the value",
+                    "{s:0.8}{C:inactive}of all things in life\"",
+                }
+            },
+            c_tboi_r_wheel_of_fortune = {
+                name = "Wheel of Fortune?",
+                text = {
+                    "{C:green}#1# in #2#{} chance to",
+                    "add {C:dark_edition}Negative{} to a",
+                    "random card in hand",
+                    "{s:0.8}{C:inactive}\"Throw the dice of fate\""
+                }
+            },
+            c_tboi_r_strength = {
+                name = "Strength?",
+                text = {
+                    "Lowers the rank of up",
+                    "to {C:attention}#1#{} selected cards by 1",
+                    "{s:0.8}{C:inactive}\"May you break their resolve\""
+                }
+            },
+            c_tboi_r_hanged_man = {
+                name = "The Hanged Man?",
+                text = {
+                    "Destroy up to {C:attention}#1#{}",
+                    "random cards in hand",
+                    "{s:0.8}{C:inactive}\"May your greed know no bounds\""
+                }
+            },
+            c_tboi_r_death = {
+                name = "Death?",
+                text = {
+                    "Creates {C:attention}#1#{} copy of",
+                    "a selected card in your hand",
+                    "{s:0.8}{C:inactive}\"May life spring forth",
+                    "{s:0.8}{C:inactive}from the fallen\""
+                }
+            },
+            c_tboi_r_temperance = {
+                name = "Temperance?",
+                text = {
+                    "Sell all your {C:attention}Jokers",
+                    "Create #1# {C:blue}Spectral{} cards",
+                    "{C:inactive}(Must have room)",
+                    "{s:0.8}{C:inactive}\"May your hunger be satiated\""
+                }
+            },
+            c_tboi_r_devil = {
+                name = "The Devil?",
+                text = {
+                    "Destroy a random card in your hand",
+                    "Add a {C:money}Gold Seal{} to another",
+                    "random card in your hand",
+                    "{s:0.8}{C:inactive}\"Bask in the light",
+                    "{s:0.8}{C:inactive}of your mercy\""
+                }
+            },
+            c_tboi_r_tower = {
+                name = "The Tower?",
+                text = {
+                    "Enhances every card in",
+                    "your hand to a {C:attention}Stone Card",
+                    "{s:0.8}{C:inactive}\"Creation brings destruction\""
+                }
+            },
+            c_tboi_r_star = {
+                name = "The Star?",
+                text = {
+                    "Destroy all {V:1}Diamonds",
+                    "cards in your hand",
+                    "{s:0.8}{C:inactive}\"May your loss bring fortune\""
+                }
+            },
+            c_tboi_r_moon = {
+                name = "The Moon?",
+                text = {
+                    "Destroy all {V:1}Clubs",
+                    "cards in your hand",
+                    "{s:0.8}{C:inactive}\"May you remember lost memories\""
+                }
+            },
+            c_tboi_r_sun = {
+                name = "The Sun?",
+                text = {
+                    "Destroy all {V:1}Hearts",
+                    "cards in your hand",
+                    "{s:0.8}{C:inactive}\"May the darkness swallow",
+                    "{s:0.8}{C:inactive}all around you\""
+                }
+            },
+            c_tboi_r_judgement = {
+                name = "Judgement?",
+                text = {
+                    "Destroy a random {C:attention}Joker",
+                    "and gain {X:money,C:white}X#1#{} its sell value",
+                    "{s:0.8}{C:inactive}\"May you redeem those found wanting\""
+                }
+            },
+            c_tboi_r_world = {
+                name = "The World?",
+                text = {
+                    "Destroy all {V:1}Spades",
+                    "cards in your hand",
+                    "{s:0.8}{C:inactive}\"Step into the abyss\""
                 }
             }
         }

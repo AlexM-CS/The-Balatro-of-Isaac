@@ -1,15 +1,6 @@
 SMODS.Consumable {
     key = "r_sun",
     set = "tboi_reversed",
-    loc_txt = {
-        name = "The Sun?",
-        text = {
-            "Destroy all {V:1}Hearts",
-            "cards in your hand",
-            "{s:0.8}{C:inactive}\"May the darkness swallow",
-            "{s:0.8}{C:inactive}all around you\""
-        }
-    },
     pos = { x = 4, y = 3 },
     atlas = "tboi_reversed_tarots",
 

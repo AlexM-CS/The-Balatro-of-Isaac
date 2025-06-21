@@ -1,22 +1,16 @@
 SMODS.Consumable {
     key = "r_tower",
     set = "tboi_reversed",
-    loc_txt = {
-        name = "The Tower?",
-        text = {
-            "Enhances every card in",
-            "your hand to a {C:blue}Stone Card",
-            "{s:0.8}{C:inactive}\"Creation brings destruction\""
-        }
-    },
     config = {
-        mod_conv = "m_stone"
+        extra = {
+            mod_conv = "m_stone"
+        }
     },
     pos = { x = 1, y = 3 },
     atlas = "tboi_reversed_tarots",
 
     loc_vars = function(self, info_queue, card)
-        info_queue[#info_queue + 1] = G.P_CENTERS[card.ability.mod_conv]
+        info_queue[#info_queue + 1] = G.P_CENTERS[card.ability.extra.mod_conv]
         return {
             vars = {
             }
@@ -39,7 +33,7 @@ SMODS.Consumable {
 
             G.E_MANAGER:add_event(Event({
                 func = function()
-                    playing_card:set_ability(G.P_CENTERS[card.ability.mod_conv])
+                    playing_card:set_ability(G.P_CENTERS[card.ability.extra.mod_conv])
                     return true
                 end
             }))

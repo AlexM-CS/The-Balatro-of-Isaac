@@ -1,20 +1,9 @@
 SMODS.Consumable {
     key = "r_devil",
     set = "tboi_reversed",
-    loc_txt = {
-        name = "The Devil?",
-        text = {
-            "Destroy a random card in your hand",
-            "Add a {C:money}Gold Seal{} to",
-            "another random card in your hand",
-            "{s:0.8}{C:inactive}\"Bask in the light",
-            "{s:0.8}{C:inactive}of your mercy\""
-        }
-    },
     config = {
         extra = {
             destroy = 1,
-            add = 1,
             seal = "Gold"
         }
     },
@@ -73,6 +62,7 @@ SMODS.Consumable {
 
         G.E_MANAGER:add_event(Event({
             trigger = "after",
+            delay = 0.2,
             func = function()
                 _seal:set_seal(card.ability.extra.seal, nil, true)
                 return true

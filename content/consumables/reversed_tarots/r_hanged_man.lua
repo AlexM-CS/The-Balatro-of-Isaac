@@ -1,14 +1,6 @@
 SMODS.Consumable {
     key = "r_hanged_man",
     set = "tboi_reversed",
-    loc_txt = {
-        name = "The Hanged Man?",
-        text = {
-            "Destroy up to {C:attention}#1#{}",
-            "random cards in hand",
-            "{s:0.8}{C:inactive}\"May your greed know no bounds\""
-        }
-    },
     config = {
         extra = {
             destroy = 3

@@ -1,14 +1,6 @@
 SMODS.Consumable {
     key = "r_hierophant",
     set = "tboi_reversed",
-    loc_txt = {
-        name = "The Hierophant?",
-        text = {
-            "Permanently add {C:blue}+#1#{} Chips",
-            "to up to #2# cards",
-            "{s:0.8}{C:inactive}\"Two prayers for the forgotten\""
-        }
-    },
     config = {
         extra = {
             upgrade = 20,

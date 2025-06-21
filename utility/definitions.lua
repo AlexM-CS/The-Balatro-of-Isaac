@@ -320,7 +320,7 @@ BI.ENABLED_JOKERS = {
     -- "page14/moms_key",
     -- "page14/moms_eyeshadow",
     -- "page14/iron_bar",
-    -- "page14/midas_touch",
+    "page14/midas_touch",
     -- "page14/humbleing_bundle",
     -- "page14/fanny_pack",
     -- "page14/sharp_plug",
@@ -575,7 +575,7 @@ BI.ENABLED_JOKERS = {
     -- "page29/obsessed_fan",
     -- "page29/mine_crafter",
     -- "page29/pjs",
-    -- "page29/head_of_the_keeper",
+    "page29/head_of_the_keeper",
     -- "page29/papa_fly",
     -- "page29/multidimensional_baby",
     -- "page29/glitter_bombs",
@@ -654,7 +654,7 @@ BI.ENABLED_JOKERS = {
     -- "page33/duality",
     -- "page33/eucharist",
     -- "page33/sack_of_sacks",
-    -- "page33/greeds_gullet",
+    "page33/greeds_gullet",
 
     -- Page 34
     -- "page34/large_zit",

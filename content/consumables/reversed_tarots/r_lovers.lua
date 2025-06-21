@@ -1,17 +1,9 @@
 SMODS.Consumable {
     key = "r_lovers",
     set = "tboi_reversed",
-    loc_txt = {
-        name = "The Lovers?",
-        text = {
-            "Select up to #1# cards",
-            "Change suits randomly",
-            "{s:0.8}{C:inactive}\"May your heart shatter to pieces\""
-        }
-    },
     config = {
         extra = {
-            max = 3
+            max_highlighted = 3
         }
     },
     pos = { x = 1, y = 1 },
@@ -20,7 +12,7 @@ SMODS.Consumable {
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
-                card.ability.extra.max
+                card.ability.extra.max_highlighted
             }
         }
     end,
@@ -63,6 +55,6 @@ SMODS.Consumable {
     end,
 
     can_use = function(self, card)
-        return G.hand and #G.hand.highlighted > 0 and #G.hand.highlighted <= card.ability.extra.max
+        return G.hand and #G.hand.highlighted > 0 and #G.hand.highlighted <= card.ability.extra.max_highlighted
     end
 }

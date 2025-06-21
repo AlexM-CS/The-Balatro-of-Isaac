@@ -1,14 +1,6 @@
 SMODS.Consumable {
     key = "r_moon",
     set = "tboi_reversed",
-    loc_txt = {
-        name = "The Moon?",
-        text = {
-            "Destroy all {V:1}Clubs",
-            "cards in your hand",
-            "{s:0.8}{C:inactive}\"May you remember lost memories\""
-        }
-    },
     pos = { x = 3, y = 3 },
     atlas = "tboi_reversed_tarots",
 

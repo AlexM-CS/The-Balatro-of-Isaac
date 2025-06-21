@@ -1,18 +1,10 @@
 SMODS.Consumable {
     key = "r_empress",
     set = "tboi_reversed",
-    loc_txt = {
-        name = "The Empress?",
-        text = {
-            "Enhances #1# random cards",
-            "to {C:red}Mult{} cards",
-            "{s:0.8}{C:inactive}\"May your love bring protection\""
-        }
-    },
     config = {
-        mod_conv = "m_mult",
         extra = {
-            enhance = 3
+            mod_conv = "m_mult",
+            cards = 3
         }
     },
     pos = { x = 3, y = 0 },
@@ -21,7 +13,7 @@ SMODS.Consumable {
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
-                card.ability.extra.enhance
+                card.ability.extra.cards
             }
         }
     end,
@@ -39,7 +31,7 @@ SMODS.Consumable {
 
         pseudoshuffle(temp_hand, pseudoseed("r_empress"))
 
-        for i = 1, card.ability.extra.enhance do enhanced_cards[#enhanced_cards + 1] = temp_hand[i] end
+        for i = 1, card.ability.extra.cards do enhanced_cards[#enhanced_cards + 1] = temp_hand[i] end
 
         G.E_MANAGER:add_event(Event({
             trigger = "after",
@@ -68,7 +60,7 @@ SMODS.Consumable {
                 trigger = "after",
                 delay = 0.1,
                 func = function()
-                    playing_card:set_ability(G.P_CENTERS[card.ability.mod_conv])
+                    playing_card:set_ability(G.P_CENTERS[card.ability.extra.mod_conv])
                     return true
                 end
             }))

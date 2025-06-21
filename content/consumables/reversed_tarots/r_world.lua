@@ -1,14 +1,6 @@
 SMODS.Consumable {
     key = "r_world",
     set = "tboi_reversed",
-    loc_txt = {
-        name = "The World?",
-        text = {
-            "Destroy all {V:1}Spades",
-            "cards in your hand",
-            "{s:0.8}{C:inactive}\"Step into the abyss\""
-        }
-    },
     pos = { x = 1, y = 4 },
     atlas = "tboi_reversed_tarots",
 

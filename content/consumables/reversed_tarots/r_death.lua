@@ -1,15 +1,6 @@
 SMODS.Consumable {
     key = "r_death",
     set = "tboi_reversed",
-    loc_txt = {
-        name = "Death?",
-        text = {
-            "Creates {C:attention}#1#{} copy of",
-            "a selected card in your hand",
-            "{s:0.8}{C:inactive}\"May life spring forth",
-            "{s:0.8}{C:inactive}from the fallen\""
-        }
-    },
     config = {
         extra = {
             max_highlighted = 1,

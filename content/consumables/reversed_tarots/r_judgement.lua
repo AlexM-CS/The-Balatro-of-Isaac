@@ -1,16 +1,8 @@
 SMODS.Consumable {
     key = "r_judgement",
     set = "tboi_reversed",
-    loc_txt = {
-        name = "Judgement?",
-        text = {
-            "Destroy a random {C:attention}Joker",
-            "and gain {X:money,C:white}X#1#{} its sell value",
-            "{s:0.8}{C:inactive}\"May you redeem those found wanting\""
-        }
-    },
     config = {
-        extra = {
+        special = {
             multiplier = 3
         }
     },
@@ -20,7 +12,7 @@ SMODS.Consumable {
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
-                card.ability.extra.multiplier
+                card.ability.special.multiplier
             }
         }
     end,
@@ -34,7 +26,7 @@ SMODS.Consumable {
             end
         end
         local _card = pseudorandom_element(candidates, pseudoseed("r_judgement"))
-        local _value = _card.sell_cost * card.ability.extra.multiplier
+        local _value = _card.sell_cost * card.ability.special.multiplier
         G.E_MANAGER:add_event(Event({
             func = function()
                 _card:start_dissolve()

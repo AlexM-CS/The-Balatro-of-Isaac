@@ -1,15 +1,6 @@
 SMODS.Consumable {
     key = "r_emperor",
     set = "tboi_reversed",
-    loc_txt = {
-        name = "The Emperor?",
-        text = {
-            "Creates up to {C:attention}#1#",
-            "{V:1}Reversed Tarot{} Cards",
-            "{C:inactive}(Must have room)",
-            "{s:0.8}{C:inactive}\"May you find a worthy opponent\""
-        }
-    },
     config = {
         extra = {
             create = 2

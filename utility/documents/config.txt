@@ -19,6 +19,7 @@ config = {
         chips           (chips)
         chip_mod        (chips gain)
         Xchips          (times chips)
+        upgrade         (permanent chips bonus)
         mult            (mult)
         mult_gain       (mult gain)
         s_mult          (suit-dependent mult)
@@ -26,10 +27,17 @@ config = {
         t_mult          (hand type-dependent mult)
         type            (hand type)
         Xmult           (times mult)
-        odds            (probability)
+        odds            (probability. Any variation of 'odds' goes in extra as well)
         repetitions     (retriggers)
         dollars         (money)
         hands_left      (hands until this is destroyed)
+        
+        max_highlighted (highlight limit)
+        cards           (num cards to effect)
+        destroy         (num cards to destroy)
+        create          (num cards to create)
+        mod_conv        (enhancements)
+        seal            (seals)
 
         bombs
         keys

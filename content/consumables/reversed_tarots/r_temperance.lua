@@ -1,15 +1,6 @@
 SMODS.Consumable {
     key = "r_temperance",
     set = "tboi_reversed",
-    loc_txt = {
-        name = "Temperance?",
-        text = {
-            "Sell all your {C:attention}Jokers",
-            "Create #1# {C:blue}Spectral{} cards",
-            "{C:inactive}(Must have room)",
-            "{s:0.8}{C:inactive}\"May your hunger be satiated\""
-        }
-    },
     config = {
         extra = {
             create = 2

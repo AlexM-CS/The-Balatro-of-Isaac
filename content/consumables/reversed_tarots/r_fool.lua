@@ -1,15 +1,6 @@
 SMODS.Consumable {
     key = "r_fool",
     set = "tboi_reversed",
-    loc_txt = {
-        name = "The Fool?",
-        text = {
-            "Creates a {C:dark_edition}Negative{} copy",
-            "of the last used {C:tarot}Tarot{} or",
-            "{C:planet}Planet{} card used during this run,",
-            "{s:0.8}{C:inactive}\"Let go and move on\""
-        }
-    },
     pos = { x = 0, y = 0 },
     atlas = "tboi_reversed_tarots",
 
@@ -49,11 +40,11 @@ SMODS.Consumable {
 
     use = function(self, card, area, copier)
         G.E_MANAGER:add_event(Event({
-            trigger = 'after',
+            trigger = "after",
             delay = 0.4,
             func = function()
                 if G.consumeables.config.card_limit > #G.consumeables.cards then
-                    play_sound('timpani')
+                    play_sound("timpani")
                     SMODS.add_card({ key = G.GAME.last_tarot_planet , edition = "e_negative"})
                     card:juice_up(0.3, 0.5)
                 end

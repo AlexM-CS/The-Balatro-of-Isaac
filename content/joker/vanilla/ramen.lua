@@ -1,5 +1,13 @@
 SMODS.Joker:take_ownership("ramen",
     {
+        --[[
+        NOTE: As of 6/20/2025, this card is bugged, kind of.
+        There is a known bug (even in Vanilla) where Ramen can be eaten
+        multiple times if the amount of discarded cards goes beyond its normal
+        1.00 threshold. This bug is abusable with Binge Eater, which relies on
+        food items being eaten. Since it exists even in Vanilla Balatro, I will
+        not be attempting to fix it until its fixed in Vanilla as well.
+        ]]--
         config = {
             extra = {
                 Xmult_loss = 0.01,

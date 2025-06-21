@@ -1,15 +1,6 @@
 SMODS.Consumable {
     key = "r_wheel_of_fortune",
     set = "tboi_reversed",
-    loc_txt = {
-        name = "Wheel of Fortune?",
-        text = {
-            "{C:green}#1# in #2#{} chance to",
-            "add {C:dark_edition}Foil{}, {C:dark_edition}Holographic{}, or",
-            "{C:dark_edition}Polychrome{} to a random card in hand",
-            "{s:0.8}{C:inactive}\"Throw the dice of fate\""
-        }
-    },
     config = {
         extra = {
             odds = 4
@@ -32,9 +23,7 @@ SMODS.Consumable {
             local editionless_cards = SMODS.Edition:get_edition_cards(G.hand, true)
 
             local eligible_card = pseudorandom_element(editionless_cards, pseudoseed("r_wheel_of_fortune"))
-            local edition = poll_edition("r_wheel_of_fortune", nil, true, true,
-                { "e_polychrome", "e_holo", "e_foil" })
-            eligible_card:set_edition(edition, true)
+            eligible_card:set_edition("e_negative", true)
             check_for_unlock({ type = "have_edition" })
         else
             G.E_MANAGER:add_event(Event({

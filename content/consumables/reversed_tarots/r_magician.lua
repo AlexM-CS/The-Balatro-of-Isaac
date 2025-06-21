@@ -1,19 +1,10 @@
 SMODS.Consumable {
     key = "r_magician",
     set = "tboi_reversed",
-    loc_txt = {
-        name = "The Magician?",
-        text = {
-            "Remove {C:attention}Enhancements",
-            "from #1# selected cards",
-            "gain {C:money}$#2#",
-            "{s:0.8}{C:inactive}\"May no harm come to you\""
-        }
-    },
     config = {
         extra = {
             cards = 2,
-            money = 5
+            dollars = 5
         }
     },
     pos = { x = 1, y = 0 },
@@ -23,7 +14,7 @@ SMODS.Consumable {
         return {
             vars = {
                 card.ability.extra.cards,
-                card.ability.extra.money
+                card.ability.extra.dollars
             }
         }
     end,
@@ -62,7 +53,7 @@ SMODS.Consumable {
                 end
             }))
         end
-        ease_dollars(card.ability.extra.money)
+        ease_dollars(card.ability.extra.dollars)
     end,
 
     can_use = function(self, card)
