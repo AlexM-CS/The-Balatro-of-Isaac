@@ -551,7 +551,7 @@ BI.ENABLED_JOKERS = {
     -- "page27/d8",
     -- "page27/purity",
     -- "page27/athame",
-    -- "page27/empty_vessel",
+    "page27/empty_vessel",
     -- "page27/evil_eye",
 
     -- Page 28

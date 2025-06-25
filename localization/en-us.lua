@@ -341,6 +341,15 @@ return {
                     "{s:0.8}{C:inactive}\"Golden Touch\""
                 }
             },
+            j_tboi_empty_vessel = {
+                name = "Empty Vessel",
+                text = {
+                    "Earn {C:money}$#1#{} when played",
+                    "hand does not defeat the",
+                    "current {C:attention}Blind",
+                    "{s:0.8}{C:inactive}\"I reward an empty vessel\""
+                }
+            },
             j_tboi_head_of_the_keeper = {
                 name = "Head of the Keeper",
                 text = {
@@ -367,6 +376,92 @@ return {
                     "{C:money}$#2#{} you have",
                     "{C:inactive}(Currently{} {C:blue}+#3#{} {C:inactive}Hands)",
                     "{s:0.8}{C:inactive}\"Money = Health!\""
+                }
+            },
+            j_tboi_sol = {
+                name = "Sol",
+                text = {
+                    "Gives {C:money}$#1#{} when played",
+                    "hand is a {C:attention}Five of a Kind",
+                    "{s:0.8}{C:inactive}\"Radiant victory\""
+                }
+            },
+            j_tboi_luna = {
+                name = "Luna",
+                text = {
+                    "Creates a copy of {C:planet}Eris",
+                    "when played hand is a",
+                    "{C:attention}Flush Five",
+                    "{C:inactive}(Must have room)",
+                    "{s:0.8}{C:inactive}\"More secrets\""
+                }
+            },
+            j_tboi_mercurius = {
+                name = "Mercurius",
+                text = {
+                    "Creates a {C:dark_edition}Negative{} copy",
+                    "of {C:planet}Saturn{} when skipping {C:attention}Blinds",
+                    "{s:0.8}{C:inactive}\"Speed up + you feel elusive\""
+                }
+            },
+            j_tboi_venus = {
+                name = "Venus",
+                text = {
+                    "Playing a {C:attention}Three of a Kind",
+                    "has a {C:greed}#1# in #2#{} chance",
+                    "to give {C:blue}+#3#{} Hand",
+                    "{s:0.8}{C:inactive}\"HP up + you feel pretty\""
+                }
+            },
+            j_tboi_terra = {
+                name = "Terra",
+                text = {
+                    "Playing a {C:attention}Full House",
+                    "adds a {C:attention}Stone Card{} with",
+                    "a random {C:attention}Seal{} to your hand",
+                    "{s:0.8}{C:inactive}\"Born to rock\""
+                }
+            },
+            j_tboi_mars = {
+                name = "Mars",
+                text = {
+                    "This Joker gains {X:red,C:white}X#1#{} Mult",
+                    "for every consecutive played",
+                    "{C:attention}Four of a Kind",
+                    "{C:inactive}(Currently {X:red,C:white}X#2#{} {C:inactive}Mult)",
+                    "{s:0.8}{C:inactive}\"Double tap dash\""
+                }
+            },
+            j_tboi_jupiter = {
+                name = "Jupiter",
+                text = {
+                    "Playing a {C:attention}Flush",
+                    "permanently adds {C:money}$#1#{} of",
+                    "sell value to consumable {C:planet}Jupiter{} cards"
+                }
+            },
+            j_tboi_saturnus = {
+                name = "Saturnus",
+                text = {
+                    "Every played hand is a",
+                    "{C:attention}Straight",
+                    "{s:0.8}{C:inactive}\"Ring of tears\""
+                }
+            },
+            j_tboi_uranus = {
+                name = "Uranus",
+                text = {
+                    "Playing a {C:attention}Two Pair",
+                    "lowers {C:attention}Ante{} scaling by {C:attention}#1#X",
+                    "{s:0.8}{C:inactive}\"Ice tears\""
+                }
+            },
+            j_tboi_neptunus = {
+                name = "Neptunus",
+                text = {
+                    "If played hand is a",
+                    "{C:attention}Straight Flush{}, retrigger",
+                    "all played cards"
                 }
             },
             j_tboi_binge_eater = {
