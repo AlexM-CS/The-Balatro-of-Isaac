@@ -30,6 +30,7 @@ config = {
         odds            (probability. Any variation of 'odds' goes in extra as well)
         repetitions     (retriggers)
         dollars         (money)
+        sell_cost       (extra value)
         hands_left      (hands until this is destroyed)
         
         max_highlighted (highlight limit)

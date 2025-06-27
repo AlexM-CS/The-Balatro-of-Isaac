@@ -1,6 +1,8 @@
 SMODS.Joker {
     key = "1up",
     config = {
+        extra = {
+        }
     },
     rarity = 3,
     pos = { x = 10, y = 2 },
@@ -28,8 +30,11 @@ SMODS.Joker {
                 end
             }))
             return {
-                message = localize("k_saved_ex"),
-                saved = "ph_1up",
+                message = localize({
+                    type = "variable",
+                    key = "k_saved",
+                    vars = { "1 Up" }
+                }),
                 colour = G.C.RED
             }
         end

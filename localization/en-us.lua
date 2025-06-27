@@ -189,7 +189,7 @@ return {
                 text = {
                     "{C:blue}+#1#{} Chips",
                     "{C:attention}-#2#{} Chips for every",
-                    "card played this {C:attention}Ante",
+                    "card scored this {C:attention}Ante",
                     "{s:0.8}{C:inactive}\"Speed and range up\""
                 }
             },
@@ -400,7 +400,7 @@ return {
                 name = "Mercurius",
                 text = {
                     "Creates a {C:dark_edition}Negative{} copy",
-                    "of {C:planet}Saturn{} when skipping {C:attention}Blinds",
+                    "of {C:planet}Mercury{} when skipping {C:attention}Blinds",
                     "{s:0.8}{C:inactive}\"Speed up + you feel elusive\""
                 }
             },
@@ -408,7 +408,7 @@ return {
                 name = "Venus",
                 text = {
                     "Playing a {C:attention}Three of a Kind",
-                    "has a {C:greed}#1# in #2#{} chance",
+                    "has a {C:green}#1# in #2#{} chance",
                     "to give {C:blue}+#3#{} Hand",
                     "{s:0.8}{C:inactive}\"HP up + you feel pretty\""
                 }
@@ -418,7 +418,7 @@ return {
                 text = {
                     "Playing a {C:attention}Full House",
                     "adds a {C:attention}Stone Card{} with",
-                    "a random {C:attention}Seal{} to your hand",
+                    "a random {C:attention}Seal{} to your deck",
                     "{s:0.8}{C:inactive}\"Born to rock\""
                 }
             },
@@ -426,7 +426,7 @@ return {
                 name = "Mars",
                 text = {
                     "This Joker gains {X:red,C:white}X#1#{} Mult",
-                    "for every consecutive played",
+                    "per {C:attention}consecutive{} played",
                     "{C:attention}Four of a Kind",
                     "{C:inactive}(Currently {X:red,C:white}X#2#{} {C:inactive}Mult)",
                     "{s:0.8}{C:inactive}\"Double tap dash\""
@@ -435,9 +435,10 @@ return {
             j_tboi_jupiter = {
                 name = "Jupiter",
                 text = {
-                    "Playing a {C:attention}Flush",
-                    "permanently adds {C:money}$#1#{} of",
-                    "sell value to consumable {C:planet}Jupiter{} cards"
+                    "Playing a {C:attention}Flush{} permanently ",
+                    "adds {C:money}$#1#{} of sell value",
+                    "to consumable {C:planet}Jupiter{} cards",
+                    "{s:0.8}{C:inactive}\"You're a gas giant!\""
                 }
             },
             j_tboi_saturnus = {
@@ -452,7 +453,7 @@ return {
                 name = "Uranus",
                 text = {
                     "Playing a {C:attention}Two Pair",
-                    "lowers {C:attention}Ante{} scaling by {C:attention}#1#X",
+                    "lowers {C:attention}Ante{} scaling by {X:attention,C:white}X#1#",
                     "{s:0.8}{C:inactive}\"Ice tears\""
                 }
             },
@@ -461,7 +462,17 @@ return {
                 text = {
                     "If played hand is a",
                     "{C:attention}Straight Flush{}, retrigger",
-                    "all played cards"
+                    "all played cards",
+                    "{s:0.8}{C:inactive}\"Open the floodgates\""
+                }
+            },
+            j_tboi_pluto = {
+                name = "Pluto",
+                text = {
+                    "Copies of consumable {C:planet}Pluto",
+                    "cards have a {C:green}#1# in #2#{} chance",
+                    "to become {C:dark_edition}Negative{} when obtained",
+                    "{s:0.8}{C:inactive}\"Size down\""
                 }
             },
             j_tboi_binge_eater = {
@@ -864,15 +875,13 @@ return {
     },
     misc = {
         dictionary = {
+            a_hands_singular = "+#1# Hand",
             k_buffed = "Buffed!",
             k_halved = "Halved!",
-            k_minus_3 = "-3",
-            k_minus_6 = "-6",
-            k_minus_9 = "-9",
-            k_minus_12 = "-12",
-            k_minus_15 = "-15",
+            k_saved = "Saved by #1#",
+            k_scaled = "Scaled!",
+            k_descaled = "De-scaled!",
             k_swapped = "Swapped!",
-            ph_1up = "Saved by 1 Up"
         }
     }
 }

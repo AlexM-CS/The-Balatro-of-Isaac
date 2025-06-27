@@ -10,7 +10,7 @@ SMODS.ConsumableType {
     primary_colour = HEX("89093a"),
     secondary_colour = HEX("89093a"),
     collection_rows = { 5, 6 },
-    shop_rate = 1.5
+    shop_rate = 0.8
 }
 
 SMODS.ConsumableType {

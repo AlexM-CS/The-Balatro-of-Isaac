@@ -33,7 +33,7 @@ SMODS.Consumable {
             }))
 
             G.E_MANAGER:add_event(Event({
-                trigger = 'after',
+                trigger = "after",
                 delay = 0.1,
                 func = function()
                     SMODS.change_base(playing_card, _suit)

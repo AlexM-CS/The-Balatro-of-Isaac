@@ -1,9 +1,45 @@
 SMODS.Joker {
-    key = jupiter,
-    loc_txt = {
-        name = jupiter,
-        text = {
-            "Placeholder"
+    key = "jupiter",
+    config = {
+        extra = {
+            sell_cost = 1,
+            poker_hand = "Flush"
         }
-    }
+    },
+    rarity = 2,
+    pos = { x = 20, y = 3 },
+    atlas = "tboi_jokers",
+    cost = 6,
+    unlocked = true,
+    blueprint_compat = false,
+    eternal_compat = false,
+    perishable_compat = true,
+
+    loc_vars = function(self, info_queue, card)
+        info_queue[#info_queue + 1] = G.P_CENTERS.c_jupiter
+        return {
+            vars = {
+                card.ability.extra.sell_cost
+            }
+        }
+    end,
+
+    calculate = function(self, card, context)
+        if context.before and context.main_eval and context.scoring_name == card.ability.extra.poker_hand then
+            if G.GAME.jupiter_value == nil then
+                G.GAME.jupiter_value = card.ability.extra.sell_cost
+            else
+                G.GAME.jupiter_value = G.GAME.jupiter_value + card.ability.extra.sell_cost
+            end
+            for _, consumable in ipairs(G.consumeables.cards) do
+                if consumable.ability.name == "Jupiter" then
+                    consumable.sell_cost = consumable.sell_cost + card.ability.extra.sell_cost
+                end
+            end
+            return {
+                message = localize("k_upgrade_ex"),
+                colour = G.C.SECONDARY_SET.Planet
+            }
+        end
+    end
 }
