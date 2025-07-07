@@ -107,13 +107,17 @@ end
 ----------------------------------------------------------------------------------------------------
 
 -- Registers things in the mod to be shown in-game
+---@param items {}
+---@param path string
 function BI.register(items, path)
     for i = 1, #items do
         SMODS.load_file(path.."/"..items[i]..".lua")()
     end
 end
 
--- Global "Can Use" function for TBoI Jokers
+-- "Can Use" function for TBoI Jokers
+---@param any_state boolean
+---@param skip_check boolean
 function Card:tboi_can_use(any_state, skip_check)
     if not skip_check and ((G.play and #G.play.cards > 0) or
         (G.CONTROLLER.locked) or
@@ -126,6 +130,7 @@ function Card:tboi_can_use(any_state, skip_check)
 end
 
 -- Color change for TBoI Jokers
+---@param e {}
 G.FUNCS.tboi_can_use = function(e)
     if e.config.ref_table:tboi_can_use(false, false) then
         e.config.colour = G.C.RED
@@ -137,6 +142,7 @@ G.FUNCS.tboi_can_use = function(e)
 end
 
 -- Function to activate Jokers with an active ability
+---@param e {}
 function G.FUNCS.tboi_use_card(e)
     local card = e.config.ref_table
     local prev_state = G.STATE
@@ -235,6 +241,7 @@ end
 ---@param card_type string
 ---@param area CardArea
 ---@param reroll_type string
+---@param add_to_deck boolean
 function BI.tboi_reroll(card, card_type, area, reroll_type, add_to_deck)
     if reroll_type == "NORMAL" then -- Reroll type used by The D6, D4, D7, D10, D20, D100, and D Infinity (when using one of the previous)
         if card.config.center.set == card_type then
@@ -258,6 +265,10 @@ function BI.tboi_reroll(card, card_type, area, reroll_type, add_to_deck)
 end
 
 -- Helper function that does an area reroll
+---@param card_type string
+---@param area CardArea
+---@param reroll_type string
+---@param add_to_deck boolean
 function BI.tboi_area_reroll(card_type, area, reroll_type, add_to_deck)
     for i = 1, #area.cards do
         BI.tboi_reroll(area.cards[i], card_type, area, reroll_type, add_to_deck)
@@ -265,12 +276,14 @@ function BI.tboi_area_reroll(card_type, area, reroll_type, add_to_deck)
 end
 
 -- Calculates the effects of familiars
-function BI.calculate_familiar(self, card, context)
+---@param card {}
+---@param context {}
+function BI.calculate_familiar(card, context)
     if context.before then
         card.ability.special.target = pseudorandom_element(context.scoring_hand, pseudoseed("familiar"))
     end
     if context.repetition and context.cardarea == G.play then
-        if context.other_card == card.ability.extra.target then
+        if context.other_card == card.ability.special.target then
             return {
                 repetitions = BI.FAMILIARS.repetitions
             }
@@ -280,7 +293,9 @@ function BI.calculate_familiar(self, card, context)
 end
 
 -- Calculates the effects of flies
-function BI.calculate_flies(self, card, context)
+---@param card {}
+---@param context {}
+function BI.calculate_flies(card, context)
     if context.joker_main then
         return {
             chips = card.ability.special.flies * BI.FLIES.fly_chips,

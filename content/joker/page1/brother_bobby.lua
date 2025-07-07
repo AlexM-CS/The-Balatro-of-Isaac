@@ -18,6 +18,6 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
-        return BI.calculate_familiar(self, card, context)
+        return BI.calculate_familiar(card, context) 
     end
 }

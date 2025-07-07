@@ -38,7 +38,7 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
         if context.joker_main then
-            return BI.calculate_flies(self, card, context)
+            return BI.calculate_flies(card, context)
         end
     end
 }

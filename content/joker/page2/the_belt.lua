@@ -33,7 +33,7 @@ SMODS.Joker {
         end
         if context.other_joker and context.other_joker.calculate ~= nil then
             local ret = context.other_joker:calculate(self, context.other_joker, context)
-            if ret[chips] ~= nil or ret[x_chips] ~= nil then
+            if ret.chips ~= nil or ret.x_chips ~= nil then
                 card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_mod
                 return {
                     message = localize("k_upgrade_ex"),

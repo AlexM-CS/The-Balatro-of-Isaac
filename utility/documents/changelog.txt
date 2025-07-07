@@ -4,6 +4,15 @@ updated every time I push, but I'll try to remember to do this each time.
 ===================================================================================================
 
 7/6/2025
+Update 1.0.7.0
+
+Added @param tags to functions in function.lua
+Modified BI.calculate_files and BI.calculate_familiar to no longer require "self"
+Fixed Brother Bobby causing crashes
+
+===================================================================================================
+
+7/6/2025
 Update 1.0.6.0
 
 Added descriptions for The D6 and Charges (for active items)
