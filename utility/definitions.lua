@@ -209,7 +209,7 @@ BI.ENABLED_JOKERS = {
     -- "page7/moms_bottle_of_pills",
     -- "page7/the_common_cold",
     -- "page7/the_parasite",
-    -- "page7/the_d6",
+    "page7/the_d6",
     -- "page7/mr_mega",
     -- "page7/pinking_shears",
     -- "page7/the_wafer",

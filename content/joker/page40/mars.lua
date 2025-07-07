@@ -8,7 +8,7 @@ SMODS.Joker {
         }
     },
     rarity = 2,
-    pos = { x = 19, y = 3 },
+    pos = { x = 20, y = 3 },
     atlas = "tboi_jokers",
     cost = 6,
     unlocked = true,
@@ -40,6 +40,9 @@ SMODS.Joker {
                 end
             else
                 card.ability.extra.Xmult = card.ability.extra.Xmult + card.ability.extra.Xmult_gain
+                return {
+                    message = localize("k_upgrade_ex")
+                }
             end
         end
         if context.joker_main then

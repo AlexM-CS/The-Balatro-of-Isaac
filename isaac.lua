@@ -22,12 +22,12 @@ SMODS.load_file("utility/functions.lua")()
 -- Load atlases
 SMODS.load_file("content/atlas.lua")()
 
--- Load vanilla joker reworks
+-- Load vanilla Joker reworks
 if BI.config.vanilla_reworks then
     BI.register(BI.VANILLA_JOKERS, "content/joker/vanilla")
 end
 
--- Load jokers
+-- Load Jokers
 if BI.config.enable_jokers then
     BI.register(BI.ENABLED_JOKERS, "content/joker")
 end
@@ -37,7 +37,7 @@ if BI.config.enable_consumables then
     BI.register(BI.ENABLED_CONSUMABLES.TYPES, "content/consumables")
     BI.register(BI.ENABLED_CONSUMABLES.ENABLED_REVERSED_TAROTS, "content/consumables/reversed_tarots")
     BI.register(BI.ENABLED_CONSUMABLES.ENABLED_RUNES, "content/consumables/runes")
-    BI.register(BI.ENABLED_CONSUMABLES.ENABLED_SOUL_STONES, "content/consumables/soul_stones")
+    -- BI.register(BI.ENABLED_CONSUMABLES.ENABLED_SOUL_STONES, "content/consumables/soul_stones")
 end
 
 -- Opt-in to SMODS features

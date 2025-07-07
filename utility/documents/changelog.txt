@@ -3,6 +3,26 @@ updated every time I push, but I'll try to remember to do this each time.
 
 ===================================================================================================
 
+7/6/2025
+Update 1.0.6.0
+
+Added descriptions for The D6 and Charges (for active items)
+Fixed 1 Up not saving you from death
+Disabled Soul Stones in isaac.lua
+Added a tooltip for the Pluto consumable to the Pluto Joker
+Reworked Uranus
+    Now alters Ante scaling by 0.02, up from 0.01
+    Only activates when a Blind is defeated with a Two Pair
+Hooked use_and_sell_buttons. Hooked version located inside functions.lua
+Hooked SMODS.add_card. Hooked version located inside functions.lua
+Added Card:tboi_can_use
+Added G.FUNCS.tboi_can_use
+Added G.FUNCS.tboi_use_card
+Added BI.tboi_reroll
+Added BI.tboi_area_reroll
+
+===================================================================================================
+
 6/27/2025
 Update 1.0.5.1
 

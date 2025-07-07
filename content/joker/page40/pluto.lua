@@ -6,7 +6,7 @@ SMODS.Joker {
         }
     },
     rarity = 3,
-    pos = { x = 3, y = 4 },
+    pos = { x = 4, y = 4 },
     atlas = "tboi_jokers",
     cost = 10,
     unlocked = true,
@@ -16,6 +16,7 @@ SMODS.Joker {
 
     loc_vars = function(self, info_queue, card)
         info_queue[#info_queue + 1] = G.P_CENTERS.e_negative
+        info_queue[#info_queue + 1] = G.P_CENTERS.c_pluto
         return {
             vars = {
                 G.GAME.probabilities.normal,

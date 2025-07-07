@@ -331,6 +331,15 @@ return {
                     "{s:0.8}{C:inactive}\"Range up\""
                 }
             },
+            j_tboi_the_d6 = {
+                name = "The D6",
+                text = {
+                    "Reroll all {C:attention}Jokers",
+                    "in the shop or in",
+                    "{C:attention}Booster Packs",
+                    "{s:0.8}{C:inactive}\"Reroll your destiny\""
+                }
+            },
             j_tboi_midas_touch = {
                 name = "Midas Touch",
                 text = {
@@ -382,7 +391,7 @@ return {
                 name = "Sol",
                 text = {
                     "Gives {C:money}$#1#{} when played",
-                    "hand is a {C:attention}Five of a Kind",
+                    "hand is a {C:planet}Five of a Kind",
                     "{s:0.8}{C:inactive}\"Radiant victory\""
                 }
             },
@@ -391,7 +400,7 @@ return {
                 text = {
                     "Creates a copy of {C:planet}Eris",
                     "when played hand is a",
-                    "{C:attention}Flush Five",
+                    "{C:planet}Flush Five",
                     "{C:inactive}(Must have room)",
                     "{s:0.8}{C:inactive}\"More secrets\""
                 }
@@ -407,7 +416,7 @@ return {
             j_tboi_venus = {
                 name = "Venus",
                 text = {
-                    "Playing a {C:attention}Three of a Kind",
+                    "Playing a {C:planet}Three of a Kind",
                     "has a {C:green}#1# in #2#{} chance",
                     "to give {C:blue}+#3#{} Hand",
                     "{s:0.8}{C:inactive}\"HP up + you feel pretty\""
@@ -416,7 +425,7 @@ return {
             j_tboi_terra = {
                 name = "Terra",
                 text = {
-                    "Playing a {C:attention}Full House",
+                    "Playing a {C:planet}Full House",
                     "adds a {C:attention}Stone Card{} with",
                     "a random {C:attention}Seal{} to your deck",
                     "{s:0.8}{C:inactive}\"Born to rock\""
@@ -427,7 +436,7 @@ return {
                 text = {
                     "This Joker gains {X:red,C:white}X#1#{} Mult",
                     "per {C:attention}consecutive{} played",
-                    "{C:attention}Four of a Kind",
+                    "{C:planet}Four of a Kind",
                     "{C:inactive}(Currently {X:red,C:white}X#2#{} {C:inactive}Mult)",
                     "{s:0.8}{C:inactive}\"Double tap dash\""
                 }
@@ -435,7 +444,7 @@ return {
             j_tboi_jupiter = {
                 name = "Jupiter",
                 text = {
-                    "Playing a {C:attention}Flush{} permanently ",
+                    "Playing a {C:planet}Flush{} permanently ",
                     "adds {C:money}$#1#{} of sell value",
                     "to consumable {C:planet}Jupiter{} cards",
                     "{s:0.8}{C:inactive}\"You're a gas giant!\""
@@ -445,15 +454,16 @@ return {
                 name = "Saturnus",
                 text = {
                     "Every played hand is a",
-                    "{C:attention}Straight",
+                    "{C:planet}Straight",
                     "{s:0.8}{C:inactive}\"Ring of tears\""
                 }
             },
             j_tboi_uranus = {
                 name = "Uranus",
                 text = {
-                    "Playing a {C:attention}Two Pair",
-                    "lowers {C:attention}Ante{} scaling by {X:attention,C:white}X#1#",
+                    "Defeating a {C:attention}Blind{} with",
+                    "a {C:planet}Two Pair{} lowers",
+                    "Ante scaling by {X:attention,C:white}X#1#",
                     "{s:0.8}{C:inactive}\"Ice tears\""
                 }
             },
@@ -461,7 +471,7 @@ return {
                 name = "Neptunus",
                 text = {
                     "If played hand is a",
-                    "{C:attention}Straight Flush{}, retrigger",
+                    "{C:planet}Straight Flush{}, retrigger",
                     "all played cards",
                     "{s:0.8}{C:inactive}\"Open the floodgates\""
                 }
@@ -503,6 +513,15 @@ return {
                     "Use to open special",
                     "{C:attention}Booster Packs",
                     "in the shop"
+                }
+            },
+
+            -- Charges --
+            charges = {
+                name = "Charges",
+                text = {
+                    "Charges: {C:gold}#1#/#2#",
+                    "{C:inactive}#3#"
                 }
             },
 
@@ -878,10 +897,12 @@ return {
             a_hands_singular = "+#1# Hand",
             k_buffed = "Buffed!",
             k_halved = "Halved!",
-            k_saved = "Saved by #1#",
             k_scaled = "Scaled!",
             k_descaled = "De-scaled!",
             k_swapped = "Swapped!",
+
+            -- Saves
+            ph_1_up = "Saved by 1 Up"
         }
     }
 }

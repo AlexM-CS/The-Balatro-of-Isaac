@@ -30,11 +30,8 @@ SMODS.Joker {
                 end
             }))
             return {
-                message = localize({
-                    type = "variable",
-                    key = "k_saved",
-                    vars = { "1 Up" }
-                }),
+                saved = "ph_1_up",
+                message = localize("k_saved_ex"),
                 colour = G.C.RED
             }
         end

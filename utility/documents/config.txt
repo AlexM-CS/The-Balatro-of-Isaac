@@ -9,7 +9,7 @@ Vanilla Jokers if they need it to function with one of the modded cards,
 but otherwise no Vanilla Jokers will have a special table.
 
 config = {
-    extra_value (might change when I do Vanilla reworks)
+    tboi_active         (active items)
     
     extra = {
         h_size          (hand size)

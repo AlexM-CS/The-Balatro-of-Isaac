@@ -9,6 +9,7 @@ SMODS.Atlas {
 }
 
 -- Consumables
+-- Reversed Tarots
 SMODS.Atlas {
     key = "tboi_reversed_tarots",
     px = 65,
@@ -16,6 +17,7 @@ SMODS.Atlas {
     path = "Reversed_Tarots.png"
 }
 
+-- Runes
 SMODS.Atlas {
     key = "tboi_runes",
     px = 65,
@@ -23,6 +25,7 @@ SMODS.Atlas {
     path = "Reversed_Tarots.png"
 }
 
+-- Soul Stones
 SMODS.Atlas {
     key = "tboi_soul_stones",
     px = 65,
