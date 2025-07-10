@@ -3,6 +3,38 @@ updated every time I push, but I'll try to remember to do this each time.
 
 ===================================================================================================
 
+7/9/2025
+Update 1.0.8.0
+
+Added art for D4
+Implemented D4
+Added localization for D4
+Added art for Booster Packs
+Implemented "Treasure Room" Packs
+    Currently disabled in the config because the art is ugly
+    and they aren't very different from Buffoon Packs
+Hooked SMODS.create_card. Hooked version inside functions.lua
+Modified SMODS.add_card
+Added BI.get_rarity_as_num
+Added BI.get_rarity_as_text
+Modified BI.tboi_reroll
+    Now rerolls Vanilla Jokers into a Joker of the same rarity
+    Now rerolls TBoI Jokers into a Joker of the same item pool
+Modified BI.tboi_area_reroll
+Added BI.has_reroll_item
+Added BI.show_item_pools_check
+Added BI.generate_pool_text
+Changed every Vanilla and modded Jokers' `loc_vars` to display its item
+    pool when show_item_pools_check returns true
+Fixed innacurate data in isaac.lua:
+    MOD_DESCRIPTION
+    MOD_VERSION
+    MOD_SITE
+Edited Supernova's localization to fix a small visual bug
+Added localization for item pools and treasure room packs
+
+===================================================================================================
+
 7/6/2025
 Update 1.0.7.0
 

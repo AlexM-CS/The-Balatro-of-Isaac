@@ -5,7 +5,7 @@ SMODS.Joker {
         }
     },
     rarity = 4,
-    pos = { x = 5, y = 4 },
+    pos = { x = 6, y = 4 },
     atlas = "tboi_jokers",
     cost = 20,
     blueprint_compat = true,
@@ -14,6 +14,18 @@ SMODS.Joker {
 
     loc_vars = function(self, info_queue, card)
         info_queue[#info_queue + 1] = { key = "food", set = "Other" }
+        if BI.show_item_pools_check() then
+            local text = BI.generate_pool_text(card)
+            info_queue[#info_queue + 1] = {
+                set = "Other", key = "item_pool", vars = {
+                    text.is_modded,
+                    text.pool,
+                    colours = {
+                        text.colour
+                    }
+                }
+            }
+        end
         return {
             vars = {
             }
@@ -32,9 +44,6 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
-        if context.selling_self then
-            print(card.ability.extra)
-        end
         if context.joker_main then
             local ret = {}
             if card.ability.extra.chips ~= nil then ret.chips = card.ability.extra.chips end

@@ -13,9 +13,8 @@ SMODS.Joker {
     pos = { x = 9, y = 3 },
     atlas = "tboi_jokers",
     cost = 20,
-    unlocked = true,
     blueprint_compat = false,
-    eternal_compat = false,
+    eternal_compat = true,
     perishable_compat = true,
 
     loc_vars = function(self, info_queue, card)
@@ -30,6 +29,18 @@ SMODS.Joker {
                 status
             }
         }
+        if BI.show_item_pools_check() then
+            local text = BI.generate_pool_text(card)
+            info_queue[#info_queue + 1] = {
+                set = "Other", key = "item_pool", vars = {
+                    text.is_modded,
+                    text.pool,
+                    colours = {
+                        text.colour
+                    }
+                }
+            }
+        end
         return {
             vars = {
             }
@@ -38,9 +49,9 @@ SMODS.Joker {
 
     use = function(self, card, area, copier)
         if G.STATE == G.STATES.SHOP then
-            BI.tboi_area_reroll("Joker", G.shop_jokers, card.ability.reroll_type, false)
+            BI.tboi_area_reroll("Joker", G.shop_jokers, card.ability.reroll_type, false, false)
         elseif G.STATE == G.STATES.SMODS_BOOSTER_OPENED then
-            BI.tboi_area_reroll("Joker", G.pack_cards, card.ability.reroll_type, false)
+            BI.tboi_area_reroll("Joker", G.pack_cards, card.ability.reroll_type, false, false)
         end
         card.ability.extra.current_charges = card.ability.extra.current_charges - card.ability.extra.full_charge
     end,

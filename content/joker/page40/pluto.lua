@@ -6,7 +6,7 @@ SMODS.Joker {
         }
     },
     rarity = 3,
-    pos = { x = 4, y = 4 },
+    pos = { x = 5, y = 4 },
     atlas = "tboi_jokers",
     cost = 10,
     unlocked = true,
@@ -17,10 +17,23 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         info_queue[#info_queue + 1] = G.P_CENTERS.e_negative
         info_queue[#info_queue + 1] = G.P_CENTERS.c_pluto
+        if BI.show_item_pools_check() then
+            local text = BI.generate_pool_text(card)
+            info_queue[#info_queue + 1] = {
+                set = "Other", key = "item_pool", vars = {
+                    text.is_modded,
+                    text.pool,
+                    colours = {
+                        text.colour
+                    }
+                }
+            }
+        end
+        local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds)
         return {
             vars = {
-                G.GAME.probabilities.normal,
-                card.ability.extra.odds
+                numerator,
+                denominator
             }
         }
     end,
@@ -29,7 +42,7 @@ SMODS.Joker {
         if context.card_added and 
            context.card.ability.set == "Planet" and 
            context.card.ability.name == "Pluto" and 
-           pseudorandom("pluto") < G.GAME.probabilities.normal / card.ability.extra.odds then
+           SMODS.pseudorandom_probability(card, "pluto", 1, card.ability.extra.odds) then
             context.card:set_edition("e_negative")
         end
     end

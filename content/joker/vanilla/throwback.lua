@@ -6,7 +6,20 @@ SMODS.Joker:take_ownership("throwback",
                 Xmult = 0.25
             }
         },
+
         loc_vars = function(self, info_queue, card)
+            if BI.show_item_pools_check() then
+                local text = BI.generate_pool_text(card)
+                info_queue[#info_queue + 1] = {
+                    set = "Other", key = "item_pool", vars = {
+                        text.is_modded,
+                        text.rarity,
+                        colours = {
+                            text.colour
+                        }
+                    }
+                }
+            end
             return {
                 vars = {
                     card.ability.extra.Xmult,
@@ -14,6 +27,7 @@ SMODS.Joker:take_ownership("throwback",
                 }
             }
         end,
+
         calculate = function(self, card, context)
             if context.skip_blind and not context.blueprint then
                 return {

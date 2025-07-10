@@ -86,6 +86,16 @@ end
 -- Hooked SMODS functions:
 ----------------------------------------------------------------------------------------------------
 
+-- Hooks create_card
+local create_card_ref = SMODS.create_card
+function SMODS.create_card(t)
+    local _card = create_card_ref(t)
+    if _card ~= nil and t.key_append then
+        _card.config.center.tboi_pool = t.key_append
+    end
+    return _card
+end
+
 -- Hooks add_card
 ---@param t {}
 ---@param add_to_deck boolean
@@ -97,6 +107,7 @@ function SMODS.add_card(t, add_to_deck)
         table.insert(G.playing_cards, card)
     end
     if add_to_deck then card:add_to_deck() end
+    if card.config.center.set == "Joker" and card.config.center.mod then card.config.center.tboi_pool = t.key_append end
     local area = t.area or G.jokers
     area:emplace(card)
     return card
@@ -113,6 +124,30 @@ function BI.register(items, path)
     for i = 1, #items do
         SMODS.load_file(path.."/"..items[i]..".lua")()
     end
+end
+
+-- Returns a card's rarity in numerical form
+---@param card Card
+function BI.get_rarity_as_num(card)
+    local rarity = card.config.center.rarity
+    if rarity == "Common" then rarity = 1
+    elseif rarity == "Uncommon" then rarity = 2
+    elseif rarity == "Rare" then rarity = 3
+    elseif rarity == "Legendary" then rarity = 4
+    end
+    return rarity
+end
+
+-- Returns a card's rarity in text form
+---@param card Card
+function BI.get_rarity_as_text(card)
+    local rarity = card.config.center.rarity
+    if rarity == 1 then rarity = "Common"
+    elseif rarity == 2 then rarity = "Uncommon"
+    elseif rarity == 3 then rarity = "Rare"
+    elseif rarity == 4 then rarity = "Legendary"
+    end
+    return rarity
 end
 
 -- "Can Use" function for TBoI Jokers
@@ -242,12 +277,78 @@ end
 ---@param area CardArea
 ---@param reroll_type string
 ---@param add_to_deck boolean
-function BI.tboi_reroll(card, card_type, area, reroll_type, add_to_deck)
+function BI.tboi_reroll(card, card_type, area, reroll_type, add_to_deck, flip)
     if reroll_type == "NORMAL" then -- Reroll type used by The D6, D4, D7, D10, D20, D100, and D Infinity (when using one of the previous)
         if card.config.center.set == card_type then
-            SMODS.destroy_cards({card})
-            local new_card = SMODS.add_card({set = card_type, area = area, key_append = "reroll"..reroll_type}, add_to_deck)
-            if area == G.shop_jokers then create_shop_card_ui(new_card) end
+            if flip then
+                if card.config.center.mod and card.config.center.mod.prefix == "tboi" then
+                    G.E_MANAGER:add_event(Event({
+                        trigger = "after",
+                        delay = 0.2,
+                        func = function()
+                            card:flip()
+                            play_sound("card1", percent)
+                            card:juice_up(0.3, 0.3)
+                            return true
+                        end
+                    }))
+                    G.E_MANAGER:add_event(Event({
+                        trigger = "after",
+                        delay = 0.2,
+                        func = function()
+                            local rarity = BI.get_rarity_as_text(card)
+                            local new_card_key = pseudorandom_element(BI.POOLS["TBOI_"..(card.config.center.tboi_pool or "Chaos")], reroll_type)
+                            card:set_ability(new_card_key)
+                            return true
+                        end
+                    }))
+                    G.E_MANAGER:add_event(Event({
+                        trigger = "after",
+                        delay = 0.2,
+                        func = function()
+                            card:flip()
+                            play_sound("card1", percent)
+                            card:juice_up(0.3, 0.3)
+                            return true
+                        end
+                    }))
+                else
+                    G.E_MANAGER:add_event(Event({
+                        trigger = "after",
+                        delay = 0.2,
+                        func = function()
+                            card:flip()
+                            play_sound("card1", percent)
+                            card:juice_up(0.3, 0.3)
+                            return true
+                        end
+                    }))
+                    G.E_MANAGER:add_event(Event({
+                        trigger = "after",
+                        delay = 0.2,
+                        func = function()
+                            local rarity = BI.get_rarity_as_text(card)
+                            local new_card_key = pseudorandom_element(BI.POOLS["VANILLA_"..rarity], reroll_type)
+                            card:set_ability(new_card_key)
+                            return true
+                        end
+                    }))
+                    G.E_MANAGER:add_event(Event({
+                        trigger = "after",
+                        delay = 0.2,
+                        func = function()
+                            card:flip()
+                            play_sound("card1", percent)
+                            card:juice_up(0.3, 0.3)
+                            return true
+                        end
+                    }))
+                end
+            else
+                SMODS.destroy_cards({card})
+                local new_card = SMODS.add_card({set = card_type, area = area, key_append = "reroll"..reroll_type}, add_to_deck)
+                if area == G.shop_jokers then create_shop_card_ui(new_card) end
+            end
         end
     elseif reroll_type == "DEBUFF" then -- Reroll type used by Eternal D6
         if card.config.center.set == card_type then
@@ -269,9 +370,40 @@ end
 ---@param area CardArea
 ---@param reroll_type string
 ---@param add_to_deck boolean
-function BI.tboi_area_reroll(card_type, area, reroll_type, add_to_deck)
+---@param flip boolean
+function BI.tboi_area_reroll(card_type, area, reroll_type, add_to_deck, flip)
     for i = 1, #area.cards do
-        BI.tboi_reroll(area.cards[i], card_type, area, reroll_type, add_to_deck)
+        BI.tboi_reroll(area.cards[i], card_type, area, reroll_type, add_to_deck, flip)
+    end
+end
+
+-- Returns true when holding an item that can reroll held Jokers
+function BI.has_reroll_item()
+    local next = next -- Faster than simply using next. Thanks StackOverflow :)
+    return next(SMODS.find_card("j_tboi_d4")) ~= nil
+end
+
+-- Returns true when item pools should be displayed
+function BI.show_item_pools_check()
+    return BI.has_reroll_item()
+end
+
+-- Generates the text to be used in the item_pool localization for vanilla Jokers
+---@param card Card
+function BI.generate_pool_text(card)
+    local ret = {}
+    if not card.config.center.mod then
+        ret["is_modded"] = "Vanilla"
+        ret["rarity"] = BI.get_rarity_as_text(card)
+        ret["colour"] = G.C.RARITY[BI.get_rarity_as_num(card)]
+        return ret
+    else
+        if card.config.center.mod.prefix == "tboi" then ret["is_modded"] = "Isaac"
+        else ret["is_modded"] = card.config.center.mod.prefix
+        end
+        ret["pool"] = card.config.center.tboi_pool or "Chaos"
+        ret["colour"] = BI.POOLS.C[ret["pool"]]
+        return ret
     end
 end
 

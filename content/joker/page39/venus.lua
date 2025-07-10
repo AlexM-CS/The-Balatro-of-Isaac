@@ -8,7 +8,7 @@ SMODS.Joker {
         }
     },
     rarity = 2,
-    pos = { x = 18, y = 3 },
+    pos = { x = 19, y = 3 },
     atlas = "tboi_jokers",
     cost = 6,
     blueprint_compat = false,
@@ -16,10 +16,23 @@ SMODS.Joker {
     perishable_compat = true,
 
     loc_vars = function(self, info_queue, card)
+        if BI.show_item_pools_check() then
+            local text = BI.generate_pool_text(card)
+            info_queue[#info_queue + 1] = {
+                set = "Other", key = "item_pool", vars = {
+                    text.is_modded,
+                    text.pool,
+                    colours = {
+                        text.colour
+                    }
+                }
+            }
+        end
+        local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds)
         return {
             vars = {
-                G.GAME.probabilities.normal,
-                card.ability.extra.odds,
+                numerator,
+                denominator,
                 card.ability.extra.h_plays
             }
         }
@@ -29,7 +42,7 @@ SMODS.Joker {
         if context.after and
            context.main_eval and
            context.scoring_name == card.ability.extra.poker_hand and
-           pseudorandom("venus") < G.GAME.probabilities.normal / card.ability.extra.odds then
+           SMODS.pseudorandom_probability(card, "venus", 1, card.ability.extra.odds) then
             return {
                 func = function()
                     ease_hands_played(card.ability.extra.h_plays)

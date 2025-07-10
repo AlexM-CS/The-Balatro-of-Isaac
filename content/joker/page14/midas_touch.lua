@@ -19,17 +19,31 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         info_queue[#info_queue + 1] = G.P_CENTERS.m_gold
         info_queue[#info_queue + 1] = G.P_SEALS[card.ability.extra.seal]
+        if BI.show_item_pools_check() then
+            local text = BI.generate_pool_text(card)
+            info_queue[#info_queue + 1] = {
+                set = "Other", key = "item_pool", vars = {
+                    text.is_modded,
+                    text.pool,
+                    colours = {
+                        text.colour
+                    }
+                }
+            }
+        end
+        local numerator, enhance_denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.enhance_odds)
+        local _, seal_denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.seal_odds)
         return {
             vars = {
-                G.GAME.probabilities.normal,
-                card.ability.extra.enhance_odds,
-                card.ability.extra.seal_odds
+                numerator,
+                enhance_denominator,
+                seal_denominator
             }
         }
     end,
 
     calculate = function(self, card, context)
-        if context.individual and context.cardarea == G.play and pseudorandom("tboi_midas_touch") < G.GAME.probabilities.normal / card.ability.extra.enhance_odds then
+        if context.individual and context.cardarea == G.play and SMODS.pseudorandom_probability(card, "midas_touch", 1, card.ability.extra.enhance_odds) then
             local _joker = card
             local _card = context.other_card
             G.E_MANAGER:add_event(Event({
@@ -46,7 +60,7 @@ SMODS.Joker {
                 end
             }))
         end
-        if context.individual and context.cardarea == G.play and pseudorandom("tboi_midas_touch") < G.GAME.probabilities.normal / card.ability.extra.seal_odds then
+        if context.individual and context.cardarea == G.play and SMODS.pseudorandom_probability(card, "midas_touch", 1, card.ability.extra.seal_odds) then
             local _joker = card
             local _card = context.other_card
             G.E_MANAGER:add_event(Event({

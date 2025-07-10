@@ -33,7 +33,7 @@ return {
             j_supernova={
                 name= "Supernova",
                 text = {
-                    "Adds {X:red,C:white}#1#{}the number of times",
+                    "Adds {V:1,C:white}#1#{}the number of times",
                     "{C:attention}poker hand{} has been",
                     "played this run to Mult",
                 }
@@ -350,6 +350,15 @@ return {
                     "{s:0.8}{C:inactive}\"Golden Touch\""
                 }
             },
+            j_tboi_d4 = {
+                name = "D4",
+                text = {
+                    "Reroll all held {C:attention}Jokers",
+                    "into another Joker from",
+                    "the same {C:attention}item pool",
+                    "{s:0.8}{C:inactive}\"Reroll into something else\""
+                }
+            },
             j_tboi_empty_vessel = {
                 name = "Empty Vessel",
                 text = {
@@ -522,6 +531,52 @@ return {
                 text = {
                     "Charges: {C:gold}#1#/#2#",
                     "{C:inactive}#3#"
+                }
+            },
+
+            -- Pools --
+            item_pool = {
+                name = "Item Pool",
+                text = {
+                    "#1#",
+                    "{V:1}#2#"
+                }
+            },
+
+            -- Packs --
+            p_tboi_treasure_normal_1 = {
+                name = "Treasure Room Pack",
+                text = {
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2#{C:joker} Joker{} cards",
+                    "from the {C:gold}Treasure Room{} pool"
+                }
+            },
+
+            p_tboi_treasure_normal_2 = {
+                name = "Treasure Room Pack",
+                text = {
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2#{C:joker} Joker{} cards",
+                    "from the {C:gold}Treasure Room{} pool"
+                }
+            },
+
+            p_tboi_treasure_jumbo_1 = {
+                name = "Jumbo Treasure Room Pack",
+                text = {
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2#{C:joker} Joker{} cards",
+                    "from the {C:gold}Treasure Room{} pool"
+                }
+            },
+
+            p_tboi_treasure_mega_1 = {
+                name = "Jumbo Treasure Room Pack",
+                text = {
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2#{C:joker} Joker{} cards",
+                    "from the {C:gold}Treasure Room{} pool"
                 }
             },
 

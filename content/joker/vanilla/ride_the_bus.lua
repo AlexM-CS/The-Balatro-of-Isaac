@@ -9,7 +9,20 @@ SMODS.Joker:take_ownership("ride_the_bus",
                 mult = 0
             }
         },
+
         loc_vars = function(self, info_queue, card)
+            if BI.show_item_pools_check() then
+                local text = BI.generate_pool_text(card)
+                info_queue[#info_queue + 1] = {
+                    set = "Other", key = "item_pool", vars = {
+                        text.is_modded,
+                        text.rarity,
+                        colours = {
+                            text.colour
+                        }
+                    }
+                }
+            end
             return {
                 vars = {
                     card.ability.extra.mult_gain,
@@ -17,6 +30,7 @@ SMODS.Joker:take_ownership("ride_the_bus",
                 }
             }
         end,
+
         calculate = function(self, card, context)
             if context.before and context.main_eval and not context.blueprint then
                 local faces = false
@@ -31,7 +45,7 @@ SMODS.Joker:take_ownership("ride_the_bus",
                     card.ability.extra.mult = 0
                     if last_mult > 0 then
                         return {
-                            message = localize('k_reset')
+                            message = localize("k_reset")
                         }
                     end
                 else

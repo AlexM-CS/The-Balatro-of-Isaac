@@ -2,9 +2,9 @@
 --- MOD NAME: The Balatro of Isaac
 --- MOD_ID: The Balatro of Isaac
 --- MOD_AUTHOR: [Jedi]
---- MOD_DESCRIPTION: Adds 15 new Jokers based on the 15 playable decks!
---- MOD_VERSION: 1.0.0
---- MOD_SITE: https://github.com/AlexM-CS/Deckception
+--- MOD_DESCRIPTION: Turns Balatro into the Binding of Isaac!
+--- MOD_VERSION: 1.0.8.0
+--- MOD_SITE: https://github.com/AlexM-CS/The-Balatro-of-Isaac
 --- PREFIX: tboi
 
 BI = {}
@@ -12,7 +12,8 @@ BI = {}
 BI.config = {
     vanilla_reworks = true,
     enable_jokers = true,
-    enable_consumables = true
+    -- enable_boosters = true,
+    enable_consumables = true,
 }
 
 -- Load util
@@ -30,6 +31,11 @@ end
 -- Load Jokers
 if BI.config.enable_jokers then
     BI.register(BI.ENABLED_JOKERS, "content/joker")
+end
+
+-- Load Boosters
+if BI.config.enable_boosters then
+    BI.register(BI.ENABLED_BOOSTERS, "content/boosters")
 end
 
 -- Load Consumables

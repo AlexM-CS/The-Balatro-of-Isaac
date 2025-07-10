@@ -6,8 +6,21 @@ SMODS.Joker:take_ownership("popcorn",
                 mult = 20
             }
         },
+
         loc_vars = function(self, info_queue, card)
             info_queue[#info_queue + 1] = { key = "food", set = "Other" }
+            if BI.show_item_pools_check() then
+                local text = BI.generate_pool_text(card)
+                info_queue[#info_queue + 1] = {
+                    set = "Other", key = "item_pool", vars = {
+                        text.is_modded,
+                        text.rarity,
+                        colours = {
+                            text.colour
+                        }
+                    }
+                }
+            end
             return {
                 vars = {
                     card.ability.extra.mult,
@@ -15,6 +28,7 @@ SMODS.Joker:take_ownership("popcorn",
                 }
             }
         end,
+
         calculate = function(self, card, context)
             if context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint then
                 if card.ability.extra.mult - card.ability.extra.mult_loss <= 0 then

@@ -19,12 +19,25 @@ SMODS.Joker {
 
     loc_vars = function(self, info_queue, card)
         info_queue[#info_queue + 1] = { key = "flies", set = "Other" }
+        if BI.show_item_pools_check() then
+            local text = BI.generate_pool_text(card)
+            info_queue[#info_queue + 1] = {
+                set = "Other", key = "item_pool", vars = {
+                    text.is_modded,
+                    text.pool,
+                    colours = {
+                        text.colour
+                    }
+                }
+            }
+        end
+        local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds)
         return {
             vars = {
                 card.ability.special.flies,
                 card.ability.special.type,
-                G.GAME.probabilities.normal,
-                card.ability.extra.odds
+                numerator,
+                denominator
             }
         }
     end,
@@ -41,7 +54,7 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
         if context.setting_blind and not context.blueprint and G.GAME.blind.boss then
-            if pseudorandom("flies") < G.GAME.probabilities.normal / card.ability.extra.odds then
+            if SMODS.pseudorandom_probability(card, "halo_of_flies", 1, card.ability.extra.odds) then
                 return {
                     func = function()
                         G.E_MANAGER:add_event(Event({

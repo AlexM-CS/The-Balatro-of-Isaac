@@ -7,7 +7,7 @@ SMODS.Joker {
         }
     },
     rarity = 2,
-    pos = { x = 0, y = 4 },
+    pos = { x = 1, y = 4 },
     atlas = "tboi_jokers",
     cost = 6,
     unlocked = true,
@@ -16,7 +16,20 @@ SMODS.Joker {
     perishable_compat = true,
 
     loc_vars = function(self, info_queue, card)
+        info_queue[#info_queue + 1] = { key = "poisonous", set = "Other" }
         info_queue[#info_queue + 1] = G.P_CENTERS.c_jupiter
+        if BI.show_item_pools_check() then
+            local text = BI.generate_pool_text(card)
+            info_queue[#info_queue + 1] = {
+                set = "Other", key = "item_pool", vars = {
+                    text.is_modded,
+                    text.pool,
+                    colours = {
+                        text.colour
+                    }
+                }
+            }
+        end
         return {
             vars = {
                 card.ability.extra.sell_cost
@@ -37,7 +50,7 @@ SMODS.Joker {
                 end
             end
             return {
-                message = localize("k_upgrade_ex"),
+                message = localize("k_val_up"),
                 colour = G.C.SECONDARY_SET.Planet
             }
         end

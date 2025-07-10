@@ -14,7 +14,7 @@ SMODS.Joker {
         }
     },
     rarity = 1,
-    pos = { x = 14, y = 3 },
+    pos = { x = 15, y = 3 },
     atlas = "tboi_jokers",
     cost = 4,
     blueprint_compat = true,
@@ -22,6 +22,18 @@ SMODS.Joker {
     perishable_compat = true,
 
     loc_vars = function(self, info_queue, card)
+        if BI.show_item_pools_check() then
+            local text = BI.generate_pool_text(card)
+            info_queue[#info_queue + 1] = {
+                set = "Other", key = "item_pool", vars = {
+                    text.is_modded,
+                    text.pool,
+                    colours = {
+                        text.colour
+                    }
+                }
+            }
+        end
         return {
             vars = {
                 card.ability.extra.h_plays,

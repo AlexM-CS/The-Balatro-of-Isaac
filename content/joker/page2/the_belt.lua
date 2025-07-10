@@ -4,8 +4,6 @@ SMODS.Joker {
         extra = {
             chip_mod = 2,
             chips = 0
-        },
-        special = {
         }
     },
     rarity = 1,
@@ -17,6 +15,18 @@ SMODS.Joker {
     perishable_compat = true,
 
     loc_vars = function(self, info_queue, card)
+        if BI.show_item_pools_check() then
+            local text = BI.generate_pool_text(card)
+            info_queue[#info_queue + 1] = {
+                set = "Other", key = "item_pool", vars = {
+                    text.is_modded,
+                    text.pool,
+                    colours = {
+                        text.colour
+                    }
+                }
+            }
+        end
         return {
             vars = {
                 card.ability.extra.chip_mod,
@@ -31,15 +41,8 @@ SMODS.Joker {
                 chips = card.ability.extra.chips
             }
         end
-        if context.other_joker and context.other_joker.calculate ~= nil then
-            local ret = context.other_joker:calculate(self, context.other_joker, context)
-            if ret.chips ~= nil or ret.x_chips ~= nil then
-                card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_mod
-                return {
-                    message = localize("k_upgrade_ex"),
-                    colour = G.C.BLUE
-                }
-            end
+        if context.other_card and context.other_card.ability.set == "Joker" then
+            --print(context.other_card)
         end
     end
 }

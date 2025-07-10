@@ -7,7 +7,7 @@ SMODS.Joker {
         }
     },
     rarity = 2,
-    pos = { x = 12, y = 3 },
+    pos = { x = 13, y = 3 },
     atlas = "tboi_jokers",
     cost = 8,
     blueprint_compat = true,
@@ -15,10 +15,23 @@ SMODS.Joker {
     perishable_compat = true,
 
     loc_vars = function(self, info_queue, card)
+        if BI.show_item_pools_check() then
+            local text = BI.generate_pool_text(card)
+            info_queue[#info_queue + 1] = {
+                set = "Other", key = "item_pool", vars = {
+                    text.is_modded,
+                    text.pool,
+                    colours = {
+                        text.colour
+                    }
+                }
+            }
+        end
+        local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds)
         return {
             vars = {
-                G.GAME.probabilities.normal,
-                card.ability.extra.odds,
+                numerator,
+                denominator,
                 card.ability.extra.dollars
             }
         }
@@ -26,7 +39,7 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play and
-            pseudorandom('tboi_head_of_the_keeper') < G.GAME.probabilities.normal / card.ability.extra.odds then
+            SMODS.pseudorandom_probability(card, "head_of_the_keeper", 1, card.ability.extra.odds) then
             G.GAME.dollar_buffer = (G.GAME.dollar_buffer or 0) + card.ability.extra.dollars
             return {
                 dollars = card.ability.extra.dollars,

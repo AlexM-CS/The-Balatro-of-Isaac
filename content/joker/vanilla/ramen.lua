@@ -17,8 +17,21 @@ SMODS.Joker:take_ownership("ramen",
                 flag = true
             }
         },
+
         loc_vars = function(self, info_queue, card)
             info_queue[#info_queue + 1] = { key = "food", set = "Other" }
+            if BI.show_item_pools_check() then
+                local text = BI.generate_pool_text(card)
+                info_queue[#info_queue + 1] = {
+                    set = "Other", key = "item_pool", vars = {
+                        text.is_modded,
+                        text.rarity,
+                        colours = {
+                            text.colour
+                        }
+                    }
+                }
+            end
             return {
                 vars = {
                     card.ability.extra.Xmult,
@@ -26,6 +39,7 @@ SMODS.Joker:take_ownership("ramen",
                 }
             }
         end,
+
         calculate = function(self, card, context)
             if context.discard and not context.blueprint and card.ability.special.flag then
                 if card.ability.extra.Xmult - card.ability.extra.Xmult_loss <= 1 then

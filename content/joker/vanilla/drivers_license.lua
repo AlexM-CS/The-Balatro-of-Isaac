@@ -6,10 +6,25 @@ SMODS.Joker:take_ownership("drivers_license",
                 driver_amount = 16
             }
         },
+
         loc_vars = function(self, info_queue, card)
+            if BI.show_item_pools_check() then
+                local text = BI.generate_pool_text(card)
+                info_queue[#info_queue + 1] = {
+                    set = "Other", key = "item_pool", vars = {
+                        text.is_modded,
+                        text.rarity,
+                        colours = {
+                            text.colour
+                        }
+                    }
+                }
+            end
             local driver_tally = 0
-            for _, playing_card in pairs(G.playing_cards) do
-                if next(SMODS.get_enhancements(playing_card)) then driver_tally = driver_tally + 1 end
+            if G.playing_cards then
+                for _, playing_card in pairs(G.playing_cards) do
+                    if next(SMODS.get_enhancements(playing_card)) then driver_tally = driver_tally + 1 end
+                end
             end
             return {
                 vars = {
@@ -19,6 +34,7 @@ SMODS.Joker:take_ownership("drivers_license",
                 }
             }
         end,
+        
         calculate = function(self, card, context)
             if context.joker_main then
                 local driver_tally = 0
