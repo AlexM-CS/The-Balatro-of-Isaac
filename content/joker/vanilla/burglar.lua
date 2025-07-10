@@ -28,21 +28,23 @@ SMODS.Joker:take_ownership("burglar",
 
         calculate = function(self, card, context)
             if context.setting_blind then
-                G.E_MANAGER:add_event(Event({
+                return {
+                    message = localize({
+                        type = "variable",
+                        key = "a_hands",
+                        vars = { card.ability.extra.h_plays }
+                    }),
                     func = function()
-                        ease_discard(-G.GAME.current_round.discards_left, nil, true)
-                        ease_hands_played(card.ability.extra.h_plays)
-                        SMODS.calculate_effect({
-                            message = localize({
-                                type = "variable",
-                                key = "a_hands",
-                                vars = { card.ability.extra.h_plays }
-                            }
-                        )}, context.blueprint_card or card)
-                        return true
+                        G.E_MANAGER:add_event(Event({
+                            trigger = "immediate",
+                            func = function()
+                                ease_discard(-G.GAME.current_round.discards_left, true, true)
+                                ease_hands_played(card.ability.extra.h_plays, true)
+                                return true
+                            end
+                        }))
                     end
-                }))
-                return nil, true
+                }
             end
         end
     },

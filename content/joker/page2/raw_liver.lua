@@ -5,6 +5,7 @@ SMODS.Joker {
     always appear under Raw Liver instead of under the copying cards.
     This is in contrast to Burglar, where the text is correctly displayed
     under the copy card.
+    NOTE: Fixed as of Update 1.0.9.0
     ]]--
     key = "raw_liver",
     config = {
@@ -43,21 +44,25 @@ SMODS.Joker {
     calculate = function(self, card, context)
         if context.setting_blind and G.jokers then
             local count = 0
-            for _, joker in ipairs(G.jokers.cards) do if joker.config.center.rarity == 2 or joker.config.center.rarity == "Uncommon" then count = count + 1 end end
-            G.E_MANAGER:add_event(Event({
+            for _, joker in ipairs(G.jokers.cards) do
+                if joker.config.center.rarity == 2 or joker.config.center.rarity == "Uncommon" then count = count + 1 end
+            end
+            return {
+                message = localize({
+                    type = "variable",
+                    key = "a_hands",
+                    vars = { count }
+                }),
                 func = function()
-                    ease_hands_played(count)
-                    SMODS.calculate_effect({
-                        message = localize({
-                            type = "variable",
-                            key = "a_hands",
-                            vars = { count }
-                        })
-                        }, context.blueprint_card or card)
-                    return true
+                    G.E_MANAGER:add_event(Event({
+                        trigger = "immediate",
+                        func = function()
+                            ease_hands_played(count, true)
+                            return true
+                        end
+                    }))
                 end
-            }))
-            return nil, true
+            }
         end
     end
 }

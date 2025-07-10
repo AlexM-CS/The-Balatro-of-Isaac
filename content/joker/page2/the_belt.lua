@@ -2,7 +2,7 @@ SMODS.Joker {
     key = "the_belt",
     config = {
         extra = {
-            chip_mod = 2,
+            chip_mod = 20,
             chips = 0
         }
     },
@@ -36,13 +36,17 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
+        if G.GAME.blind and context.end_of_round and not context.game_over and context.cardarea == G.jokers then
+            card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_mod
+            return {
+                message = localize("k_upgrade_ex"),
+                colour = G.C.BLUE
+            }
+        end
         if context.joker_main then
             return {
                 chips = card.ability.extra.chips
             }
-        end
-        if context.other_card and context.other_card.ability.set == "Joker" then
-            --print(context.other_card)
         end
     end
 }

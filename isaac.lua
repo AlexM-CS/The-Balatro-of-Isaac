@@ -3,7 +3,7 @@
 --- MOD_ID: The Balatro of Isaac
 --- MOD_AUTHOR: [Jedi]
 --- MOD_DESCRIPTION: Turns Balatro into the Binding of Isaac!
---- MOD_VERSION: 1.0.8.0
+--- MOD_VERSION: 1.0.9.0
 --- MOD_SITE: https://github.com/AlexM-CS/The-Balatro-of-Isaac
 --- PREFIX: tboi
 

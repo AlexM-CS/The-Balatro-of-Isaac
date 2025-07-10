@@ -1,5 +1,7 @@
 SMODS.Joker:take_ownership("brainstorm",
     {
+        -- Prevents a bug in the description of Brainstorm
+        name = "tboi-Brainstorm",
         loc_vars = function(self, info_queue, card)
             if BI.show_item_pools_check() then
                 local text = BI.generate_pool_text(card)
@@ -42,6 +44,14 @@ SMODS.Joker:take_ownership("brainstorm",
                 }
             end
         end,
+
+        calculate = function(self, card, context)
+            local ret = SMODS.blueprint_effect(card, G.jokers.cards[1], context)
+            if ret then
+                ret.colour = G.C.RED
+            end
+            return ret
+        end
     },
     true
 )

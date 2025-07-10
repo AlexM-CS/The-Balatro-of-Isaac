@@ -1,5 +1,7 @@
 SMODS.Joker:take_ownership("blueprint",
     {
+        -- Prevents a bug in the description of Blueprint
+        name = "tboi-Blueprint",
         loc_vars = function(self, info_queue, card)
             if BI.show_item_pools_check() then
                 local text = BI.generate_pool_text(card)
@@ -45,6 +47,14 @@ SMODS.Joker:take_ownership("blueprint",
                 }
             end
         end,
+
+        calculate = function(self, card, context)
+            local other_joker = nil
+            for i = 1, #G.jokers.cards do
+                if G.jokers.cards[i] == card then other_joker = G.jokers.cards[i + 1] end
+            end
+            return SMODS.blueprint_effect(card, other_joker, context)
+        end
     },
     true
 )

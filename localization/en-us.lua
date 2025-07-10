@@ -306,9 +306,8 @@ return {
                 name = "The Belt",
                 text = {
                     "This Joker gets {C:blue}+#1#{} Chips",
-                    "every time another Joker",
-                    "gives {C:blue}Chips",
-                    "{C:inactive}(Currently {C:blue}#2#{} {C:inactive}Chips)",
+                    "when a Blind is defeated",
+                    "{C:inactive}(Currently {C:blue}+#2#{} {C:inactive}Chips)",
                     "{s:0.8}{C:inactive}\"Speed up\""
                 }
             },

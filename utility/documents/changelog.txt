@@ -3,6 +3,16 @@ updated every time I push, but I'll try to remember to do this each time.
 
 ===================================================================================================
 
+7/10/2025
+Update 1.0.9.0
+
+Reworked The Belt
+    Now gets +20 chips when a Blind is defeated
+Fixed visual bugs with Burglar, Raw Liver, and Greed's Gullet
+Fixed description bugs with Blueprint and Brainstorm
+
+===================================================================================================
+
 7/9/2025
 Update 1.0.8.0
 
