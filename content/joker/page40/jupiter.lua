@@ -7,7 +7,7 @@ SMODS.Joker {
         }
     },
     rarity = 2,
-    pos = { x = 1, y = 4 },
+    pos = { x = 3, y = 4 },
     atlas = "tboi_jokers",
     cost = 6,
     unlocked = true,

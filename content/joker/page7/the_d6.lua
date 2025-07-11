@@ -49,9 +49,9 @@ SMODS.Joker {
 
     use = function(self, card, area, copier)
         if G.STATE == G.STATES.SHOP then
-            BI.tboi_area_reroll("Joker", G.shop_jokers, card.ability.reroll_type, false, false)
+            BI.tboi_area_reroll("Joker", G.shop_jokers, card.ability.reroll_type, false, false, nil)
         elseif G.STATE == G.STATES.SMODS_BOOSTER_OPENED then
-            BI.tboi_area_reroll("Joker", G.pack_cards, card.ability.reroll_type, false, false)
+            BI.tboi_area_reroll("Joker", G.pack_cards, card.ability.reroll_type, false, false, nil)
         end
         card.ability.extra.current_charges = card.ability.extra.current_charges - card.ability.extra.full_charge
     end,

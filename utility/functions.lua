@@ -277,21 +277,22 @@ end
 ---@param area CardArea
 ---@param reroll_type string
 ---@param add_to_deck boolean
-function BI.tboi_reroll(card, card_type, area, reroll_type, add_to_deck, flip)
-    if reroll_type == "NORMAL" then -- Reroll type used by The D6, D4, D7, D10, D20, D100, and D Infinity (when using one of the previous)
+---@param odds any
+function BI.tboi_reroll(card, card_type, area, reroll_type, add_to_deck, flip, odds)
+    if reroll_type == "NORMAL" then -- Reroll type used by The D6, Eternal D6, D4, D7, D20, D100, and D Infinity (when using one of the previous)
         if card.config.center.set == card_type then
             if flip then
+                G.E_MANAGER:add_event(Event({
+                    trigger = "after",
+                    delay = 0.2,
+                    func = function()
+                        card:flip()
+                        play_sound("card1", percent)
+                        card:juice_up(0.3, 0.3)
+                        return true
+                    end
+                }))
                 if card.config.center.mod and card.config.center.mod.prefix == "tboi" then
-                    G.E_MANAGER:add_event(Event({
-                        trigger = "after",
-                        delay = 0.2,
-                        func = function()
-                            card:flip()
-                            play_sound("card1", percent)
-                            card:juice_up(0.3, 0.3)
-                            return true
-                        end
-                    }))
                     G.E_MANAGER:add_event(Event({
                         trigger = "after",
                         delay = 0.2,
@@ -302,27 +303,7 @@ function BI.tboi_reroll(card, card_type, area, reroll_type, add_to_deck, flip)
                             return true
                         end
                     }))
-                    G.E_MANAGER:add_event(Event({
-                        trigger = "after",
-                        delay = 0.2,
-                        func = function()
-                            card:flip()
-                            play_sound("card1", percent)
-                            card:juice_up(0.3, 0.3)
-                            return true
-                        end
-                    }))
                 else
-                    G.E_MANAGER:add_event(Event({
-                        trigger = "after",
-                        delay = 0.2,
-                        func = function()
-                            card:flip()
-                            play_sound("card1", percent)
-                            card:juice_up(0.3, 0.3)
-                            return true
-                        end
-                    }))
                     G.E_MANAGER:add_event(Event({
                         trigger = "after",
                         delay = 0.2,
@@ -333,33 +314,59 @@ function BI.tboi_reroll(card, card_type, area, reroll_type, add_to_deck, flip)
                             return true
                         end
                     }))
-                    G.E_MANAGER:add_event(Event({
-                        trigger = "after",
-                        delay = 0.2,
-                        func = function()
-                            card:flip()
-                            play_sound("card1", percent)
-                            card:juice_up(0.3, 0.3)
-                            return true
-                        end
-                    }))
                 end
+                G.E_MANAGER:add_event(Event({
+                    trigger = "after",
+                    delay = 0.2,
+                    func = function()
+                        card:flip()
+                        play_sound("card1", percent)
+                        card:juice_up(0.3, 0.3)
+                        return true
+                    end
+                }))
             else
                 SMODS.destroy_cards({card})
                 local new_card = SMODS.add_card({set = card_type, area = area, key_append = "reroll"..reroll_type}, add_to_deck)
                 if area == G.shop_jokers then create_shop_card_ui(new_card) end
+                if odds ~= nil and SMODS.pseudorandom_probability(new_card, reroll_type, 1, odds) then SMODS.debuff_card(new_card, true, reroll_type) end
             end
-        end
-    elseif reroll_type == "DEBUFF" then -- Reroll type used by Eternal D6
-        if card.config.center.set == card_type then
-            --[[TODO]]--
         end
     elseif reroll_type == "SPINDOWN" then -- Reroll type used by Spindown Dice
         if card.config.center.set == card_type then
             --[[TODO]]--
         end
-    elseif reroll_type == "RANKS" then -- Reroll type used by D7
-        --[[TODO]]--
+    elseif reroll_type == "RANKS" then -- Reroll type used by D10
+        if flip then
+            G.E_MANAGER:add_event(Event({
+                trigger = "after",
+                delay = 0.25,
+                func = function()
+                    card:flip()
+                    play_sound("card1", percent)
+                    card:juice_up(0.3, 0.3)
+                    return true
+                end
+            }))
+            G.E_MANAGER:add_event(Event({
+                trigger = "after",
+                delay = 0.25,
+                func = function()
+                    SMODS.change_base(card, nil, pseudorandom_element(SMODS.Ranks, reroll_type).key)
+                    return true
+                end
+            }))
+            G.E_MANAGER:add_event(Event({
+                trigger = "after",
+                delay = 0.25,
+                func = function()
+                    card:flip()
+                    play_sound("card1", percent)
+                    card:juice_up(0.3, 0.3)
+                    return true
+                end
+            }))
+        end
     elseif reroll_type == "POKER_HANDS" then -- Reroll type used by D8
         --[[TODO]]--
     end
@@ -371,9 +378,10 @@ end
 ---@param reroll_type string
 ---@param add_to_deck boolean
 ---@param flip boolean
-function BI.tboi_area_reroll(card_type, area, reroll_type, add_to_deck, flip)
+---@param odds any
+function BI.tboi_area_reroll(card_type, area, reroll_type, add_to_deck, flip, odds)
     for i = 1, #area.cards do
-        BI.tboi_reroll(area.cards[i], card_type, area, reroll_type, add_to_deck, flip)
+        BI.tboi_reroll(area.cards[i], card_type, area, reroll_type, add_to_deck, flip, odds)
     end
 end
 

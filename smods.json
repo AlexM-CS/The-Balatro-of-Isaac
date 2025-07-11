@@ -5,5 +5,5 @@
 	"description": "Turns Balatro into the Binding of Isaac!",
 	"prefix": "tboi",
 	"main_file": "isaac.lua",
-	"version": "1.0.9.0"
+	"version": "1.0.10.0"
 }

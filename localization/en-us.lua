@@ -358,6 +358,14 @@ return {
                     "{s:0.8}{C:inactive}\"Reroll into something else\""
                 }
             },
+            j_tboi_d10 = {
+                name = "D10",
+                text = {
+                    "Reroll the {C:attention}ranks{} of",
+                    "cards in hand",
+                    "{s:0.8}{C:inactive}\"Rerolls enemies\""
+                }
+            },
             j_tboi_empty_vessel = {
                 name = "Empty Vessel",
                 text = {
@@ -383,6 +391,15 @@ return {
                     "on scored {C:attention}face cards",
                     "Eaten after {C:attention}#3#{} rounds",
                     "{s:0.8}{C:inactive}\"HP up\""
+                }
+            },
+            j_tboi_d1 = {
+                name = "D1",
+                text = {
+                    "Duplicate a random",
+                    "held {C:attention}consumable",
+                    "{C:inactive}(Must have room)",
+                    "{s:0.8}{C:inactive}\"What will it be?\""
                 }
             },
             j_tboi_greeds_gullet = {
@@ -491,6 +508,16 @@ return {
                     "cards have a {C:green}#1# in #2#{} chance",
                     "to become {C:dark_edition}Negative{} when obtained",
                     "{s:0.8}{C:inactive}\"Size down\""
+                }
+            },
+            j_tboi_eternal_d6 = {
+                name = "Eternal D6",
+                text = {
+                    "Reroll all {C:attention}Jokers",
+                    "in the shop or in",
+                    "{C:attention}Booster Packs",
+                    "{C:green}#1# in #2#{} chance to {C:attention}debuff",
+                    "{s:0.8}{C:inactive}\"Reroll your destiny\""
                 }
             },
             j_tboi_binge_eater = {

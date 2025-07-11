@@ -5,7 +5,7 @@ SMODS.Joker {
         }
     },
     rarity = 4,
-    pos = { x = 6, y = 4 },
+    pos = { x = 9, y = 4 },
     atlas = "tboi_jokers",
     cost = 20,
     blueprint_compat = true,

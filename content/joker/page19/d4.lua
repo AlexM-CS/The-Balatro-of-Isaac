@@ -49,7 +49,7 @@ SMODS.Joker {
 
     use = function(self, card, area, copier)
         if G.jokers then
-            BI.tboi_area_reroll("Joker", G.jokers, card.ability.reroll_type, true, true)
+            BI.tboi_area_reroll("Joker", G.jokers, card.ability.reroll_type, true, true, nil)
         end
         card.ability.extra.current_charges = card.ability.extra.current_charges - card.ability.extra.full_charge
     end,
