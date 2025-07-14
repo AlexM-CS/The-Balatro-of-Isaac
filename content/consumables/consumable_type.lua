@@ -1,40 +1,40 @@
 -- Consumables to be used by The Balatro of Isaac
 
 SMODS.ConsumableType {
-    key = "tboi_reversed",
+    key = "Reversed_Tarot",
     loc_txt = {
         name = "Reversed Tarot",
         collection = "Reversed Tarot Cards"
     },
-    default = "c_tboi_reversed_r_fool",
-    primary_colour = HEX("89093a"),
-    secondary_colour = HEX("89093a"),
+    default = "c_Reversed_Tarot_r_fool",
+    primary_colour = BI.C["Reversed_Tarot"],
+    secondary_colour = BI.C["Reversed_Tarot"],
     collection_rows = { 5, 6 },
-    shop_rate = 0.8
+    shop_rate = 0.6
 }
 
 SMODS.ConsumableType {
-    key = "tboi_runes",
+    key = "Rune",
     loc_txt = {
         name = "Rune",
         collection = "Runes"
     },
-    default = "c_tboi_runes_hagalaz",
-    primary_colour = HEX("6d059f"),
-    secondary_colour = HEX("6d059f"),
+    default = "c_tboi_Rune_hagalaz",
+    primary_colour = BI.C["Rune"],
+    secondary_colour = BI.C["Rune"],
     collection_rows = { 5, 6 },
-    shop_rate = 0.1
+    shop_rate = 0
 }
 
 SMODS.ConsumableType {
-    key = "tboi_souls",
+    key = "Soul_Stones",
     loc_txt = {
         name = "Soul Stone",
         collection = "Soul Stones"
     },
-    default = "c_tboi_souls_soul_of_isaac",
-    primary_colour = HEX("f8edd9"),
-    secondary_colour = HEX("f8edd9"),
+    default = "c_tboi_Soul_Stones_soul_of_isaac",
+    primary_colour = BI.C["Soul_Stones"],
+    secondary_colour = BI.C["Soul_Stones"],
     collection_rows = { 8, 9 },
-    shop_rate = 0.1
+    shop_rate = 0
 }

@@ -277,6 +277,7 @@ end
 ---@param area CardArea
 ---@param reroll_type string
 ---@param add_to_deck boolean
+---@param flip boolean
 ---@param odds any
 function BI.tboi_reroll(card, card_type, area, reroll_type, add_to_deck, flip, odds)
     if reroll_type == "NORMAL" then -- Reroll type used by The D6, Eternal D6, D4, D7, D20, D100, and D Infinity (when using one of the previous)
@@ -297,8 +298,7 @@ function BI.tboi_reroll(card, card_type, area, reroll_type, add_to_deck, flip, o
                         trigger = "after",
                         delay = 0.2,
                         func = function()
-                            local rarity = BI.get_rarity_as_text(card)
-                            local new_card_key = pseudorandom_element(BI.POOLS["TBOI_"..(card.config.center.tboi_pool or "Chaos")], reroll_type)
+                            local new_card_key = pseudorandom_element(BI.POOLS["TBOI_"..(card.config.center.tboi_pool or card.config.center.set)] or BI.POOLS.TBOI_Chaos, reroll_type)
                             card:set_ability(new_card_key)
                             return true
                         end
@@ -308,8 +308,13 @@ function BI.tboi_reroll(card, card_type, area, reroll_type, add_to_deck, flip, o
                         trigger = "after",
                         delay = 0.2,
                         func = function()
-                            local rarity = BI.get_rarity_as_text(card)
-                            local new_card_key = pseudorandom_element(BI.POOLS["VANILLA_"..rarity], reroll_type)
+                            local suffix
+                            if card.config.center.set == "Joker" then
+                                suffix = BI.get_rarity_as_text(card)
+                            else
+                                suffix = card.config.center.set
+                            end
+                            local new_card_key = pseudorandom_element(BI.POOLS["VANILLA_"..suffix], reroll_type)
                             card:set_ability(new_card_key)
                             return true
                         end
@@ -332,11 +337,7 @@ function BI.tboi_reroll(card, card_type, area, reroll_type, add_to_deck, flip, o
                 if odds ~= nil and SMODS.pseudorandom_probability(new_card, reroll_type, 1, odds) then SMODS.debuff_card(new_card, true, reroll_type) end
             end
         end
-    elseif reroll_type == "SPINDOWN" then -- Reroll type used by Spindown Dice
-        if card.config.center.set == card_type then
-            --[[TODO]]--
-        end
-    elseif reroll_type == "RANKS" then -- Reroll type used by D10
+    elseif reroll_type == "RANKS" or reroll_type == "SUITS" then -- Reroll type used by D10 and D12, respectively
         if flip then
             G.E_MANAGER:add_event(Event({
                 trigger = "after",
@@ -348,11 +349,15 @@ function BI.tboi_reroll(card, card_type, area, reroll_type, add_to_deck, flip, o
                     return true
                 end
             }))
+            local _rank = nil
+            local _suit = nil
+            if reroll_type == "RANKS" then _rank = pseudorandom_element(SMODS.Ranks, reroll_type).key end
+            if reroll_type == "SUITS" then _suit = pseudorandom_element(SMODS.Suits, reroll_type).key end
             G.E_MANAGER:add_event(Event({
                 trigger = "after",
                 delay = 0.25,
                 func = function()
-                    SMODS.change_base(card, nil, pseudorandom_element(SMODS.Ranks, reroll_type).key)
+                    SMODS.change_base(card, _suit, _rank)
                     return true
                 end
             }))
@@ -368,7 +373,26 @@ function BI.tboi_reroll(card, card_type, area, reroll_type, add_to_deck, flip, o
             }))
         end
     elseif reroll_type == "POKER_HANDS" then -- Reroll type used by D8
-        --[[TODO]]--
+        local hands = {}
+        for k, v in pairs(G.GAME.hands) do if SMODS.is_poker_hand_visible(k) then table.insert(hands, #hands + 1, k) end end
+        pseudoshuffle(hands, pseudoseed(reroll_type))
+        for i = 1, 4 do -- The D8 picks 4 hands to change
+            SMODS.smart_level_up_hand(card, hands[i], false, pseudorandom_element({ -2, -1, 1, 2}, reroll_type))
+        end
+    elseif reroll_type == "VOUCHER" then -- Reroll type used by D7
+        local eligible = {}
+        for i = 1, #G.P_CENTER_POOLS.Voucher do
+            local _voucher = G.P_CENTER_POOLS.Voucher[i]
+            if not G.GAME.used_vouchers[_voucher.key] and _voucher.requires == nil then
+                table.insert(eligible, #eligible + 1, _voucher.key)
+            elseif _voucher.requires and G.GAME.used_vouchers[_voucher.requires[1]] then
+                table.insert(eligible, #eligible + 1, _voucher.key)
+            end
+        end
+        pseudoshuffle(eligible, pseudoseed(reroll_type))
+        for i = 1, #G.shop_vouchers.cards do
+            G.shop_vouchers.cards[i]:set_ability(eligible[i])
+        end
     end
 end
 
@@ -386,32 +410,56 @@ function BI.tboi_area_reroll(card_type, area, reroll_type, add_to_deck, flip, od
 end
 
 -- Returns true when holding an item that can reroll held Jokers
-function BI.has_reroll_item()
+function BI.has_joker_reroll()
     local next = next -- Faster than simply using next. Thanks StackOverflow :)
     return next(SMODS.find_card("j_tboi_d4")) ~= nil
 end
 
+-- Returns true when holding an item that can reroll held consumables
+function BI.has_consumable_reroll()
+    local next = next -- Faster than simply using next. Thanks StackOverflow :)
+    return next(SMODS.find_card("j_tboi_d20")) ~= nil
+end
+
 -- Returns true when item pools should be displayed
-function BI.show_item_pools_check()
-    return BI.has_reroll_item()
+---@param card_type string
+function BI.show_item_pools(card_type)
+    return (card_type == "Joker" and BI.has_joker_reroll()) or
+           (BI.CONSUMABLE_TYPES[card_type] and BI.has_consumable_reroll())
 end
 
 -- Generates the text to be used in the item_pool localization for vanilla Jokers
 ---@param card Card
 function BI.generate_pool_text(card)
     local ret = {}
-    if not card.config.center.mod then
-        ret["is_modded"] = "Vanilla"
-        ret["rarity"] = BI.get_rarity_as_text(card)
-        ret["colour"] = G.C.RARITY[BI.get_rarity_as_num(card)]
-        return ret
-    else
-        if card.config.center.mod.prefix == "tboi" then ret["is_modded"] = "Isaac"
-        else ret["is_modded"] = card.config.center.mod.prefix
+    if card.config.center.set == "Joker" then
+        if not card.config.center.mod then
+            ret["is_modded"] = "Vanilla"
+            ret["pool"] = BI.get_rarity_as_text(card)
+            ret["colour"] = G.C.RARITY[BI.get_rarity_as_num(card)]
+            return ret
+        else
+            if card.config.center.mod.prefix == "tboi" then ret["is_modded"] = "Isaac"
+            else ret["is_modded"] = card.config.center.mod.prefix
+            end
+            ret["pool"] = card.config.center.tboi_pool or "Chaos"
+            ret["colour"] = BI.C[ret["pool"]]
+            return ret
         end
-        ret["pool"] = card.config.center.tboi_pool or "Chaos"
-        ret["colour"] = BI.POOLS.C[ret["pool"]]
-        return ret
+    elseif BI.CONSUMABLE_TYPES[card.config.center.set] then
+        if not card.config.center.mod then
+            ret["is_modded"] = "Vanilla"
+            ret["pool"] = card.config.center.set
+            ret["colour"] = G.C.SECONDARY_SET[ret["pool"]]
+            return ret
+        else
+            if card.config.center.mod.prefix == "tboi" then ret["is_modded"] = "Isaac"
+            else ret["is_modded"] = card.config.center.mod.prefix
+            end
+            ret["pool"] = card.config.center.set
+            ret["colour"] = BI.C[ret["pool"]]
+            return ret
+        end
     end
 end
 

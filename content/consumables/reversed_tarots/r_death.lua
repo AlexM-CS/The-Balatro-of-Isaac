@@ -1,6 +1,6 @@
 SMODS.Consumable {
     key = "r_death",
-    set = "tboi_reversed",
+    set = "Reversed_Tarot",
     config = {
         extra = {
             max_highlighted = 1,

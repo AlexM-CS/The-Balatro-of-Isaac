@@ -1,6 +1,6 @@
 SMODS.Consumable {
     key = "r_judgement",
-    set = "tboi_reversed",
+    set = "Reversed_Tarot",
     config = {
         special = {
             multiplier = 3

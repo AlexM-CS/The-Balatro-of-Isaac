@@ -1,6 +1,6 @@
 SMODS.Consumable {
     key = "r_high_priestess",
-    set = "tboi_reversed",
+    set = "Reversed_Tarot",
     config = {
     },
     pos = { x = 2, y = 0 },

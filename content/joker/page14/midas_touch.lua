@@ -9,7 +9,7 @@ SMODS.Joker {
         }
     },
     rarity = 2,
-    pos = { x = 10, y = 3 },
+    pos = { x = 11, y = 3 },
     atlas = "tboi_jokers",
     cost = 8,
     blueprint_compat = true,
@@ -19,7 +19,7 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         info_queue[#info_queue + 1] = G.P_CENTERS.m_gold
         info_queue[#info_queue + 1] = G.P_SEALS[card.ability.extra.seal]
-        if BI.show_item_pools_check() then
+        if BI.show_item_pools(card.config.center.set) then
             local text = BI.generate_pool_text(card)
             info_queue[#info_queue + 1] = {
                 set = "Other", key = "item_pool", vars = {

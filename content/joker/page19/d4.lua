@@ -10,7 +10,7 @@ SMODS.Joker {
         }
     },
     rarity = 2,
-    pos = { x = 11, y = 3 },
+    pos = { x = 12, y = 3 },
     atlas = "tboi_jokers",
     cost = 6,
     blueprint_compat = false,
@@ -29,18 +29,6 @@ SMODS.Joker {
                 status
             }
         }
-        if BI.show_item_pools_check() then
-            local text = BI.generate_pool_text(card)
-            info_queue[#info_queue + 1] = {
-                set = "Other", key = "item_pool", vars = {
-                    text.is_modded,
-                    text.pool,
-                    colours = {
-                        text.colour
-                    }
-                }
-            }
-        end
         return {
             vars = {
             }

@@ -1,6 +1,6 @@
 SMODS.Consumable {
     key = "r_hanged_man",
-    set = "tboi_reversed",
+    set = "Reversed_Tarot",
     config = {
         extra = {
             destroy = 3

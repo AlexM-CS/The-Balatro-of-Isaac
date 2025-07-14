@@ -3,6 +3,38 @@ updated every time I push, but I'll try to remember to do this each time.
 
 ===================================================================================================
 
+7/13/2025
+Update 1.0.11.0
+
+Added "Thank Yous" in isaac.lua. Thank you!!
+Added lovely.toml
+    Patched functions/common_events.lua to add tooltip functionality
+    to every card
+Removed files for Vanilla Jokers that didn't need to be taken ownership of anymore
+Added art, localization, and implementations for:
+    D7
+    D8
+    D12
+    D20
+Added BI.C, a table to store color values for the modded
+Added BI.CONSUMABLE_TYPES, used to detect what consumables are enabled
+Added VANILLA_Tarot, VANILLA_Planet, VANILLA_Spectral, and TBOI_Reversed_Tarot to BI.POOLS
+Combined RANKS and SUITS reroll types in tboi_reroll
+Removed SPINDOWN from reroll types in tboi_reroll
+Added POKER_HANDS and VOUCHER reroll types
+Renamed BI.has_reroll_item to BI.has_joker_reroll
+Added BI.has_consumable_reroll
+Renamed and modified BI.show_item_pools_check to BI.show_item_pools
+Modified BI.generate_pool_text
+Modified ConsumableType definitions for Reversed Tarots, Runes, and Soul Stones
+Modified the sets for Reversed Tarot cards and Runes to account for the new set names
+Updated probability calculations for:
+    Cavendish
+    Gros Michel
+    Halo of Flies
+
+===================================================================================================
+
 7/10/2025
 Update 1.0.10.0
 

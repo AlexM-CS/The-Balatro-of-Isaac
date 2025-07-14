@@ -1,6 +1,6 @@
 SMODS.Consumable {
     key = "r_hierophant",
-    set = "tboi_reversed",
+    set = "Reversed_Tarot",
     config = {
         extra = {
             upgrade = 20,

@@ -1,6 +1,6 @@
 SMODS.Consumable {
     key = "rune_shard",
-    set = "tboi_runes",
+    set = "Rune",
     loc_txt = {
         name = "Rune Shard",
         text = {
@@ -18,7 +18,7 @@ SMODS.Consumable {
         return {
             vars = {
                 colours = {
-                    HEX("6d059f")
+                    BI.C.Rune
                 }
             }
         }

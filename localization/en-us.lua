@@ -339,6 +339,13 @@ return {
                     "{s:0.8}{C:inactive}\"Reroll your destiny\""
                 }
             },
+            j_tboi_d20 = {
+                name = "D20",
+                text = {
+                    "Reroll all {C:attention}consumables",
+                    "{s:0.8}{C:inactive}\"Reroll the basics\""
+                }
+            },
             j_tboi_midas_touch = {
                 name = "Midas Touch",
                 text = {
@@ -366,6 +373,22 @@ return {
                     "{s:0.8}{C:inactive}\"Rerolls enemies\""
                 }
             },
+            j_tboi_d12 = {
+                name = "D12",
+                text = {
+                    "Reroll the {C:attention}suits{} of",
+                    "cards in hand",
+                    "{s:0.8}{C:inactive}\"Rerolls rocks\""
+                }
+            },
+            j_tboi_d8 = {
+                name = "D8",
+                text = {
+                    "Reroll the levels of 4",
+                    "different {C:attention}poker hands{} {C:inactive}(±#1#)",
+                    "{s:0.8}{C:inactive}\"Reroll stats\""
+                }
+            },
             j_tboi_empty_vessel = {
                 name = "Empty Vessel",
                 text = {
@@ -382,6 +405,14 @@ return {
                     "{C:green}#1# in #2#{} chance to give {C:money}$#3#",
                     "when scored",
                     "{s:0.8}{C:inactive}\"Penny tears!\""
+                }
+            },
+            j_tboi_d7 = {
+                name = "D7",
+                text = {
+                    "Reroll all {C:attention}Vouchers",
+                    "in the shop",
+                    "{s:0.8}{C:inactive}\"Reroll rewards!\""
                 }
             },
             j_tboi_midnight_snack = {
@@ -785,7 +816,7 @@ return {
             }
         },
 
-        tboi_reversed = {
+        Reversed_Tarot = {
             c_tboi_r_fool = {
                 name = "The Fool?",
                 text = {

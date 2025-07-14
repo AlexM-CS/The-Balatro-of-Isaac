@@ -1,6 +1,6 @@
 SMODS.Consumable {
     key = "r_tower",
-    set = "tboi_reversed",
+    set = "Reversed_Tarot",
     config = {
         extra = {
             mod_conv = "m_stone"

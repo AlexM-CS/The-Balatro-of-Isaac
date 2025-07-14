@@ -19,18 +19,6 @@ SMODS.Joker {
 
     loc_vars = function(self, info_queue, card)
         info_queue[#info_queue + 1] = { key = "flies", set = "Other" }
-        if BI.show_item_pools_check() then
-            local text = BI.generate_pool_text(card)
-            info_queue[#info_queue + 1] = {
-                set = "Other", key = "item_pool", vars = {
-                    text.is_modded,
-                    text.pool,
-                    colours = {
-                        text.colour
-                    }
-                }
-            }
-        end
         local numerator, denominator = SMODS.get_probability_vars(card, 1, card.ability.extra.odds)
         return {
             vars = {
@@ -44,7 +32,7 @@ SMODS.Joker {
 
     add_to_deck = function(self, card)
         if G.GAME.blind and G.GAME.blind.boss and not G.GAME.blind.disabled then
-            if pseudorandom("flies") < G.GAME.probabilities.normal / card.ability.extra.odds then
+            if SMODS.pseudorandom_probability(card, "halo_of_flies", 1, card.ability.extra.odds) then
                 G.GAME.blind:disable()
                 play_sound("timpani")
                 SMODS.calculate_effect({ message = localize("ph_boss_disabled")}, card)

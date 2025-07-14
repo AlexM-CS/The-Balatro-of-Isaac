@@ -1,6 +1,6 @@
 SMODS.Consumable {
     key = "blank_rune",
-    set = "tboi_runes",
+    set = "Rune",
     loc_txt = {
         name = "Blank Rune",
         text = {

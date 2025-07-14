@@ -6,7 +6,7 @@ SMODS.Joker {
         }
     },
     rarity = 2,
-    pos = { x = 19, y = 3 },
+    pos = { x = 2, y = 4 },
     atlas = "tboi_jokers",
     cost = 6,
     blueprint_compat = true,
@@ -15,18 +15,6 @@ SMODS.Joker {
 
     loc_vars = function(self, info_queue, card)
         info_queue[#info_queue + 1] = G.P_CENTERS.c_eris
-        if BI.show_item_pools_check() then
-            local text = BI.generate_pool_text(card)
-            info_queue[#info_queue + 1] = {
-                set = "Other", key = "item_pool", vars = {
-                    text.is_modded,
-                    text.pool,
-                    colours = {
-                        text.colour
-                    }
-                }
-            }
-        end
         return {
             vars = {
             }

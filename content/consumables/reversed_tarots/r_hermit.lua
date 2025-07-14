@@ -1,6 +1,6 @@
 SMODS.Consumable {
     key = "r_hermit",
-    set = "tboi_reversed",
+    set = "Reversed_Tarot",
     config = {
         extra = {
             dollars = 15

@@ -1,6 +1,6 @@
 SMODS.Consumable {
     key = "r_moon",
-    set = "tboi_reversed",
+    set = "Reversed_Tarot",
     pos = { x = 3, y = 3 },
     atlas = "tboi_reversed_tarots",
 

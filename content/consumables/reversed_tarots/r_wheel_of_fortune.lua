@@ -1,6 +1,6 @@
 SMODS.Consumable {
     key = "r_wheel_of_fortune",
-    set = "tboi_reversed",
+    set = "Reversed_Tarot",
     config = {
         extra = {
             odds = 4
@@ -19,9 +19,8 @@ SMODS.Consumable {
     end,
 
     use = function(self, card, area, copier)
-        if pseudorandom("r_wheel_of_fortune") < G.GAME.probabilities.normal / card.ability.extra.odds then
+        if SMODS.pseudorandom_probability(card, "r_wheel_of_fortune", 1, card.ability.extra.odds) then
             local editionless_cards = SMODS.Edition:get_edition_cards(G.hand, true)
-
             local eligible_card = pseudorandom_element(editionless_cards, pseudoseed("r_wheel_of_fortune"))
             eligible_card:set_edition("e_negative", true)
             check_for_unlock({ type = "have_edition" })

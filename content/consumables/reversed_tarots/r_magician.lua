@@ -1,6 +1,6 @@
 SMODS.Consumable {
     key = "r_magician",
-    set = "tboi_reversed",
+    set = "Reversed_Tarot",
     config = {
         extra = {
             cards = 2,

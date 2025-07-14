@@ -1,6 +1,6 @@
 SMODS.Consumable {
     key = "r_justice",
-    set = "tboi_reversed",
+    set = "Reversed_Tarot",
     config = {
         extra = {
             mod_conv = "m_glass"

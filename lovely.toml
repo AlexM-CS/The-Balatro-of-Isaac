@@ -1,0 +1,24 @@
+[manifest]
+version = "1.0.0"
+priority = 0
+
+[[patches]]
+[patches.pattern]
+target = "functions/common_events.lua"
+pattern = "for _, v in ipairs(info_queue) do"
+position = "before"
+payload = '''
+if card and card.config.center and BI.show_item_pools(card.config.center.set) then
+    local text = BI.generate_pool_text(card)
+    info_queue[#info_queue + 1] = {
+        set = "Other", key = "item_pool", vars = {
+            text.is_modded,
+            text.pool,
+            colours = {
+                text.colour
+            }
+        }
+    }
+end
+'''
+match_indent = true
